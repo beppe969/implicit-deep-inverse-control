@@ -1,0 +1,240 @@
+{
+  "baseline": "revision_v3.zip; original checkpoints preserved",
+  "runtime": {
+    "python": "3.13.5",
+    "torch": "2.10.0+cpu",
+    "numpy": "2.3.5"
+  },
+  "static": {
+    "inverse_rmse_algebraic": 0.02310915827702672,
+    "inverse_rmse_direct": 0.01983007959844559,
+    "inverse_rmse_newton": 0.023109156359218324,
+    "true_cycle_rmse_algebraic": 0.023042364599821688,
+    "true_cycle_rmse_direct": 0.019579347185822556,
+    "learned_model_cycle_rmse": 7.707761266022537e-08,
+    "noisy_inverse_rmse_algebraic": 0.050839890300025774,
+    "noisy_inverse_rmse_direct": 0.049161890337057965,
+    "mean_iterations": 7.185333251953125,
+    "max_iterations": 9,
+    "newton_mean_iterations": 2.9839999675750732,
+    "newton_mean_hidden_evaluations": 3.9826667308807373,
+    "inverse_contraction_inf": 0.6863285899162292
+  },
+  "narx": {
+    "variants": {
+      "main": {
+        "forward_rmse": 0.004433558939308465,
+        "inverse_rmse_algebraic": 0.005400730754209922,
+        "learned_model_cycle_rmse": 3.0016542144364315e-08,
+        "rho_H": 0.6706798304285071,
+        "rho_absA": 0.0,
+        "rho_absAi": 0.08207902429220779,
+        "closed_loop_rmse": 0.005764506431937189,
+        "iterations_mean": 4.059315476190476,
+        "input_tube": [
+          0.18104602709835507,
+          0.19752524200034866
+        ]
+      },
+      "control-affine (B_u=0)": {
+        "forward_rmse": 0.005994018885244888,
+        "inverse_rmse_algebraic": 0.0072674223114854095,
+        "learned_model_cycle_rmse": 4.4285960853224954e-08,
+        "rho_H": 2.1609347655579625,
+        "rho_absA": 0.0,
+        "rho_absAi": 0.0,
+        "closed_loop_rmse": 0.005789993924558158,
+        "iterations_mean": 2.0,
+        "input_tube": [
+          null,
+          null
+        ]
+      },
+      "control-affine (B_u=0), lambda_s=3e-3": {
+        "forward_rmse": 0.008883531789094781,
+        "inverse_rmse_algebraic": 0.01075271873470002,
+        "learned_model_cycle_rmse": 4.206214611909809e-08,
+        "rho_H": 0.6381169806107643,
+        "rho_absA": 0.0,
+        "rho_absAi": 0.0,
+        "closed_loop_rmse": 0.008130573976117727,
+        "iterations_mean": 2.0,
+        "input_tube": [
+          0.18156258265488068,
+          0.18616076495997752
+        ]
+      },
+      "lambda_s=0": {
+        "forward_rmse": 0.0033993370755581423,
+        "inverse_rmse_algebraic": 0.004141143524882753,
+        "learned_model_cycle_rmse": 4.01449140775603e-08,
+        "rho_H": 0.9791002904384842,
+        "rho_absA": 0.0,
+        "rho_absAi": 0.18290139960908017,
+        "closed_loop_rmse": 0.0053850285243458446,
+        "iterations_mean": 4.120595238095238,
+        "input_tube": [
+          3.319760443046915,
+          4.4756932101671625
+        ]
+      },
+      "lambda_s=1e-3": {
+        "forward_rmse": 0.005722721911875533,
+        "inverse_rmse_algebraic": 0.006943600130343141,
+        "learned_model_cycle_rmse": 3.466370454753358e-08,
+        "rho_H": 0.6350352934271511,
+        "rho_absA": 0.0,
+        "rho_absAi": 0.11812074147433503,
+        "closed_loop_rmse": 0.005991069780050857,
+        "iterations_mean": 4.037708333333334,
+        "input_tube": [
+          0.15271307543649568,
+          0.1589601886808116
+        ]
+      },
+      "implicit forward (A!=0)": {
+        "forward_rmse": 0.00433621672279407,
+        "inverse_rmse_algebraic": 0.005257569229875677,
+        "learned_model_cycle_rmse": 4.1732344117832053e-08,
+        "rho_H": 0.6506706860632854,
+        "rho_absA": 0.1079173365297296,
+        "rho_absAi": 0.09959380910384089,
+        "closed_loop_rmse": 0.005784463882173855,
+        "iterations_mean": 5.6570238095238095,
+        "input_tube": [
+          0.14538275258988081,
+          0.15494598706018345
+        ]
+      }
+    },
+    "main_comparators": {
+      "online Newton": {
+        "rmse_mean": 0.005764507119691164,
+        "rmse_p95": 0.006485712402821475,
+        "max_error_mean": 0.021346083871715476,
+        "max_error_p95": 0.02701586479521294,
+        "paired_difference": {
+          "mean_difference": -6.877539753414457e-10,
+          "ci95_low": -1.1571430962946181e-09,
+          "ci95_high": -2.1542285714421716e-10,
+          "fraction_negative": 0.6
+        }
+      },
+      "direct inverse": {
+        "rmse_mean": 0.005751333320749968,
+        "rmse_p95": 0.007728106829394946,
+        "max_error_mean": 0.03680966706029636,
+        "max_error_p95": 0.06372213956079155,
+        "paired_difference": {
+          "mean_difference": 1.3173111187220603e-05,
+          "ci95_low": -0.00015607700888764454,
+          "ci95_high": 0.00017761758010162099,
+          "fraction_negative": 0.4583333333333333
+        }
+      },
+      "linear ARX inverse": {
+        "rmse_mean": 0.008449294913776929,
+        "rmse_p95": 0.009279687997745749,
+        "max_error_mean": 0.028282899765901297,
+        "max_error_p95": 0.03334321065503177,
+        "paired_difference": {
+          "mean_difference": -0.0026847884818397383,
+          "ci95_low": -0.0027882143956868334,
+          "ci95_high": -0.002577980637514048,
+          "fraction_negative": 1.0
+        }
+      }
+    },
+    "main_closed_loop_rmse": 0.005764506431937189,
+    "rho_H": 0.6706798304285071,
+    "rho_Q": 0.5218690387393186,
+    "fresh_calibration": {
+      "seed": 20262857,
+      "trajectories": 20,
+      "horizon": 280,
+      "sigma": [
+        0.03999258577823639,
+        0.03709369897842407
+      ],
+      "scores": [
+        1.274312968825799,
+        1.1044779669932547,
+        1.26596664853196,
+        1.072844542988037,
+        1.6114934138021508,
+        1.2407038401691934,
+        1.209572934918873,
+        1.2404360509349945,
+        1.1406124795771404,
+        1.0964212483106228,
+        1.1749205257001527,
+        0.9430846783535239,
+        1.0355049724139465,
+        1.1323103638002106,
+        1.1024698358872225,
+        1.2421181844484208,
+        1.2263259202567336,
+        1.097378290167196,
+        1.0990825412641854,
+        1.192223782078752
+      ],
+      "fresh_residual_box": [
+        0.0644477885825455,
+        0.05977625159728996
+      ],
+      "final_residual_box": [
+        0.0644477885825455,
+        0.05977625159728996
+      ],
+      "coverage_guarantee": 0.9523809523809523,
+      "fp_residual_max": 5.960464477539063e-08
+    },
+    "evaluation_coverage": 1.0,
+    "output_tube": [
+      0.08202070056901768,
+      0.07676693557544895
+    ],
+    "input_tube": [
+      0.18104602709835507,
+      0.19752524200034866
+    ],
+    "tube_check_after_40_samples": {
+      "output_tube_exceedance_fraction_after_burn": 0.0,
+      "input_tube_exceedance_fraction_after_burn": 0.0,
+      "output_tube_max_ratio_after_burn": 0.7214047156896776,
+      "input_tube_max_ratio_after_burn": 0.14696905487153444
+    },
+    "max_one_step_comparison_defect": 7.44527575702314e-09,
+    "max_transient_comparison_defect": 7.44527575702314e-09,
+    "max_all_time_regressor_ratio_to_2tube": 0.9677425051080386,
+    "input_margin_under_2tube": [
+      1.321951007536536,
+      1.353312814177022
+    ],
+    "reference_input_abs_max": [
+      0.5159569382667542,
+      0.4516367018222809
+    ]
+  },
+  "independent_equation_tests": {
+    "implementation": "independent NumPy equations; float64",
+    "seed": 2091306,
+    "dense_cyclic_models": 36,
+    "queries_per_model": 64,
+    "activations": [
+      "tanh",
+      "ReLU",
+      "tanh + 0.25"
+    ],
+    "maximum_forward_inverse_cycle_error": 1.1102230246251565e-15,
+    "maximum_inequality_defects": {
+      "inverse_sensitivity": -0.006477562029879896,
+      "hidden_residual": -0.0005848085427159165,
+      "control_residual": -0.0010779930499890062,
+      "output_residual": -0.0008951877762150302,
+      "free_running_incremental": 0.0,
+      "free_running_absolute": 0.0
+    }
+  },
+  "scope": "Checkpoint evaluation and numerical checks of bounds; no full retraining and no exhaustive formal verification."
+}

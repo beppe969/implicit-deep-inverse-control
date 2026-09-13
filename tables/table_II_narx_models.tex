@@ -1,0 +1,17 @@
+% Generated from all_results.json. Requires the booktabs package.
+% Table II. NARX models and certificates
+% Only the main model uses fresh matched closed-loop calibration. Other tube values are conditional calculations from preliminary open-loop envelopes. An unavailable tube is shown as --.
+\begin{tabular}{lrrrrrr}
+\toprule
+Model & Forward RMSE x 1e3 & Inverse RMSE x 1e3 & Inverse contraction & rho(H) & Max. input-tube radius & CL RMSE x 1e3 \\
+\midrule
+Main (lambda\_s = 1e-4) & 4.43 & 5.40 & 0.64 & 0.671 & 0.20 & 5.76 \\
+lambda\_s = 0 & 3.40 & 4.14 & 0.61 & 0.979 & 4.48 & 5.39 \\
+lambda\_s = 1e-3 & 5.72 & 6.94 & 0.63 & 0.635 & 0.16 & 5.99 \\
+B\_u = 0, lambda\_s = 1e-4 & 5.99 & 7.27 & 0.00 & 2.161 & -- & 5.79 \\
+B\_u = 0, lambda\_s = 3e-3 & 8.88 & 10.75 & 0.00 & 0.638 & 0.19 & 8.13 \\
+A != 0, lambda\_s = 1e-4 & 4.34 & 5.26 & 0.33 & 0.651 & 0.15 & 5.78 \\
+Direct inverse & -- & 11.20 & -- & -- & -- & 5.75 \\
+Linear ARX inverse & -- & 10.95 & -- & -- & -- & 8.45 \\
+\bottomrule
+\end{tabular}

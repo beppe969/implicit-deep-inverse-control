@@ -1,0 +1,6 @@
+# Validated direct numerical dependencies (Python 3.13.5, Linux x86_64 CPU).
+# Linux/Windows: install the CPU PyTorch wheel first; see README.md.
+# torch==2.10.0 accepts the official 2.10.0+cpu build.
+numpy==2.3.5
+matplotlib==3.10.8
+torch==2.10.0

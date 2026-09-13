@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "frozen_scientific_files_verified": 21,
+  "local_documentation_links_checked": 10,
+  "broken_local_links": [],
+  "portable_json_files_parsed": 15,
+  "well_formed_generated_csv_files": 5,
+  "workflow_yaml_files_parsed": 2,
+  "citation_yaml_parsed": true,
+  "symlinks_in_release": 0,
+  "font_files_in_release": 0,
+  "excluded_materials": [
+    "runtime workspaces and caches",
+    "manuscript and editorial review files",
+    "Git history and credentials"
+  ],
+  "scope": "Static packaging checks. Execution records are documented separately in REPORT.md."
+}

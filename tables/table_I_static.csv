@@ -1,0 +1,6 @@
+Metric,Algebraic,Newton,Direct
+Inverse RMSE,0.0231,0.0231,0.0198
+True-map cycle RMSE,0.0230,0.0230,0.0196
+Noisy-target inverse RMSE,0.0508,0.0508,0.0492
+Hidden-layer evaluations (mean),7.19,3.98,--
+Iterations (mean / max),7.19 / 9,2.98 / 4,--

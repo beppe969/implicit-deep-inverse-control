@@ -1,0 +1,2538 @@
+experiment,metric_path,value
+static,forward_rmse,0.025793618339551874
+static,inverse_rmse_algebraic,0.02310915827702672
+static,inverse_rmse_direct,0.01983007959844559
+static,inverse_rmse_newton,0.023109156359218324
+static,learned_model_cycle_rmse,7.707761266022537e-08
+static,true_cycle_rmse_algebraic,0.023042364599821688
+static,true_cycle_rmse_direct,0.019579347185822556
+static,noisy_inverse_rmse_algebraic,0.050839890300025774
+static,noisy_inverse_rmse_direct,0.049161890337057965
+static,mean_iterations,7.185333251953125
+static,p95_iterations,9.0
+static,max_iterations,9.0
+static,newton_mean_iterations,2.9839999675750732
+static,newton_mean_hidden_evaluations,3.9826667308807373
+static,newton_max_iterations,4.0
+static,time_ratio_newton_over_algebraic,2.4894236576354842
+static,inverse_contraction_inf,0.6863285899162292
+static,Dhat/0/0,1.2623920440673828
+static,Dhat/0/1,0.19150729477405548
+static,Dhat/1/0,-0.050442855805158615
+static,Dhat/1/1,1.0643208026885986
+narx,input_dimension,2
+narx,output_dimension,2
+narx,regressor_dimension,10
+narx,output_history,3
+narx,input_history,2
+narx,training_trajectories,150
+narx,test_trajectories,30
+narx,calibration_trajectories,20
+narx,calibration_horizon,280
+narx,closed_loop_horizon,280
+narx,measurement_noise_std,0.012
+narx,forward_rmse,0.004433558939308465
+narx,inverse_rmse_algebraic,0.005400730754209922
+narx,inverse_rmse_direct,0.011198717940985996
+narx,inverse_rmse_linear,0.01095187354644552
+narx,learned_model_cycle_rmse,3.0016542144364315e-08
+narx,inverse_contraction_inf,0.6367357969284058
+narx,mean_iterations,4.960302829742432
+narx,p95_iterations,5.0
+narx,D_u_hat/0/0,0.8509554862976074
+narx,D_u_hat/0/1,0.057233523577451706
+narx,D_u_hat/1/0,0.0518583282828331
+narx,D_u_hat/1/1,0.7890384197235107
+narx,E_chi/0/0,0.004
+narx,E_chi/0/1,0.002
+narx,E_chi/0/2,0.002
+narx,E_chi/0/3,0.001
+narx,E_chi/0/4,0.001
+narx,E_chi/0/5,0.001
+narx,E_chi/0/6,0.001
+narx,E_chi/0/7,0.0005
+narx,E_chi/0/8,0.0005
+narx,E_chi/0/9,0.0005
+narx,E_chi/1/0,0.002
+narx,E_chi/1/1,0.004
+narx,E_chi/1/2,0.001
+narx,E_chi/1/3,0.002
+narx,E_chi/1/4,0.001
+narx,E_chi/1/5,0.001
+narx,E_chi/1/6,0.0005
+narx,E_chi/1/7,0.001
+narx,E_chi/1/8,0.0005
+narx,E_chi/1/9,0.0005
+narx,E_u/0/0,0.004
+narx,E_u/0/1,0.0015
+narx,E_u/1/0,0.001
+narx,E_u/1/1,0.004
+narx,F/0/0,0.1
+narx,F/0/1,0.0
+narx,F/1/0,0.0
+narx,F/1/1,0.1
+narx,conformal/d_bar/0,0.05509202554821968
+narx,conformal/d_bar/1,0.051098644733428955
+narx,conformal/sigma/0,0.03999258577823639
+narx,conformal/sigma/1,0.03709369897842407
+narx,conformal/quantile_score,1.3775559663772583
+narx,conformal/coverage_guarantee,0.9523809523809523
+narx,conformal/per_sample_q999_box/0,0.046589963138103485
+narx,conformal/per_sample_q999_box/1,0.04600239545106888
+narx,conformal_empirical_coverage_test_trajectories,0.9666666666666667
+narx,d_bar_total/0,0.06844778858254551
+narx,d_bar_total/1,0.06377625159728996
+narx,S_chi/0/0,0.6359178454590343
+narx,S_chi/0/1,0.12663747471933615
+narx,S_chi/0/2,0.09437135400942553
+narx,S_chi/0/3,0.09231428041711615
+narx,S_chi/0/4,0.06789797555433438
+narx,S_chi/0/5,0.06821090478407162
+narx,S_chi/0/6,0.0846097009210855
+narx,S_chi/0/7,0.06244653967322525
+narx,S_chi/0/8,0.23321550002661945
+narx,S_chi/0/9,0.06301081307850778
+narx,S_chi/1/0,0.048398883557402364
+narx,S_chi/1/1,0.5347763840236931
+narx,S_chi/1/2,0.09613238194105735
+narx,S_chi/1/3,0.12912613847596496
+narx,S_chi/1/4,0.05073631242270481
+narx,S_chi/1/5,0.07471883800942564
+narx,S_chi/1/6,0.13713824633876548
+narx,S_chi/1/7,0.16302413287835196
+narx,S_chi/1/8,0.1016743786059249
+narx,S_chi/1/9,0.1921274812908381
+narx,S_y/0/0,1.2690730002686932
+narx,S_y/0/1,0.10453322315157816
+narx,S_y/1/0,0.13776456105826204
+narx,S_y/1/1,1.3404260101378886
+narx,L_u/0/0,0.7628251454859036
+narx,L_u/0/1,0.13709079703449395
+narx,L_u/0/2,0.09437135400942553
+narx,L_u/0/3,0.09231428041711615
+narx,L_u/0/4,0.06789797555433438
+narx,L_u/0/5,0.06821090478407162
+narx,L_u/0/6,0.0846097009210855
+narx,L_u/0/7,0.06244653967322525
+narx,L_u/0/8,0.23321550002661945
+narx,L_u/0/9,0.06301081307850778
+narx,L_u/1/0,0.062175339663228565
+narx,L_u/1/1,0.6688189850374819
+narx,L_u/1/2,0.09613238194105735
+narx,L_u/1/3,0.12912613847596496
+narx,L_u/1/4,0.05073631242270481
+narx,L_u/1/5,0.07471883800942564
+narx,L_u/1/6,0.13713824633876548
+narx,L_u/1/7,0.16302413287835196
+narx,L_u/1/8,0.1016743786059249
+narx,L_u/1/9,0.1921274812908381
+narx,H/0/0,0.10714456359143847
+narx,H/0/1,0.0035515916656941988
+narx,H/0/2,0.002521683988949288
+narx,H/0/3,0.001562946329382412
+narx,H/0/4,0.0013476963708513947
+narx,H/0/5,0.001384921876150425
+narx,H/0/6,0.0015441461731924902
+narx,H/0/7,0.000994322358010429
+narx,H/0/8,0.0015853735680153652
+narx,H/0/9,0.0010402344742502883
+narx,H/1/0,0.003011526504138818
+narx,H/1/1,0.10681236673718443
+narx,H/1/2,0.001478900881773655
+narx,H/1/3,0.002608818834320976
+narx,H/1/4,0.0012708432252451537
+narx,H/1/5,0.0013670862568217741
+narx,H/1/6,0.0011331626862761475
+narx,H/1/7,0.0017145430711866332
+narx,H/1/8,0.0011399130144503192
+narx,H/1/9,0.00133152073824186
+narx,H/2/0,1.0
+narx,H/2/1,0.0
+narx,H/2/2,0.0
+narx,H/2/3,0.0
+narx,H/2/4,0.0
+narx,H/2/5,0.0
+narx,H/2/6,0.0
+narx,H/2/7,0.0
+narx,H/2/8,0.0
+narx,H/2/9,0.0
+narx,H/3/0,0.0
+narx,H/3/1,1.0
+narx,H/3/2,0.0
+narx,H/3/3,0.0
+narx,H/3/4,0.0
+narx,H/3/5,0.0
+narx,H/3/6,0.0
+narx,H/3/7,0.0
+narx,H/3/8,0.0
+narx,H/3/9,0.0
+narx,H/4/0,0.0
+narx,H/4/1,0.0
+narx,H/4/2,1.0
+narx,H/4/3,0.0
+narx,H/4/4,0.0
+narx,H/4/5,0.0
+narx,H/4/6,0.0
+narx,H/4/7,0.0
+narx,H/4/8,0.0
+narx,H/4/9,0.0
+narx,H/5/0,0.0
+narx,H/5/1,0.0
+narx,H/5/2,0.0
+narx,H/5/3,1.0
+narx,H/5/4,0.0
+narx,H/5/5,0.0
+narx,H/5/6,0.0
+narx,H/5/7,0.0
+narx,H/5/8,0.0
+narx,H/5/9,0.0
+narx,H/6/0,0.7628251454859036
+narx,H/6/1,0.13709079703449395
+narx,H/6/2,0.09437135400942553
+narx,H/6/3,0.09231428041711615
+narx,H/6/4,0.06789797555433438
+narx,H/6/5,0.06821090478407162
+narx,H/6/6,0.0846097009210855
+narx,H/6/7,0.06244653967322525
+narx,H/6/8,0.23321550002661945
+narx,H/6/9,0.06301081307850778
+narx,H/7/0,0.062175339663228565
+narx,H/7/1,0.6688189850374819
+narx,H/7/2,0.09613238194105735
+narx,H/7/3,0.12912613847596496
+narx,H/7/4,0.05073631242270481
+narx,H/7/5,0.07471883800942564
+narx,H/7/6,0.13713824633876548
+narx,H/7/7,0.16302413287835196
+narx,H/7/8,0.1016743786059249
+narx,H/7/9,0.1921274812908381
+narx,H/8/0,0.0
+narx,H/8/1,0.0
+narx,H/8/2,0.0
+narx,H/8/3,0.0
+narx,H/8/4,0.0
+narx,H/8/5,0.0
+narx,H/8/6,1.0
+narx,H/8/7,0.0
+narx,H/8/8,0.0
+narx,H/8/9,0.0
+narx,H/9/0,0.0
+narx,H/9/1,0.0
+narx,H/9/2,0.0
+narx,H/9/3,0.0
+narx,H/9/4,0.0
+narx,H/9/5,0.0
+narx,H/9/6,0.0
+narx,H/9/7,1.0
+narx,H/9/8,0.0
+narx,H/9/9,0.0
+narx,rho_H,0.6706798304285071
+narx,rho_nominal_memory,0.660381725155756
+narx,rho_no_uncertainty,0.660381725155756
+narx,rho_signed_linear_zero_dynamics,0.5075486800079838
+narx,rho_majorant_linear_zero_dynamics,0.5948629620379418
+narx,output_tube/0,0.08202070056901768
+narx,output_tube/1,0.07676693557544895
+narx,input_deviation_tube/0,0.18104602709835507
+narx,input_deviation_tube/1,0.19752524200034866
+narx,slope_refinement/invariant_box_scale_t,1.9539662339728971
+narx,slope_refinement/fraction_neurons_reference_preactivation_crosses_zero,0.9791666666666666
+narx,slope_refinement/preactivation_abs_max,1.3324412107467651
+narx,slope_refinement/iterations/0/iteration,1
+narx,slope_refinement/iterations/0/rho_H,0.6706798304285071
+narx,slope_refinement/iterations/0/lam_mean,1.0
+narx,slope_refinement/iterations/0/lam_max,1.0
+narx,slope_refinement/iterations/0/lam_min,1.0
+narx,slope_refinement/lam/0,1.0
+narx,slope_refinement/lam/1,1.0
+narx,slope_refinement/lam/2,1.0
+narx,slope_refinement/lam/3,1.0
+narx,slope_refinement/lam/4,1.0
+narx,slope_refinement/lam/5,1.0
+narx,slope_refinement/lam/6,1.0
+narx,slope_refinement/lam/7,1.0
+narx,slope_refinement/lam/8,1.0
+narx,slope_refinement/lam/9,1.0
+narx,slope_refinement/lam/10,1.0
+narx,slope_refinement/lam/11,1.0
+narx,slope_refinement/lam/12,1.0
+narx,slope_refinement/lam/13,1.0
+narx,slope_refinement/lam/14,1.0
+narx,slope_refinement/lam/15,1.0
+narx,slope_refinement/lam/16,1.0
+narx,slope_refinement/lam/17,1.0
+narx,slope_refinement/lam/18,1.0
+narx,slope_refinement/lam/19,1.0
+narx,slope_refinement/lam/20,1.0
+narx,slope_refinement/lam/21,1.0
+narx,slope_refinement/lam/22,1.0
+narx,slope_refinement/lam/23,1.0
+narx,slope_refinement/lam/24,1.0
+narx,slope_refinement/lam/25,1.0
+narx,slope_refinement/lam/26,1.0
+narx,slope_refinement/lam/27,1.0
+narx,slope_refinement/lam/28,1.0
+narx,slope_refinement/lam/29,1.0
+narx,slope_refinement/lam/30,1.0
+narx,slope_refinement/lam/31,1.0
+narx,slope_refinement/lam/32,1.0
+narx,slope_refinement/lam/33,1.0
+narx,slope_refinement/lam/34,1.0
+narx,slope_refinement/lam/35,1.0
+narx,slope_refinement/lam/36,1.0
+narx,slope_refinement/lam/37,1.0
+narx,slope_refinement/lam/38,1.0
+narx,slope_refinement/lam/39,1.0
+narx,slope_refinement/lam/40,1.0
+narx,slope_refinement/lam/41,1.0
+narx,slope_refinement/lam/42,1.0
+narx,slope_refinement/lam/43,1.0
+narx,slope_refinement/lam/44,1.0
+narx,slope_refinement/lam/45,1.0
+narx,slope_refinement/lam/46,1.0
+narx,slope_refinement/lam/47,1.0
+narx,slope_refinement/lam_mean,1.0
+narx,slope_refinement/lam_max,1.0
+narx,slope_refinement/lam_min,1.0
+narx,slope_refinement/rho_H,0.6706798304285071
+narx,slope_refinement/rho_nominal_memory,0.660381725155756
+narx,slope_refinement/S_chi_inf,1.528632388642756
+narx,slope_refinement/output_tube/0,0.08202070056901768
+narx,slope_refinement/output_tube/1,0.07676693557544895
+narx,slope_refinement/input_deviation_tube/0,0.18104602709835507
+narx,slope_refinement/input_deviation_tube/1,0.19752524200034866
+narx,reference_input_max,0.5159569382667542
+narx,variants/main/forward_rmse,0.004433558939308465
+narx,variants/main/inverse_rmse_algebraic,0.005400730754209922
+narx,variants/main/learned_model_cycle_rmse,3.0016542144364315e-08
+narx,variants/main/inverse_contraction_inf,0.6367357969284058
+narx,variants/main/rho_absA,0.0
+narx,variants/main/rho_absAi,0.08207902429220779
+narx,variants/main/mean_iterations,4.960302829742432
+narx,variants/main/p95_iterations,5.0
+narx,variants/main/S_chi_inf,1.528632388642756
+narx,variants/main/rho_H,0.6706798304285071
+narx,variants/main/rho_nominal_memory,0.660381725155756
+narx,variants/main/conformal_box/0,0.05509202554821968
+narx,variants/main/conformal_box/1,0.051098644733428955
+narx,variants/main/y_tube/0,0.08202070056901768
+narx,variants/main/y_tube/1,0.07676693557544895
+narx,variants/main/u_tube/0,0.18104602709835507
+narx,variants/main/u_tube/1,0.19752524200034866
+narx,variants/main/closed_loop/rmse_mean,0.005764506431937189
+narx,variants/main/closed_loop/rmse_p95,0.006485711728816711
+narx,variants/main/closed_loop/max_error_mean,0.02134608200820741
+narx,variants/main/closed_loop/max_error_p95,0.02701584896700982
+narx,variants/main/closed_loop/rms_input_mean,0.24390648853774274
+narx,variants/main/closed_loop/saturation_fraction_mean,0.0
+narx,variants/main/closed_loop/controller_time_per_step_ms,1.089574892843562
+narx,variants/main/closed_loop/closed_loop_iterations_mean,4.059315476190476
+narx,variants/main/closed_loop/closed_loop_iterations_p95,5.0
+narx,variants/main/closed_loop/closed_loop_iterations_max,5.0
+narx,variants/main/closed_loop/hidden_evaluations_mean,4.059315476190476
+narx,variants/main/closed_loop/tube_plain_output_tube_exceedance_fraction_after_burn,0.0
+narx,variants/main/closed_loop/tube_plain_input_tube_exceedance_fraction_after_burn,0.0
+narx,variants/main/closed_loop/tube_plain_output_tube_max_ratio_after_burn,0.7214047156896776
+narx,variants/main/closed_loop/tube_plain_input_tube_max_ratio_after_burn,0.14696905487153444
+narx,variants/main/closed_loop/tube_slope_output_tube_exceedance_fraction_after_burn,0.0
+narx,variants/main/closed_loop/tube_slope_input_tube_exceedance_fraction_after_burn,0.0
+narx,variants/main/closed_loop/tube_slope_output_tube_max_ratio_after_burn,0.7214047156896776
+narx,variants/main/closed_loop/tube_slope_input_tube_max_ratio_after_burn,0.14696905487153444
+narx,variants/control-affine (B_u=0)/forward_rmse,0.005994018885244888
+narx,variants/control-affine (B_u=0)/inverse_rmse_algebraic,0.0072674223114854095
+narx,variants/control-affine (B_u=0)/learned_model_cycle_rmse,4.4285960853224954e-08
+narx,variants/control-affine (B_u=0)/inverse_contraction_inf,0.0
+narx,variants/control-affine (B_u=0)/rho_absA,0.0
+narx,variants/control-affine (B_u=0)/rho_absAi,0.0
+narx,variants/control-affine (B_u=0)/mean_iterations,2.0
+narx,variants/control-affine (B_u=0)/p95_iterations,2.0
+narx,variants/control-affine (B_u=0)/S_chi_inf,7.451609067812142
+narx,variants/control-affine (B_u=0)/rho_H,2.1609347655579625
+narx,variants/control-affine (B_u=0)/rho_nominal_memory,2.1460569697925562
+narx,variants/control-affine (B_u=0)/conformal_box/0,0.060480594635009766
+narx,variants/control-affine (B_u=0)/conformal_box/1,0.056358952075242996
+narx,variants/control-affine (B_u=0)/y_tube/0,
+narx,variants/control-affine (B_u=0)/y_tube/1,
+narx,variants/control-affine (B_u=0)/u_tube/0,
+narx,variants/control-affine (B_u=0)/u_tube/1,
+narx,variants/control-affine (B_u=0)/closed_loop/rmse_mean,0.005789993924558158
+narx,variants/control-affine (B_u=0)/closed_loop/rmse_p95,0.007018164272790228
+narx,variants/control-affine (B_u=0)/closed_loop/max_error_mean,0.02352170519398332
+narx,variants/control-affine (B_u=0)/closed_loop/max_error_p95,0.038504150435274345
+narx,variants/control-affine (B_u=0)/closed_loop/rms_input_mean,0.24504121929068765
+narx,variants/control-affine (B_u=0)/closed_loop/saturation_fraction_mean,0.0
+narx,variants/control-affine (B_u=0)/closed_loop/controller_time_per_step_ms,0.6530404571484334
+narx,variants/control-affine (B_u=0)/closed_loop/closed_loop_iterations_mean,2.0
+narx,variants/control-affine (B_u=0)/closed_loop/closed_loop_iterations_p95,2.0
+narx,variants/control-affine (B_u=0)/closed_loop/closed_loop_iterations_max,2.0
+narx,variants/control-affine (B_u=0)/closed_loop/hidden_evaluations_mean,2.0
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/0,0.0071490009145719095
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/1,0.005541526704523759
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/2,0.0058603945715750266
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/3,0.005529927075431858
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/4,0.006320252454687316
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/5,0.005350957001989879
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/6,0.005841002489841967
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/7,0.005341587313441533
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/8,0.00632437980723873
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/9,0.0060890031133166945
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/10,0.005742166398051973
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/11,0.005305924598833204
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/12,0.004992139771034287
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/13,0.0063182278775067765
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/14,0.005191819093114379
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/15,0.0055414507266594104
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/16,0.005715772165859926
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/17,0.006413608877669663
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/18,0.005637632003181785
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/19,0.006009664342839587
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/20,0.00541928381177031
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/21,0.006066544555675234
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/22,0.007047530248001751
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/23,0.0058659680464883115
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/24,0.005630125161501106
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/25,0.0055238891274137945
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/26,0.005625926801693016
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/27,0.006508822883368775
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/28,0.005358796443721672
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/29,0.005236952878671162
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/30,0.005501264550035004
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/31,0.006487295156299395
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/32,0.006086956660205268
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/33,0.005102759009123098
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/34,0.00610897555657396
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/35,0.006141383772505223
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/36,0.005511487205681302
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/37,0.00580008107530492
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/38,0.005872438914501425
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/39,0.005448630942856923
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/40,0.005089071092484468
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/41,0.006411119447819632
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/42,0.006178785575408129
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/43,0.006339826468623128
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/44,0.007166454987349636
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/45,0.005243277882466586
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/46,0.006266283261703979
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/47,0.006713575139501905
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/48,0.005548505622472524
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/49,0.005121535017788077
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/50,0.005516914440168
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/51,0.0062176326691871465
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/52,0.00622989542581083
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/53,0.005148339992281897
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/54,0.006931249672332368
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/55,0.005615321895475923
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/56,0.006022901951933434
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/57,0.005820937839393716
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/58,0.00558768832109786
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/59,0.005999236976603077
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/60,0.00699619655145127
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/61,0.006065943717947778
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/62,0.005106113205243464
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/63,0.006088370957084822
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/64,0.005516200399737271
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/65,0.005164053049655268
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/66,0.006059539940176075
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/67,0.005070373595820999
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/68,0.005309535159817866
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/69,0.005363594746960693
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/70,0.005878887292428472
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/71,0.005730504772850642
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/72,0.007267010567083378
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/73,0.005502470668708755
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/74,0.005557870355361862
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/75,0.006762642902784885
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/76,0.006346366096792238
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/77,0.005421027582174631
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/78,0.005534100993655017
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/79,0.005631607206981229
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/80,0.005415289746846233
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/81,0.005486487419993216
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/82,0.005486654098795539
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/83,0.005375648744557834
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/84,0.007151458822289313
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/85,0.005200757383543098
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/86,0.006046353160124649
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/87,0.00548235347360483
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/88,0.0051362382431386095
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/89,0.006261508416254016
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/90,0.006449228340719009
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/91,0.004943647536123895
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/92,0.005240674924149709
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/93,0.005463072563043583
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/94,0.007433162250155802
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/95,0.004874945552652078
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/96,0.006132905663840556
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/97,0.005204768656406696
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/98,0.006534922548894673
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/99,0.005916963253910884
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/100,0.00604372258921282
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/101,0.005752308060348903
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/102,0.004836796953996374
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/103,0.005382525968290752
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/104,0.004906254408287906
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/105,0.005367924145698413
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/106,0.005024838425576351
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/107,0.006008880222979282
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/108,0.005558812779102353
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/109,0.005371428504202277
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/110,0.00597944341351306
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/111,0.0050790044216467494
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/112,0.005279848830114518
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/113,0.006896846586419433
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/114,0.005059527042629916
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/115,0.0070166186951475164
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/116,0.005771020613984194
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/117,0.005595086886151885
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/118,0.005462301361624605
+narx,variants/control-affine (B_u=0)/closed_loop_rmse_samples/119,0.005066526693627173
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/forward_rmse",0.008883531789094781
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/inverse_rmse_algebraic",0.01075271873470002
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/learned_model_cycle_rmse",4.206214611909809e-08
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/inverse_contraction_inf",0.0
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/rho_absA",0.0
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/rho_absAi",0.0
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/mean_iterations",2.0
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/p95_iterations",2.0
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/S_chi_inf",1.4282136839860926
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/rho_H",0.6381169806107643
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/rho_nominal_memory",0.6283309685512177
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/conformal_box/0",0.07614612579345703
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/conformal_box/1",0.0688396468758583
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/y_tube/0",0.0951374838219409
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/y_tube/1",0.08690625780747174
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/u_tube/0",0.18156258265488068
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/u_tube/1",0.18616076495997752
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop/rmse_mean",0.008130573976117727
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop/rmse_p95",0.008910020724674972
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop/max_error_mean",0.02777980274721262
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop/max_error_p95",0.03304208358537843
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop/rms_input_mean",0.24640369229955753
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop/saturation_fraction_mean",0.0
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop/controller_time_per_step_ms",0.634009325027104
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop/closed_loop_iterations_mean",2.0
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop/closed_loop_iterations_p95",2.0
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop/closed_loop_iterations_max",2.0
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop/hidden_evaluations_mean",2.0
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/0",0.00878533201052101
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/1",0.008349702225556917
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/2",0.00765123903993237
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/3",0.008250736457047306
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/4",0.0077330205705365765
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/5",0.007908078833006048
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/6",0.007409382401106133
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/7",0.007414212106388887
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/8",0.007732013998519215
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/9",0.007900582586991228
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/10",0.008050866773297272
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/11",0.007574711359794873
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/12",0.007462223430722901
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/13",0.007730331921111147
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/14",0.00850159590688575
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/15",0.008970623073936507
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/16",0.008184921313066943
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/17",0.007707482565608124
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/18",0.007757395372607902
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/19",0.007208736761711177
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/20",0.008371426207011985
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/21",0.007762776840936938
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/22",0.008425669689872359
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/23",0.0068500151094096975
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/24",0.008337109562631404
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/25",0.008815827758107358
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/26",0.008306518246271436
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/27",0.008267962047644031
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/28",0.00800601916776803
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/29",0.007770808796767195
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/30",0.008654704265759731
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/31",0.008070697586656298
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/32",0.008457088462279917
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/33",0.008076417149161276
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/34",0.008723120918732561
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/35",0.007521483105086775
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/36",0.008116943801007838
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/37",0.008778506414114437
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/38",0.007012344688808982
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/39",0.008619441074677195
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/40",0.008229426817149364
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/41",0.007810173677622233
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/42",0.00851171320710046
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/43",0.007544690863444544
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/44",0.007044667716452943
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/45",0.008375171819529929
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/46",0.007331264222770752
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/47",0.008719459550423973
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/48",0.007946163287381344
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/49",0.008226695617496874
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/50",0.008320952550701428
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/51",0.008192563324908439
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/52",0.008439627095542161
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/53",0.007849813231424023
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/54",0.00836330644402208
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/55",0.008469598178981864
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/56",0.00815347071431338
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/57",0.008886007767072256
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/58",0.007754699006927454
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/59",0.007271088110759378
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/60",0.007493997166607236
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/61",0.00722194474040796
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/62",0.008272928073440598
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/63",0.007568951227191379
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/64",0.008875598933681318
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/65",0.008046034296116746
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/66",0.007882528982213281
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/67",0.008485135528807294
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/68",0.00884805591572559
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/69",0.008152638379956355
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/70",0.008883384096796218
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/71",0.007451445342620943
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/72",0.00892289440281053
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/73",0.007783796688109262
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/74",0.008874422156227744
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/75",0.008941529790914978
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/76",0.008626103864134144
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/77",0.008578253522093118
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/78",0.00769690375230581
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/79",0.008634328789989517
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/80",0.008784007193757503
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/81",0.008032016443047626
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/82",0.0074499160450667125
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/83",0.008724190180828656
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/84",0.008494565616431287
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/85",0.007805704512066833
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/86",0.007783116692819397
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/87",0.0071881105272827445
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/88",0.008243993033346712
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/89",0.0090172933080446
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/90",0.008505613621304519
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/91",0.008011773022737648
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/92",0.008367213894366345
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/93",0.00797259582574243
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/94",0.008874408060782305
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/95",0.007998337155052758
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/96",0.008211153583237525
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/97",0.007960175259428003
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/98",0.007888059738148481
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/99",0.00817694954411229
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/100",0.00905153498686219
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/101",0.007781577848336511
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/102",0.007627922003355153
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/103",0.008371888582345999
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/104",0.007783099344349882
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/105",0.00819483677437539
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/106",0.008070013119261777
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/107",0.007251098528687053
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/108",0.008732245116699115
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/109",0.007855307882359625
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/110",0.007574441367479742
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/111",0.00853997959361909
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/112",0.008065165917353576
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/113",0.009009890848413974
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/114",0.008472243651497392
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/115",0.008871861574276463
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/116",0.008122767505890072
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/117",0.008909343162667838
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/118",0.008308489735163372
+narx,"variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop_rmse_samples/119",0.007676477878299923
+narx,variants/lambda_s=0/forward_rmse,0.0033993370755581423
+narx,variants/lambda_s=0/inverse_rmse_algebraic,0.004141143524882753
+narx,variants/lambda_s=0/learned_model_cycle_rmse,4.01449140775603e-08
+narx,variants/lambda_s=0/inverse_contraction_inf,0.6050782799720764
+narx,variants/lambda_s=0/rho_absA,0.0
+narx,variants/lambda_s=0/rho_absAi,0.18290139960908017
+narx,variants/lambda_s=0/mean_iterations,4.898484706878662
+narx,variants/lambda_s=0/p95_iterations,5.0
+narx,variants/lambda_s=0/S_chi_inf,2.731621341556653
+narx,variants/lambda_s=0/rho_H,0.9791002904384842
+narx,variants/lambda_s=0/rho_nominal_memory,0.9683396888754014
+narx,variants/lambda_s=0/conformal_box/0,0.05570739135146141
+narx,variants/lambda_s=0/conformal_box/1,0.05121421813964844
+narx,variants/lambda_s=0/y_tube/0,0.10364842098476965
+narx,variants/lambda_s=0/y_tube/1,0.10065484859783105
+narx,variants/lambda_s=0/u_tube/0,3.319760443046915
+narx,variants/lambda_s=0/u_tube/1,4.4756932101671625
+narx,variants/lambda_s=0/closed_loop/rmse_mean,0.0053850285243458446
+narx,variants/lambda_s=0/closed_loop/rmse_p95,0.006184410102780399
+narx,variants/lambda_s=0/closed_loop/max_error_mean,0.02025586245825739
+narx,variants/lambda_s=0/closed_loop/max_error_p95,0.027001074277573058
+narx,variants/lambda_s=0/closed_loop/rms_input_mean,0.24369205761223872
+narx,variants/lambda_s=0/closed_loop/saturation_fraction_mean,0.0
+narx,variants/lambda_s=0/closed_loop/controller_time_per_step_ms,1.1275250178625487
+narx,variants/lambda_s=0/closed_loop/closed_loop_iterations_mean,4.120595238095238
+narx,variants/lambda_s=0/closed_loop/closed_loop_iterations_p95,5.0
+narx,variants/lambda_s=0/closed_loop/closed_loop_iterations_max,5.0
+narx,variants/lambda_s=0/closed_loop/hidden_evaluations_mean,4.120595238095238
+narx,variants/lambda_s=0/closed_loop_rmse_samples/0,0.006317687172967478
+narx,variants/lambda_s=0/closed_loop_rmse_samples/1,0.005684265381312649
+narx,variants/lambda_s=0/closed_loop_rmse_samples/2,0.005462705169158133
+narx,variants/lambda_s=0/closed_loop_rmse_samples/3,0.004967795647218044
+narx,variants/lambda_s=0/closed_loop_rmse_samples/4,0.005671020311110197
+narx,variants/lambda_s=0/closed_loop_rmse_samples/5,0.004857911851071548
+narx,variants/lambda_s=0/closed_loop_rmse_samples/6,0.005599500076985652
+narx,variants/lambda_s=0/closed_loop_rmse_samples/7,0.004988525719763644
+narx,variants/lambda_s=0/closed_loop_rmse_samples/8,0.0053548660560585664
+narx,variants/lambda_s=0/closed_loop_rmse_samples/9,0.005666196758391449
+narx,variants/lambda_s=0/closed_loop_rmse_samples/10,0.0050202824665357354
+narx,variants/lambda_s=0/closed_loop_rmse_samples/11,0.005515256713980389
+narx,variants/lambda_s=0/closed_loop_rmse_samples/12,0.0046212078663980215
+narx,variants/lambda_s=0/closed_loop_rmse_samples/13,0.005460787805710848
+narx,variants/lambda_s=0/closed_loop_rmse_samples/14,0.004917565448533696
+narx,variants/lambda_s=0/closed_loop_rmse_samples/15,0.005276427359777018
+narx,variants/lambda_s=0/closed_loop_rmse_samples/16,0.005275030549908603
+narx,variants/lambda_s=0/closed_loop_rmse_samples/17,0.005555339391197836
+narx,variants/lambda_s=0/closed_loop_rmse_samples/18,0.0055492805743990025
+narx,variants/lambda_s=0/closed_loop_rmse_samples/19,0.005665236502817775
+narx,variants/lambda_s=0/closed_loop_rmse_samples/20,0.0055838827144537575
+narx,variants/lambda_s=0/closed_loop_rmse_samples/21,0.0050376994708723356
+narx,variants/lambda_s=0/closed_loop_rmse_samples/22,0.006118756606936012
+narx,variants/lambda_s=0/closed_loop_rmse_samples/23,0.005525557782127821
+narx,variants/lambda_s=0/closed_loop_rmse_samples/24,0.005058577724284694
+narx,variants/lambda_s=0/closed_loop_rmse_samples/25,0.005745331789983765
+narx,variants/lambda_s=0/closed_loop_rmse_samples/26,0.005173673372721682
+narx,variants/lambda_s=0/closed_loop_rmse_samples/27,0.005598545860342972
+narx,variants/lambda_s=0/closed_loop_rmse_samples/28,0.005109437098645944
+narx,variants/lambda_s=0/closed_loop_rmse_samples/29,0.0050871859453058875
+narx,variants/lambda_s=0/closed_loop_rmse_samples/30,0.005560977460078062
+narx,variants/lambda_s=0/closed_loop_rmse_samples/31,0.0055206130992997895
+narx,variants/lambda_s=0/closed_loop_rmse_samples/32,0.005247249506674149
+narx,variants/lambda_s=0/closed_loop_rmse_samples/33,0.004899560700699319
+narx,variants/lambda_s=0/closed_loop_rmse_samples/34,0.005361979382375191
+narx,variants/lambda_s=0/closed_loop_rmse_samples/35,0.005502668646699993
+narx,variants/lambda_s=0/closed_loop_rmse_samples/36,0.005166782764997253
+narx,variants/lambda_s=0/closed_loop_rmse_samples/37,0.005306403545547078
+narx,variants/lambda_s=0/closed_loop_rmse_samples/38,0.005726122955188223
+narx,variants/lambda_s=0/closed_loop_rmse_samples/39,0.005635362972332281
+narx,variants/lambda_s=0/closed_loop_rmse_samples/40,0.004902331742619409
+narx,variants/lambda_s=0/closed_loop_rmse_samples/41,0.005670605963137153
+narx,variants/lambda_s=0/closed_loop_rmse_samples/42,0.006147329834999191
+narx,variants/lambda_s=0/closed_loop_rmse_samples/43,0.005510824072616974
+narx,variants/lambda_s=0/closed_loop_rmse_samples/44,0.006288444120562761
+narx,variants/lambda_s=0/closed_loop_rmse_samples/45,0.0053923822002747476
+narx,variants/lambda_s=0/closed_loop_rmse_samples/46,0.0054563308096256605
+narx,variants/lambda_s=0/closed_loop_rmse_samples/47,0.005970875726638182
+narx,variants/lambda_s=0/closed_loop_rmse_samples/48,0.004833539808845849
+narx,variants/lambda_s=0/closed_loop_rmse_samples/49,0.004729572912953511
+narx,variants/lambda_s=0/closed_loop_rmse_samples/50,0.005629869545211392
+narx,variants/lambda_s=0/closed_loop_rmse_samples/51,0.006183497813420861
+narx,variants/lambda_s=0/closed_loop_rmse_samples/52,0.005459037446280628
+narx,variants/lambda_s=0/closed_loop_rmse_samples/53,0.00497809993151779
+narx,variants/lambda_s=0/closed_loop_rmse_samples/54,0.006167960799628684
+narx,variants/lambda_s=0/closed_loop_rmse_samples/55,0.005063048879892893
+narx,variants/lambda_s=0/closed_loop_rmse_samples/56,0.005479062585812911
+narx,variants/lambda_s=0/closed_loop_rmse_samples/57,0.00513522195805514
+narx,variants/lambda_s=0/closed_loop_rmse_samples/58,0.005088723150098468
+narx,variants/lambda_s=0/closed_loop_rmse_samples/59,0.0056241148006407225
+narx,variants/lambda_s=0/closed_loop_rmse_samples/60,0.005888324967698639
+narx,variants/lambda_s=0/closed_loop_rmse_samples/61,0.00562656016605846
+narx,variants/lambda_s=0/closed_loop_rmse_samples/62,0.004775819871631904
+narx,variants/lambda_s=0/closed_loop_rmse_samples/63,0.005390990896429967
+narx,variants/lambda_s=0/closed_loop_rmse_samples/64,0.005465609183143545
+narx,variants/lambda_s=0/closed_loop_rmse_samples/65,0.004869752833417793
+narx,variants/lambda_s=0/closed_loop_rmse_samples/66,0.00544143052189873
+narx,variants/lambda_s=0/closed_loop_rmse_samples/67,0.004910169895190772
+narx,variants/lambda_s=0/closed_loop_rmse_samples/68,0.005377035206508898
+narx,variants/lambda_s=0/closed_loop_rmse_samples/69,0.005650896243204781
+narx,variants/lambda_s=0/closed_loop_rmse_samples/70,0.005644835534126281
+narx,variants/lambda_s=0/closed_loop_rmse_samples/71,0.005046665302419556
+narx,variants/lambda_s=0/closed_loop_rmse_samples/72,0.006324069512275612
+narx,variants/lambda_s=0/closed_loop_rmse_samples/73,0.005267915624011812
+narx,variants/lambda_s=0/closed_loop_rmse_samples/74,0.005367652237654878
+narx,variants/lambda_s=0/closed_loop_rmse_samples/75,0.005900941182434902
+narx,variants/lambda_s=0/closed_loop_rmse_samples/76,0.005722524500940352
+narx,variants/lambda_s=0/closed_loop_rmse_samples/77,0.005026568771775965
+narx,variants/lambda_s=0/closed_loop_rmse_samples/78,0.004943455378586833
+narx,variants/lambda_s=0/closed_loop_rmse_samples/79,0.005510118545851444
+narx,variants/lambda_s=0/closed_loop_rmse_samples/80,0.005156777749787621
+narx,variants/lambda_s=0/closed_loop_rmse_samples/81,0.00489177301595978
+narx,variants/lambda_s=0/closed_loop_rmse_samples/82,0.005433469665533044
+narx,variants/lambda_s=0/closed_loop_rmse_samples/83,0.005284595390210933
+narx,variants/lambda_s=0/closed_loop_rmse_samples/84,0.0061021093730216705
+narx,variants/lambda_s=0/closed_loop_rmse_samples/85,0.005152636847278173
+narx,variants/lambda_s=0/closed_loop_rmse_samples/86,0.005243259563018669
+narx,variants/lambda_s=0/closed_loop_rmse_samples/87,0.004968297354348018
+narx,variants/lambda_s=0/closed_loop_rmse_samples/88,0.004951308826051752
+narx,variants/lambda_s=0/closed_loop_rmse_samples/89,0.005829193226566717
+narx,variants/lambda_s=0/closed_loop_rmse_samples/90,0.006740349951379667
+narx,variants/lambda_s=0/closed_loop_rmse_samples/91,0.005080218873738676
+narx,variants/lambda_s=0/closed_loop_rmse_samples/92,0.004915639563062497
+narx,variants/lambda_s=0/closed_loop_rmse_samples/93,0.005424890481206744
+narx,variants/lambda_s=0/closed_loop_rmse_samples/94,0.006568686863769459
+narx,variants/lambda_s=0/closed_loop_rmse_samples/95,0.0048910291850960035
+narx,variants/lambda_s=0/closed_loop_rmse_samples/96,0.00620174360061164
+narx,variants/lambda_s=0/closed_loop_rmse_samples/97,0.005271363504617757
+narx,variants/lambda_s=0/closed_loop_rmse_samples/98,0.005760128523296141
+narx,variants/lambda_s=0/closed_loop_rmse_samples/99,0.005100785960636347
+narx,variants/lambda_s=0/closed_loop_rmse_samples/100,0.005464091193578856
+narx,variants/lambda_s=0/closed_loop_rmse_samples/101,0.005189077553861365
+narx,variants/lambda_s=0/closed_loop_rmse_samples/102,0.00458615095400989
+narx,variants/lambda_s=0/closed_loop_rmse_samples/103,0.005396367172750088
+narx,variants/lambda_s=0/closed_loop_rmse_samples/104,0.004552885353367616
+narx,variants/lambda_s=0/closed_loop_rmse_samples/105,0.004800866349946412
+narx,variants/lambda_s=0/closed_loop_rmse_samples/106,0.004880478524169879
+narx,variants/lambda_s=0/closed_loop_rmse_samples/107,0.005214041739101659
+narx,variants/lambda_s=0/closed_loop_rmse_samples/108,0.005143404746244903
+narx,variants/lambda_s=0/closed_loop_rmse_samples/109,0.004903087784051674
+narx,variants/lambda_s=0/closed_loop_rmse_samples/110,0.00543708670055312
+narx,variants/lambda_s=0/closed_loop_rmse_samples/111,0.00488201275201118
+narx,variants/lambda_s=0/closed_loop_rmse_samples/112,0.00554097571203799
+narx,variants/lambda_s=0/closed_loop_rmse_samples/113,0.006135302570373181
+narx,variants/lambda_s=0/closed_loop_rmse_samples/114,0.004814624125239477
+narx,variants/lambda_s=0/closed_loop_rmse_samples/115,0.006168468783657591
+narx,variants/lambda_s=0/closed_loop_rmse_samples/116,0.004954009591303139
+narx,variants/lambda_s=0/closed_loop_rmse_samples/117,0.005598581186931942
+narx,variants/lambda_s=0/closed_loop_rmse_samples/118,0.00519405052859245
+narx,variants/lambda_s=0/closed_loop_rmse_samples/119,0.005124133379571097
+narx,variants/lambda_s=1e-3/forward_rmse,0.005722721911875533
+narx,variants/lambda_s=1e-3/inverse_rmse_algebraic,0.006943600130343141
+narx,variants/lambda_s=1e-3/learned_model_cycle_rmse,3.466370454753358e-08
+narx,variants/lambda_s=1e-3/inverse_contraction_inf,0.629085898399353
+narx,variants/lambda_s=1e-3/rho_absA,0.0
+narx,variants/lambda_s=1e-3/rho_absAi,0.11812074147433503
+narx,variants/lambda_s=1e-3/mean_iterations,5.327878952026367
+narx,variants/lambda_s=1e-3/p95_iterations,6.0
+narx,variants/lambda_s=1e-3/S_chi_inf,1.394550468118127
+narx,variants/lambda_s=1e-3/rho_H,0.6350352934271511
+narx,variants/lambda_s=1e-3/rho_nominal_memory,0.6250965364083149
+narx,variants/lambda_s=1e-3/conformal_box/0,0.06468188762664795
+narx,variants/lambda_s=1e-3/conformal_box/1,0.056916721165180206
+narx,variants/lambda_s=1e-3/y_tube/0,0.08198469845877945
+narx,variants/lambda_s=1e-3/y_tube/1,0.07326363320146456
+narx,variants/lambda_s=1e-3/u_tube/0,0.15271307543649568
+narx,variants/lambda_s=1e-3/u_tube/1,0.1589601886808116
+narx,variants/lambda_s=1e-3/closed_loop/rmse_mean,0.005991069780050857
+narx,variants/lambda_s=1e-3/closed_loop/rmse_p95,0.006972606116545518
+narx,variants/lambda_s=1e-3/closed_loop/max_error_mean,0.022032630060294787
+narx,variants/lambda_s=1e-3/closed_loop/max_error_p95,0.027266737613505045
+narx,variants/lambda_s=1e-3/closed_loop/rms_input_mean,0.24432466691292537
+narx,variants/lambda_s=1e-3/closed_loop/saturation_fraction_mean,0.0
+narx,variants/lambda_s=1e-3/closed_loop/controller_time_per_step_ms,1.1108010000124782
+narx,variants/lambda_s=1e-3/closed_loop/closed_loop_iterations_mean,4.037708333333334
+narx,variants/lambda_s=1e-3/closed_loop/closed_loop_iterations_p95,5.0
+narx,variants/lambda_s=1e-3/closed_loop/closed_loop_iterations_max,5.0
+narx,variants/lambda_s=1e-3/closed_loop/hidden_evaluations_mean,4.037708333333334
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/0,0.007098661992592741
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/1,0.005921589369055561
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/2,0.006186914723084068
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/3,0.005724652742755262
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/4,0.00650601924187798
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/5,0.005530498583155352
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/6,0.006165800662073536
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/7,0.005628634460168533
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/8,0.006183630807093657
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/9,0.006328956094245999
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/10,0.006026184173619499
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/11,0.005964615149137814
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/12,0.005200306091737327
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/13,0.00635994287494694
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/14,0.005532231649229795
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/15,0.005704258998524618
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/16,0.006031991579731379
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/17,0.006453300048145973
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/18,0.005979566642438628
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/19,0.006188617618015588
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/20,0.0057886949117059005
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/21,0.005921447406223256
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/22,0.007128286489290025
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/23,0.006195750749501974
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/24,0.005992089814728904
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/25,0.0060400128543028056
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/26,0.0055623847419107655
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/27,0.006606360279079477
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/28,0.00580552840219856
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/29,0.005677664974519554
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/30,0.006064964029585981
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/31,0.006373019242099446
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/32,0.006118135443436757
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/33,0.005491864825559927
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/34,0.006226076018703525
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/35,0.006216348568526435
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/36,0.005745726745652008
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/37,0.006001027555245415
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/38,0.006041366922168715
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/39,0.005781650100847373
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/40,0.005283527365801179
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/41,0.006426787515310696
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/42,0.006242773918253118
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/43,0.006381117922970218
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/44,0.00683261885145823
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/45,0.005531930829984227
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/46,0.006255465867660935
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/47,0.006671865948261929
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/48,0.005651640775243002
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/49,0.005247093583512535
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/50,0.005637661597822434
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/51,0.006495452594117237
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/52,0.006366809718524992
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/53,0.00569428360146459
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/54,0.006825300693953098
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/55,0.005789925110569066
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/56,0.00621119325185153
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/57,0.005941349201067724
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/58,0.005861134041089702
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/59,0.006304207316644628
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/60,0.006658993520885783
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/61,0.006157131935273764
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/62,0.005437753288648641
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/63,0.006273431858350376
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/64,0.005689140217522122
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/65,0.0054044187090715205
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/66,0.006268307665107248
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/67,0.005599620240770621
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/68,0.005711599246899246
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/69,0.005711069129745111
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/70,0.005718467929941191
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/71,0.005826518934720777
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/72,0.0070600004242028485
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/73,0.005874457020277974
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/74,0.006058657341616286
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/75,0.006736161381763923
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/76,0.006599115447739047
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/77,0.005481791846827671
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/78,0.005816032644544847
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/79,0.005543635180840176
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/80,0.005628787620985865
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/81,0.00567295301048322
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/82,0.005911267515178969
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/83,0.005528768704524219
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/84,0.007027691129291664
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/85,0.005767754589272959
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/86,0.006042310936817533
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/87,0.005544439241322614
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/88,0.005335420006806092
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/89,0.006729850898871602
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/90,0.006715195367260414
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/91,0.005437059649044017
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/92,0.0055000939626699274
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/93,0.005683044224361723
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/94,0.007296409493321522
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/95,0.005448028356216579
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/96,0.006421529279340851
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/97,0.005418689538247478
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/98,0.006644425853796715
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/99,0.006011278985536761
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/100,0.006287482813517224
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/101,0.006155067307582785
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/102,0.005213106194247523
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/103,0.005526722843971685
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/104,0.0049602652377403345
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/105,0.0056299408569612935
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/106,0.005518772405265761
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/107,0.005888833744804608
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/108,0.005927002031343309
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/109,0.0057905210050001165
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/110,0.006037092966672285
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/111,0.0054037492627945155
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/112,0.005843686376140111
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/113,0.006969706905348353
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/114,0.00517079481622134
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/115,0.0070795884037844195
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/116,0.005852271675828283
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/117,0.0058006586827569154
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/118,0.005728719455933543
+narx,variants/lambda_s=1e-3/closed_loop_rmse_samples/119,0.005606175009610469
+narx,variants/implicit forward (A!=0)/forward_rmse,0.00433621672279407
+narx,variants/implicit forward (A!=0)/inverse_rmse_algebraic,0.005257569229875677
+narx,variants/implicit forward (A!=0)/learned_model_cycle_rmse,4.1732344117832053e-08
+narx,variants/implicit forward (A!=0)/inverse_contraction_inf,0.33056381344795227
+narx,variants/implicit forward (A!=0)/rho_absA,0.1079173365297296
+narx,variants/implicit forward (A!=0)/rho_absAi,0.09959380910384089
+narx,variants/implicit forward (A!=0)/mean_iterations,6.777272701263428
+narx,variants/implicit forward (A!=0)/p95_iterations,7.0
+narx,variants/implicit forward (A!=0)/S_chi_inf,1.4683493549079707
+narx,variants/implicit forward (A!=0)/rho_H,0.6506706860632854
+narx,variants/implicit forward (A!=0)/rho_nominal_memory,0.6404316319213753
+narx,variants/implicit forward (A!=0)/conformal_box/0,0.05581604689359665
+narx,variants/implicit forward (A!=0)/conformal_box/1,0.04996579885482788
+narx,variants/implicit forward (A!=0)/y_tube/0,0.07196489037611334
+narx,variants/implicit forward (A!=0)/y_tube/1,0.06539383769249753
+narx,variants/implicit forward (A!=0)/u_tube/0,0.14538275258988081
+narx,variants/implicit forward (A!=0)/u_tube/1,0.15494598706018345
+narx,variants/implicit forward (A!=0)/closed_loop/rmse_mean,0.005784463882173855
+narx,variants/implicit forward (A!=0)/closed_loop/rmse_p95,0.006589413660377666
+narx,variants/implicit forward (A!=0)/closed_loop/max_error_mean,0.021550655957601104
+narx,variants/implicit forward (A!=0)/closed_loop/max_error_p95,0.026949189033051105
+narx,variants/implicit forward (A!=0)/closed_loop/rms_input_mean,0.24370161304238055
+narx,variants/implicit forward (A!=0)/closed_loop/saturation_fraction_mean,0.0
+narx,variants/implicit forward (A!=0)/closed_loop/controller_time_per_step_ms,1.618122742866035
+narx,variants/implicit forward (A!=0)/closed_loop/closed_loop_iterations_mean,5.6570238095238095
+narx,variants/implicit forward (A!=0)/closed_loop/closed_loop_iterations_p95,6.0
+narx,variants/implicit forward (A!=0)/closed_loop/closed_loop_iterations_max,7.0
+narx,variants/implicit forward (A!=0)/closed_loop/hidden_evaluations_mean,5.6570238095238095
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/0,0.006789972161740671
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/1,0.005841176774637226
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/2,0.00565873240568819
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/3,0.005496153131541776
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/4,0.006197092490430126
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/5,0.005425887692105578
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/6,0.005780293030212807
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/7,0.005374167467053185
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/8,0.005679195754917903
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/9,0.006272170143352453
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/10,0.005527346083634819
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/11,0.0057879888924285494
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/12,0.005094452435120506
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/13,0.005854568766196024
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/14,0.005533682292453436
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/15,0.005803538955806413
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/16,0.0059414951364418975
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/17,0.005917414467058548
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/18,0.005597462568737045
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/19,0.005763893747071414
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/20,0.005815134452301644
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/21,0.005321383960782548
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/22,0.006524860601062652
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/23,0.005644036522787892
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/24,0.005668706856545278
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/25,0.006252434239487787
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/26,0.005701525934977934
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/27,0.006057076949781237
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/28,0.005786503208901367
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/29,0.0054880624295592095
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/30,0.005954832451585456
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/31,0.005882998747232431
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/32,0.005727832938513184
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/33,0.005379181952163368
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/34,0.006006424293664668
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/35,0.005718495431483731
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/36,0.005856733693342821
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/37,0.005989327545910337
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/38,0.005796665656684403
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/39,0.005987762747374266
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/40,0.005426566359408053
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/41,0.006088807336695839
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/42,0.006286685791727668
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/43,0.005796045691531023
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/44,0.006176439586221246
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/45,0.005651775497562397
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/46,0.005650638173591481
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/47,0.006495252133078683
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/48,0.005329534889371205
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/49,0.005269423475033492
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/50,0.005913698535462031
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/51,0.006107785495243163
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/52,0.006007803943469837
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/53,0.005387419811819988
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/54,0.006586490981623191
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/55,0.005674762493010333
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/56,0.0060341931803475435
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/57,0.005742515034406048
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/58,0.005330040980393919
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/59,0.005786542851879873
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/60,0.005938399059431872
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/61,0.005667383998016195
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/62,0.005310375016818099
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/63,0.005817935396789749
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/64,0.005914014492064787
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/65,0.005250574902673416
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/66,0.005934235222337941
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/67,0.00557361280135145
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/68,0.005895314543042749
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/69,0.005867239922338433
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/70,0.006062389510492667
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/71,0.005464905168016014
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/72,0.006775024737602088
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/73,0.005581823235482938
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/74,0.006088607488678063
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/75,0.0063626255935571125
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/76,0.006304956496734933
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/77,0.0056166347562209675
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/78,0.005397079087091985
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/79,0.005793367719043035
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/80,0.005730787338916021
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/81,0.005398442699696845
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/82,0.005626940491400702
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/83,0.005791551598433503
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/84,0.006469134567089883
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/85,0.005490517765004655
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/86,0.005575131188086244
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/87,0.005123434981575978
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/88,0.005326861658132454
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/89,0.00643438496896142
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/90,0.0066456132404100025
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/91,0.005502039957457788
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/92,0.005572037007801907
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/93,0.0056127498933824195
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/94,0.007003569645771969
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/95,0.0054347722904037055
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/96,0.0062268292818301475
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/97,0.00570012866129097
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/98,0.0061877587341176744
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/99,0.0055902778934592365
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/100,0.006111737426825713
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/101,0.005580296341147176
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/102,0.00502592181497533
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/103,0.005676481339579292
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/104,0.004915781096482259
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/105,0.0053721139133062435
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/106,0.00541565899717658
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/107,0.005381579330472988
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/108,0.0057617083574221005
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/109,0.00543286653592006
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/110,0.005463413837054227
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/111,0.0055118019712678155
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/112,0.0058850574202443185
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/113,0.006644944556712698
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/114,0.005327973887578583
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/115,0.006650316499741993
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/116,0.00545808993170693
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/117,0.005827862968645813
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/118,0.005512508709008637
+narx,variants/implicit forward (A!=0)/closed_loop_rmse_samples/119,0.005481000661938007
+narx,variants/implicit forward (A!=0)/closed_loop_newton/rmse_mean,0.0057844648059138404
+narx,variants/implicit forward (A!=0)/closed_loop_newton/rmse_p95,0.00658941254511166
+narx,variants/implicit forward (A!=0)/closed_loop_newton/max_error_mean,0.021550651814617676
+narx,variants/implicit forward (A!=0)/closed_loop_newton/max_error_p95,0.026949175157183983
+narx,variants/implicit forward (A!=0)/closed_loop_newton/rms_input_mean,0.24370160681485747
+narx,variants/implicit forward (A!=0)/closed_loop_newton/saturation_fraction_mean,0.0
+narx,variants/implicit forward (A!=0)/closed_loop_newton/controller_time_per_step_ms,31.24281551786063
+narx,variants/implicit forward (A!=0)/closed_loop_newton/closed_loop_iterations_mean,1.8951785714285714
+narx,variants/implicit forward (A!=0)/closed_loop_newton/closed_loop_iterations_p95,2.0
+narx,variants/implicit forward (A!=0)/closed_loop_newton/closed_loop_iterations_max,2.0
+narx,variants/implicit forward (A!=0)/closed_loop_newton/hidden_evaluations_mean,348.2890476190476
+narx,envelope_violation/scale_1.5/rmse_mean,0.006251142591601412
+narx,envelope_violation/scale_1.5/rmse_p95,0.007391550964403006
+narx,envelope_violation/scale_1.5/max_error_mean,0.022668927051208283
+narx,envelope_violation/scale_1.5/max_error_p95,0.027461070170292323
+narx,envelope_violation/scale_1.5/rms_input_mean,0.2439149309061007
+narx,envelope_violation/scale_1.5/saturation_fraction_mean,0.0
+narx,envelope_violation/scale_1.5/controller_time_per_step_ms,1.1017829999949365
+narx,envelope_violation/scale_1.5/closed_loop_iterations_mean,4.058630952380953
+narx,envelope_violation/scale_1.5/closed_loop_iterations_p95,5.0
+narx,envelope_violation/scale_1.5/closed_loop_iterations_max,5.0
+narx,envelope_violation/scale_1.5/hidden_evaluations_mean,4.058630952380953
+narx,envelope_violation/scale_1.5/output_tube_exceedance_fraction_after_burn,0.0
+narx,envelope_violation/scale_1.5/input_tube_exceedance_fraction_after_burn,0.0
+narx,envelope_violation/scale_1.5/output_tube_max_ratio_after_burn,0.748340200266339
+narx,envelope_violation/scale_1.5/input_tube_max_ratio_after_burn,0.15760572767437805
+narx,envelope_violation/scale_2.0/rmse_mean,0.006857478519430834
+narx,envelope_violation/scale_2.0/rmse_p95,0.008593013799930696
+narx,envelope_violation/scale_2.0/max_error_mean,0.02376137610587354
+narx,envelope_violation/scale_2.0/max_error_p95,0.02872920075803458
+narx,envelope_violation/scale_2.0/rms_input_mean,0.2439196701463774
+narx,envelope_violation/scale_2.0/saturation_fraction_mean,0.0
+narx,envelope_violation/scale_2.0/controller_time_per_step_ms,1.1002504571381775
+narx,envelope_violation/scale_2.0/closed_loop_iterations_mean,4.059047619047619
+narx,envelope_violation/scale_2.0/closed_loop_iterations_p95,5.0
+narx,envelope_violation/scale_2.0/closed_loop_iterations_max,5.0
+narx,envelope_violation/scale_2.0/hidden_evaluations_mean,4.059047619047619
+narx,envelope_violation/scale_2.0/output_tube_exceedance_fraction_after_burn,0.0
+narx,envelope_violation/scale_2.0/input_tube_exceedance_fraction_after_burn,0.0
+narx,envelope_violation/scale_2.0/output_tube_max_ratio_after_burn,0.7698628197859179
+narx,envelope_violation/scale_2.0/input_tube_max_ratio_after_burn,0.16335133986643685
+narx,paired_rmse_differences/implicit minus online Newton/mean_difference,-6.877539753414457e-10
+narx,paired_rmse_differences/implicit minus online Newton/ci95_low,-1.1571430962946181e-09
+narx,paired_rmse_differences/implicit minus online Newton/ci95_high,-2.1542285714421716e-10
+narx,paired_rmse_differences/implicit minus online Newton/fraction_negative,0.6
+narx,paired_rmse_differences/implicit minus direct inverse/mean_difference,1.3173111187220603e-05
+narx,paired_rmse_differences/implicit minus direct inverse/ci95_low,-0.00015607700888764454
+narx,paired_rmse_differences/implicit minus direct inverse/ci95_high,0.00017761758010162099
+narx,paired_rmse_differences/implicit minus direct inverse/fraction_negative,0.4583333333333333
+narx,paired_rmse_differences/implicit minus linear ARX inverse/mean_difference,-0.0026845771804497533
+narx,paired_rmse_differences/implicit minus linear ARX inverse/ci95_low,-0.0027880067438923904
+narx,paired_rmse_differences/implicit minus linear ARX inverse/ci95_high,-0.002577766661581479
+narx,paired_rmse_differences/implicit minus linear ARX inverse/fraction_negative,1.0
+narx,paired_rmse_differences/implicit minus control-affine/mean_difference,-2.548749262096851e-05
+narx,paired_rmse_differences/implicit minus control-affine/ci95_low,-9.472214740076802e-05
+narx,paired_rmse_differences/implicit minus control-affine/ci95_high,4.4109341694779134e-05
+narx,paired_rmse_differences/implicit minus control-affine/fraction_negative,0.48333333333333334
+narx,monte_carlo/implicit inverse/rmse_mean,0.005764506431937189
+narx,monte_carlo/implicit inverse/rmse_p95,0.006485711728816711
+narx,monte_carlo/implicit inverse/max_error_mean,0.02134608200820741
+narx,monte_carlo/implicit inverse/max_error_p95,0.02701584896700982
+narx,monte_carlo/implicit inverse/rms_input_mean,0.24390648853774274
+narx,monte_carlo/implicit inverse/saturation_fraction_mean,0.0
+narx,monte_carlo/implicit inverse/controller_time_per_step_ms,1.089574892843562
+narx,monte_carlo/implicit inverse/rmse_samples/0,0.006621291686670432
+narx,monte_carlo/implicit inverse/rmse_samples/1,0.006014063410191101
+narx,monte_carlo/implicit inverse/rmse_samples/2,0.0058297003925904586
+narx,monte_carlo/implicit inverse/rmse_samples/3,0.0054386436025275165
+narx,monte_carlo/implicit inverse/rmse_samples/4,0.006089015325202741
+narx,monte_carlo/implicit inverse/rmse_samples/5,0.005277057666595988
+narx,monte_carlo/implicit inverse/rmse_samples/6,0.005925458861266338
+narx,monte_carlo/implicit inverse/rmse_samples/7,0.005419023504247475
+narx,monte_carlo/implicit inverse/rmse_samples/8,0.0056558205962922966
+narx,monte_carlo/implicit inverse/rmse_samples/9,0.006106988895120026
+narx,monte_carlo/implicit inverse/rmse_samples/10,0.0054569658152644465
+narx,monte_carlo/implicit inverse/rmse_samples/11,0.005903663591737213
+narx,monte_carlo/implicit inverse/rmse_samples/12,0.005053973469775355
+narx,monte_carlo/implicit inverse/rmse_samples/13,0.005774727976804372
+narx,monte_carlo/implicit inverse/rmse_samples/14,0.005469578723385039
+narx,monte_carlo/implicit inverse/rmse_samples/15,0.005740288378907389
+narx,monte_carlo/implicit inverse/rmse_samples/16,0.005806970034300339
+narx,monte_carlo/implicit inverse/rmse_samples/17,0.00586945880635625
+narx,monte_carlo/implicit inverse/rmse_samples/18,0.005827578424103124
+narx,monte_carlo/implicit inverse/rmse_samples/19,0.005937008875662763
+narx,monte_carlo/implicit inverse/rmse_samples/20,0.0058899054288679
+narx,monte_carlo/implicit inverse/rmse_samples/21,0.005271987885910896
+narx,monte_carlo/implicit inverse/rmse_samples/22,0.00649304446362548
+narx,monte_carlo/implicit inverse/rmse_samples/23,0.005765151206300869
+narx,monte_carlo/implicit inverse/rmse_samples/24,0.005614029923504903
+narx,monte_carlo/implicit inverse/rmse_samples/25,0.006231344704747934
+narx,monte_carlo/implicit inverse/rmse_samples/26,0.0056022194215902665
+narx,monte_carlo/implicit inverse/rmse_samples/27,0.006000240421143987
+narx,monte_carlo/implicit inverse/rmse_samples/28,0.005679930634778581
+narx,monte_carlo/implicit inverse/rmse_samples/29,0.005564647069395747
+narx,monte_carlo/implicit inverse/rmse_samples/30,0.006032220578144732
+narx,monte_carlo/implicit inverse/rmse_samples/31,0.0058411028186787705
+narx,monte_carlo/implicit inverse/rmse_samples/32,0.0056375751519201645
+narx,monte_carlo/implicit inverse/rmse_samples/33,0.005382666521499394
+narx,monte_carlo/implicit inverse/rmse_samples/34,0.005828438474580741
+narx,monte_carlo/implicit inverse/rmse_samples/35,0.005799121095422945
+narx,monte_carlo/implicit inverse/rmse_samples/36,0.005659956644786807
+narx,monte_carlo/implicit inverse/rmse_samples/37,0.005819680773787563
+narx,monte_carlo/implicit inverse/rmse_samples/38,0.005988059375590834
+narx,monte_carlo/implicit inverse/rmse_samples/39,0.005991407633922058
+narx,monte_carlo/implicit inverse/rmse_samples/40,0.0052989491136711106
+narx,monte_carlo/implicit inverse/rmse_samples/41,0.005985608161640049
+narx,monte_carlo/implicit inverse/rmse_samples/42,0.00638518900308298
+narx,monte_carlo/implicit inverse/rmse_samples/43,0.005827392049750196
+narx,monte_carlo/implicit inverse/rmse_samples/44,0.006322245339635493
+narx,monte_carlo/implicit inverse/rmse_samples/45,0.005724933699680136
+narx,monte_carlo/implicit inverse/rmse_samples/46,0.005732605803196694
+narx,monte_carlo/implicit inverse/rmse_samples/47,0.006221713959463715
+narx,monte_carlo/implicit inverse/rmse_samples/48,0.005226799724815035
+narx,monte_carlo/implicit inverse/rmse_samples/49,0.005133702993310627
+narx,monte_carlo/implicit inverse/rmse_samples/50,0.005961664830868359
+narx,monte_carlo/implicit inverse/rmse_samples/51,0.006364538584183195
+narx,monte_carlo/implicit inverse/rmse_samples/52,0.005916462953089881
+narx,monte_carlo/implicit inverse/rmse_samples/53,0.005439819213791795
+narx,monte_carlo/implicit inverse/rmse_samples/54,0.006362064342344819
+narx,monte_carlo/implicit inverse/rmse_samples/55,0.005508105767903033
+narx,monte_carlo/implicit inverse/rmse_samples/56,0.00589660120659428
+narx,monte_carlo/implicit inverse/rmse_samples/57,0.00557269437839554
+narx,monte_carlo/implicit inverse/rmse_samples/58,0.0054854882897204865
+narx,monte_carlo/implicit inverse/rmse_samples/59,0.00590296059606911
+narx,monte_carlo/implicit inverse/rmse_samples/60,0.006028368318562912
+narx,monte_carlo/implicit inverse/rmse_samples/61,0.005831604439372592
+narx,monte_carlo/implicit inverse/rmse_samples/62,0.005269215047010358
+narx,monte_carlo/implicit inverse/rmse_samples/63,0.005797590659213158
+narx,monte_carlo/implicit inverse/rmse_samples/64,0.005862082751328604
+narx,monte_carlo/implicit inverse/rmse_samples/65,0.005310460666058279
+narx,monte_carlo/implicit inverse/rmse_samples/66,0.005858292354826252
+narx,monte_carlo/implicit inverse/rmse_samples/67,0.0054658222488727665
+narx,monte_carlo/implicit inverse/rmse_samples/68,0.005808075997524386
+narx,monte_carlo/implicit inverse/rmse_samples/69,0.005960353308154072
+narx,monte_carlo/implicit inverse/rmse_samples/70,0.005905383827771126
+narx,monte_carlo/implicit inverse/rmse_samples/71,0.005452582676586494
+narx,monte_carlo/implicit inverse/rmse_samples/72,0.006536649644947563
+narx,monte_carlo/implicit inverse/rmse_samples/73,0.0057139842806674165
+narx,monte_carlo/implicit inverse/rmse_samples/74,0.005964063526237104
+narx,monte_carlo/implicit inverse/rmse_samples/75,0.006187572989728861
+narx,monte_carlo/implicit inverse/rmse_samples/76,0.0061557426480995095
+narx,monte_carlo/implicit inverse/rmse_samples/77,0.005467609432821971
+narx,monte_carlo/implicit inverse/rmse_samples/78,0.005381901510107428
+narx,monte_carlo/implicit inverse/rmse_samples/79,0.005765423017133384
+narx,monte_carlo/implicit inverse/rmse_samples/80,0.005597421312833672
+narx,monte_carlo/implicit inverse/rmse_samples/81,0.005301564828371972
+narx,monte_carlo/implicit inverse/rmse_samples/82,0.0057733131735957805
+narx,monte_carlo/implicit inverse/rmse_samples/83,0.005701889143430975
+narx,monte_carlo/implicit inverse/rmse_samples/84,0.006377520955002099
+narx,monte_carlo/implicit inverse/rmse_samples/85,0.005629435735831866
+narx,monte_carlo/implicit inverse/rmse_samples/86,0.005588941582964248
+narx,monte_carlo/implicit inverse/rmse_samples/87,0.005237938870968322
+narx,monte_carlo/implicit inverse/rmse_samples/88,0.0053674476934449725
+narx,monte_carlo/implicit inverse/rmse_samples/89,0.0062433239901326905
+narx,monte_carlo/implicit inverse/rmse_samples/90,0.006895824453347728
+narx,monte_carlo/implicit inverse/rmse_samples/91,0.005523855394039554
+narx,monte_carlo/implicit inverse/rmse_samples/92,0.005438586861443005
+narx,monte_carlo/implicit inverse/rmse_samples/93,0.005746657349887559
+narx,monte_carlo/implicit inverse/rmse_samples/94,0.0067716878423232
+narx,monte_carlo/implicit inverse/rmse_samples/95,0.0053880439189360006
+narx,monte_carlo/implicit inverse/rmse_samples/96,0.006485325795405723
+narx,monte_carlo/implicit inverse/rmse_samples/97,0.0055905817731039574
+narx,monte_carlo/implicit inverse/rmse_samples/98,0.006073428722023205
+narx,monte_carlo/implicit inverse/rmse_samples/99,0.00547276692483795
+narx,monte_carlo/implicit inverse/rmse_samples/100,0.005931141022350467
+narx,monte_carlo/implicit inverse/rmse_samples/101,0.005634677678035472
+narx,monte_carlo/implicit inverse/rmse_samples/102,0.005057350644846681
+narx,monte_carlo/implicit inverse/rmse_samples/103,0.005732726874182811
+narx,monte_carlo/implicit inverse/rmse_samples/104,0.00490837291439382
+narx,monte_carlo/implicit inverse/rmse_samples/105,0.005253138941726575
+narx,monte_carlo/implicit inverse/rmse_samples/106,0.005413857554435132
+narx,monte_carlo/implicit inverse/rmse_samples/107,0.005468459047404187
+narx,monte_carlo/implicit inverse/rmse_samples/108,0.005671760059681476
+narx,monte_carlo/implicit inverse/rmse_samples/109,0.005416792356570702
+narx,monte_carlo/implicit inverse/rmse_samples/110,0.005663409909973571
+narx,monte_carlo/implicit inverse/rmse_samples/111,0.0053736774665096975
+narx,monte_carlo/implicit inverse/rmse_samples/112,0.005987364969935795
+narx,monte_carlo/implicit inverse/rmse_samples/113,0.006428163805388654
+narx,monte_carlo/implicit inverse/rmse_samples/114,0.00522215554031681
+narx,monte_carlo/implicit inverse/rmse_samples/115,0.006506754982734687
+narx,monte_carlo/implicit inverse/rmse_samples/116,0.005400624105371955
+narx,monte_carlo/implicit inverse/rmse_samples/117,0.005931469277294499
+narx,monte_carlo/implicit inverse/rmse_samples/118,0.005659776419643105
+narx,monte_carlo/implicit inverse/rmse_samples/119,0.005571214318310142
+narx,monte_carlo/implicit inverse/max_error_samples/0,0.02048483068908163
+narx,monte_carlo/implicit inverse/max_error_samples/1,0.018604368889448625
+narx,monte_carlo/implicit inverse/max_error_samples/2,0.021796703419121898
+narx,monte_carlo/implicit inverse/max_error_samples/3,0.022686307527555603
+narx,monte_carlo/implicit inverse/max_error_samples/4,0.03188652807291425
+narx,monte_carlo/implicit inverse/max_error_samples/5,0.02105582735551338
+narx,monte_carlo/implicit inverse/max_error_samples/6,0.020750722475749724
+narx,monte_carlo/implicit inverse/max_error_samples/7,0.02008819312692713
+narx,monte_carlo/implicit inverse/max_error_samples/8,0.01680101595147792
+narx,monte_carlo/implicit inverse/max_error_samples/9,0.02492448028005289
+narx,monte_carlo/implicit inverse/max_error_samples/10,0.021894196721282663
+narx,monte_carlo/implicit inverse/max_error_samples/11,0.027041714030380682
+narx,monte_carlo/implicit inverse/max_error_samples/12,0.018106954747420134
+narx,monte_carlo/implicit inverse/max_error_samples/13,0.020508623887817667
+narx,monte_carlo/implicit inverse/max_error_samples/14,0.02369272577525644
+narx,monte_carlo/implicit inverse/max_error_samples/15,0.023550206708957556
+narx,monte_carlo/implicit inverse/max_error_samples/16,0.019125276552984887
+narx,monte_carlo/implicit inverse/max_error_samples/17,0.024263776040689806
+narx,monte_carlo/implicit inverse/max_error_samples/18,0.02160541529456607
+narx,monte_carlo/implicit inverse/max_error_samples/19,0.021091076224289948
+narx,monte_carlo/implicit inverse/max_error_samples/20,0.02098839220420285
+narx,monte_carlo/implicit inverse/max_error_samples/21,0.020769357589663084
+narx,monte_carlo/implicit inverse/max_error_samples/22,0.02103529686391543
+narx,monte_carlo/implicit inverse/max_error_samples/23,0.01957529610930975
+narx,monte_carlo/implicit inverse/max_error_samples/24,0.022372484479032652
+narx,monte_carlo/implicit inverse/max_error_samples/25,0.02322959344685479
+narx,monte_carlo/implicit inverse/max_error_samples/26,0.019671516423382607
+narx,monte_carlo/implicit inverse/max_error_samples/27,0.024082345060809234
+narx,monte_carlo/implicit inverse/max_error_samples/28,0.021283383587334496
+narx,monte_carlo/implicit inverse/max_error_samples/29,0.019527005389228632
+narx,monte_carlo/implicit inverse/max_error_samples/30,0.01909201550732285
+narx,monte_carlo/implicit inverse/max_error_samples/31,0.01887107925281168
+narx,monte_carlo/implicit inverse/max_error_samples/32,0.022538033483433268
+narx,monte_carlo/implicit inverse/max_error_samples/33,0.01944228697004346
+narx,monte_carlo/implicit inverse/max_error_samples/34,0.017676643223989787
+narx,monte_carlo/implicit inverse/max_error_samples/35,0.023463816644216963
+narx,monte_carlo/implicit inverse/max_error_samples/36,0.02026118653593175
+narx,monte_carlo/implicit inverse/max_error_samples/37,0.02367382218667275
+narx,monte_carlo/implicit inverse/max_error_samples/38,0.023771596608967858
+narx,monte_carlo/implicit inverse/max_error_samples/39,0.030216214022030202
+narx,monte_carlo/implicit inverse/max_error_samples/40,0.0171434165851472
+narx,monte_carlo/implicit inverse/max_error_samples/41,0.022122505144141557
+narx,monte_carlo/implicit inverse/max_error_samples/42,0.019919972933721886
+narx,monte_carlo/implicit inverse/max_error_samples/43,0.023838849794989358
+narx,monte_carlo/implicit inverse/max_error_samples/44,0.020778841658929206
+narx,monte_carlo/implicit inverse/max_error_samples/45,0.018991572222735637
+narx,monte_carlo/implicit inverse/max_error_samples/46,0.024519380922306405
+narx,monte_carlo/implicit inverse/max_error_samples/47,0.0259371637251539
+narx,monte_carlo/implicit inverse/max_error_samples/48,0.019080710818943233
+narx,monte_carlo/implicit inverse/max_error_samples/49,0.022354807164100356
+narx,monte_carlo/implicit inverse/max_error_samples/50,0.020256232332322686
+narx,monte_carlo/implicit inverse/max_error_samples/51,0.022149500760548627
+narx,monte_carlo/implicit inverse/max_error_samples/52,0.02455061445880918
+narx,monte_carlo/implicit inverse/max_error_samples/53,0.017926964888869534
+narx,monte_carlo/implicit inverse/max_error_samples/54,0.019246673702626744
+narx,monte_carlo/implicit inverse/max_error_samples/55,0.019234975801598463
+narx,monte_carlo/implicit inverse/max_error_samples/56,0.025433676950155196
+narx,monte_carlo/implicit inverse/max_error_samples/57,0.020758256036526035
+narx,monte_carlo/implicit inverse/max_error_samples/58,0.027164418301546166
+narx,monte_carlo/implicit inverse/max_error_samples/59,0.02171186926692367
+narx,monte_carlo/implicit inverse/max_error_samples/60,0.02046616614360388
+narx,monte_carlo/implicit inverse/max_error_samples/61,0.020970261321663002
+narx,monte_carlo/implicit inverse/max_error_samples/62,0.016686843561850337
+narx,monte_carlo/implicit inverse/max_error_samples/63,0.024886507451328765
+narx,monte_carlo/implicit inverse/max_error_samples/64,0.02006981746890782
+narx,monte_carlo/implicit inverse/max_error_samples/65,0.020827363287548507
+narx,monte_carlo/implicit inverse/max_error_samples/66,0.021678446243099496
+narx,monte_carlo/implicit inverse/max_error_samples/67,0.022423642019845837
+narx,monte_carlo/implicit inverse/max_error_samples/68,0.026672706993941295
+narx,monte_carlo/implicit inverse/max_error_samples/69,0.017947006149698148
+narx,monte_carlo/implicit inverse/max_error_samples/70,0.0218644720598089
+narx,monte_carlo/implicit inverse/max_error_samples/71,0.01977350055389831
+narx,monte_carlo/implicit inverse/max_error_samples/72,0.0214851421981388
+narx,monte_carlo/implicit inverse/max_error_samples/73,0.02353698029470448
+narx,monte_carlo/implicit inverse/max_error_samples/74,0.034627438862496744
+narx,monte_carlo/implicit inverse/max_error_samples/75,0.02111463317803409
+narx,monte_carlo/implicit inverse/max_error_samples/76,0.021301989725950075
+narx,monte_carlo/implicit inverse/max_error_samples/77,0.01929120245055172
+narx,monte_carlo/implicit inverse/max_error_samples/78,0.021793935304572718
+narx,monte_carlo/implicit inverse/max_error_samples/79,0.021772569930960654
+narx,monte_carlo/implicit inverse/max_error_samples/80,0.020719862859551883
+narx,monte_carlo/implicit inverse/max_error_samples/81,0.02006761553881263
+narx,monte_carlo/implicit inverse/max_error_samples/82,0.019776175031065664
+narx,monte_carlo/implicit inverse/max_error_samples/83,0.021170479301306493
+narx,monte_carlo/implicit inverse/max_error_samples/84,0.02116994286798947
+narx,monte_carlo/implicit inverse/max_error_samples/85,0.021498430762019797
+narx,monte_carlo/implicit inverse/max_error_samples/86,0.021684010178355192
+narx,monte_carlo/implicit inverse/max_error_samples/87,0.017319245571777487
+narx,monte_carlo/implicit inverse/max_error_samples/88,0.019051721328951682
+narx,monte_carlo/implicit inverse/max_error_samples/89,0.021850742451991527
+narx,monte_carlo/implicit inverse/max_error_samples/90,0.020681667256584636
+narx,monte_carlo/implicit inverse/max_error_samples/91,0.021749599181124686
+narx,monte_carlo/implicit inverse/max_error_samples/92,0.019364688713470534
+narx,monte_carlo/implicit inverse/max_error_samples/93,0.018480365608604464
+narx,monte_carlo/implicit inverse/max_error_samples/94,0.022403848623895283
+narx,monte_carlo/implicit inverse/max_error_samples/95,0.022685038233660755
+narx,monte_carlo/implicit inverse/max_error_samples/96,0.02701448764788504
+narx,monte_carlo/implicit inverse/max_error_samples/97,0.018396980100631788
+narx,monte_carlo/implicit inverse/max_error_samples/98,0.019801836828747366
+narx,monte_carlo/implicit inverse/max_error_samples/99,0.017027933342064056
+narx,monte_carlo/implicit inverse/max_error_samples/100,0.020006433921872374
+narx,monte_carlo/implicit inverse/max_error_samples/101,0.022089560104986125
+narx,monte_carlo/implicit inverse/max_error_samples/102,0.017310347519727876
+narx,monte_carlo/implicit inverse/max_error_samples/103,0.018663915404489813
+narx,monte_carlo/implicit inverse/max_error_samples/104,0.017541801685919626
+narx,monte_carlo/implicit inverse/max_error_samples/105,0.019530748270495522
+narx,monte_carlo/implicit inverse/max_error_samples/106,0.017024804240691506
+narx,monte_carlo/implicit inverse/max_error_samples/107,0.020602759837469568
+narx,monte_carlo/implicit inverse/max_error_samples/108,0.019508503172051238
+narx,monte_carlo/implicit inverse/max_error_samples/109,0.027298735126994232
+narx,monte_carlo/implicit inverse/max_error_samples/110,0.019688933071914924
+narx,monte_carlo/implicit inverse/max_error_samples/111,0.022285936821092686
+narx,monte_carlo/implicit inverse/max_error_samples/112,0.01986465941767588
+narx,monte_carlo/implicit inverse/max_error_samples/113,0.02344333051979943
+narx,monte_carlo/implicit inverse/max_error_samples/114,0.017994876472787535
+narx,monte_carlo/implicit inverse/max_error_samples/115,0.020544306498514686
+narx,monte_carlo/implicit inverse/max_error_samples/116,0.02016975344251548
+narx,monte_carlo/implicit inverse/max_error_samples/117,0.020020153026726117
+narx,monte_carlo/implicit inverse/max_error_samples/118,0.02282372225130475
+narx,monte_carlo/implicit inverse/max_error_samples/119,0.019390550718027443
+narx,monte_carlo/implicit inverse/closed_loop_iterations_mean,4.059315476190476
+narx,monte_carlo/implicit inverse/closed_loop_iterations_p95,5.0
+narx,monte_carlo/implicit inverse/closed_loop_iterations_max,5.0
+narx,monte_carlo/implicit inverse/hidden_evaluations_mean,4.059315476190476
+narx,monte_carlo/implicit inverse/tube_plain_output_tube_exceedance_fraction_after_burn,0.0
+narx,monte_carlo/implicit inverse/tube_plain_input_tube_exceedance_fraction_after_burn,0.0
+narx,monte_carlo/implicit inverse/tube_plain_output_tube_max_ratio_after_burn,0.7214047156896776
+narx,monte_carlo/implicit inverse/tube_plain_input_tube_max_ratio_after_burn,0.14696905487153444
+narx,monte_carlo/implicit inverse/tube_slope_output_tube_exceedance_fraction_after_burn,0.0
+narx,monte_carlo/implicit inverse/tube_slope_input_tube_exceedance_fraction_after_burn,0.0
+narx,monte_carlo/implicit inverse/tube_slope_output_tube_max_ratio_after_burn,0.7214047156896776
+narx,monte_carlo/implicit inverse/tube_slope_input_tube_max_ratio_after_burn,0.14696905487153444
+narx,monte_carlo/online Newton/rmse_mean,0.005764507119691164
+narx,monte_carlo/online Newton/rmse_p95,0.006485712402821475
+narx,monte_carlo/online Newton/max_error_mean,0.021346083871715476
+narx,monte_carlo/online Newton/max_error_p95,0.02701586479521294
+narx,monte_carlo/online Newton/rms_input_mean,0.24390648193170097
+narx,monte_carlo/online Newton/saturation_fraction_mean,0.0
+narx,monte_carlo/online Newton/controller_time_per_step_ms,1.8719062357149596
+narx,monte_carlo/online Newton/rmse_samples/0,0.006621292882149741
+narx,monte_carlo/online Newton/rmse_samples/1,0.006014063556868807
+narx,monte_carlo/online Newton/rmse_samples/2,0.005829701649750154
+narx,monte_carlo/online Newton/rmse_samples/3,0.00543864801959898
+narx,monte_carlo/online Newton/rmse_samples/4,0.006089020829629327
+narx,monte_carlo/online Newton/rmse_samples/5,0.005277060456426302
+narx,monte_carlo/online Newton/rmse_samples/6,0.0059254600364110005
+narx,monte_carlo/online Newton/rmse_samples/7,0.0054190253563685216
+narx,monte_carlo/online Newton/rmse_samples/8,0.005655819638383531
+narx,monte_carlo/online Newton/rmse_samples/9,0.006106990483350846
+narx,monte_carlo/online Newton/rmse_samples/10,0.005456969656417326
+narx,monte_carlo/online Newton/rmse_samples/11,0.00590366253110821
+narx,monte_carlo/online Newton/rmse_samples/12,0.005053975533182938
+narx,monte_carlo/online Newton/rmse_samples/13,0.005774730868891665
+narx,monte_carlo/online Newton/rmse_samples/14,0.005469580228878208
+narx,monte_carlo/online Newton/rmse_samples/15,0.005740284761280819
+narx,monte_carlo/online Newton/rmse_samples/16,0.0058069721162470195
+narx,monte_carlo/online Newton/rmse_samples/17,0.0058694623599204
+narx,monte_carlo/online Newton/rmse_samples/18,0.005827578234605363
+narx,monte_carlo/online Newton/rmse_samples/19,0.005937011398890161
+narx,monte_carlo/online Newton/rmse_samples/20,0.005889908050323549
+narx,monte_carlo/online Newton/rmse_samples/21,0.0052719884356251575
+narx,monte_carlo/online Newton/rmse_samples/22,0.00649304692327424
+narx,monte_carlo/online Newton/rmse_samples/23,0.005765155199441455
+narx,monte_carlo/online Newton/rmse_samples/24,0.005614030108525512
+narx,monte_carlo/online Newton/rmse_samples/25,0.006231342416096127
+narx,monte_carlo/online Newton/rmse_samples/26,0.005602217213158165
+narx,monte_carlo/online Newton/rmse_samples/27,0.0060002416173226955
+narx,monte_carlo/online Newton/rmse_samples/28,0.0056799330648101025
+narx,monte_carlo/online Newton/rmse_samples/29,0.005564643290957638
+narx,monte_carlo/online Newton/rmse_samples/30,0.006032218182663747
+narx,monte_carlo/online Newton/rmse_samples/31,0.005841105089740205
+narx,monte_carlo/online Newton/rmse_samples/32,0.00563757757905275
+narx,monte_carlo/online Newton/rmse_samples/33,0.005382667994562327
+narx,monte_carlo/online Newton/rmse_samples/34,0.0058284374121088936
+narx,monte_carlo/online Newton/rmse_samples/35,0.005799124014982195
+narx,monte_carlo/online Newton/rmse_samples/36,0.005659961462178198
+narx,monte_carlo/online Newton/rmse_samples/37,0.005819680332888332
+narx,monte_carlo/online Newton/rmse_samples/38,0.0059880587566884585
+narx,monte_carlo/online Newton/rmse_samples/39,0.005991405640030826
+narx,monte_carlo/online Newton/rmse_samples/40,0.00529895074891816
+narx,monte_carlo/online Newton/rmse_samples/41,0.00598561284915985
+narx,monte_carlo/online Newton/rmse_samples/42,0.006385184539255417
+narx,monte_carlo/online Newton/rmse_samples/43,0.005827393828442204
+narx,monte_carlo/online Newton/rmse_samples/44,0.006322250554266796
+narx,monte_carlo/online Newton/rmse_samples/45,0.005724930653152928
+narx,monte_carlo/online Newton/rmse_samples/46,0.005732606136223631
+narx,monte_carlo/online Newton/rmse_samples/47,0.0062217176996674905
+narx,monte_carlo/online Newton/rmse_samples/48,0.005226802358635812
+narx,monte_carlo/online Newton/rmse_samples/49,0.005133703701125232
+narx,monte_carlo/online Newton/rmse_samples/50,0.005961663951628836
+narx,monte_carlo/online Newton/rmse_samples/51,0.0063645323037839555
+narx,monte_carlo/online Newton/rmse_samples/52,0.005916463040445977
+narx,monte_carlo/online Newton/rmse_samples/53,0.005439821200518464
+narx,monte_carlo/online Newton/rmse_samples/54,0.0063620664346648375
+narx,monte_carlo/online Newton/rmse_samples/55,0.005508106968854008
+narx,monte_carlo/online Newton/rmse_samples/56,0.005896603930117619
+narx,monte_carlo/online Newton/rmse_samples/57,0.005572692434384074
+narx,monte_carlo/online Newton/rmse_samples/58,0.0054854900270336635
+narx,monte_carlo/online Newton/rmse_samples/59,0.005902963042603385
+narx,monte_carlo/online Newton/rmse_samples/60,0.0060283722780480106
+narx,monte_carlo/online Newton/rmse_samples/61,0.005831606403792692
+narx,monte_carlo/online Newton/rmse_samples/62,0.00526921272570172
+narx,monte_carlo/online Newton/rmse_samples/63,0.0057975927737986795
+narx,monte_carlo/online Newton/rmse_samples/64,0.005862076744973822
+narx,monte_carlo/online Newton/rmse_samples/65,0.005310459307119331
+narx,monte_carlo/online Newton/rmse_samples/66,0.005858296973993905
+narx,monte_carlo/online Newton/rmse_samples/67,0.005465822245611806
+narx,monte_carlo/online Newton/rmse_samples/68,0.005808073120494408
+narx,monte_carlo/online Newton/rmse_samples/69,0.00596035212607378
+narx,monte_carlo/online Newton/rmse_samples/70,0.005905383304187992
+narx,monte_carlo/online Newton/rmse_samples/71,0.005452588224064079
+narx,monte_carlo/online Newton/rmse_samples/72,0.00653664965191768
+narx,monte_carlo/online Newton/rmse_samples/73,0.00571398684441917
+narx,monte_carlo/online Newton/rmse_samples/74,0.005964060645560677
+narx,monte_carlo/online Newton/rmse_samples/75,0.006187573922282594
+narx,monte_carlo/online Newton/rmse_samples/76,0.0061557446017487475
+narx,monte_carlo/online Newton/rmse_samples/77,0.005467608664649212
+narx,monte_carlo/online Newton/rmse_samples/78,0.005381903087871693
+narx,monte_carlo/online Newton/rmse_samples/79,0.005765421705746158
+narx,monte_carlo/online Newton/rmse_samples/80,0.0055974226609104534
+narx,monte_carlo/online Newton/rmse_samples/81,0.005301565847713016
+narx,monte_carlo/online Newton/rmse_samples/82,0.005773311896164618
+narx,monte_carlo/online Newton/rmse_samples/83,0.005701892263577755
+narx,monte_carlo/online Newton/rmse_samples/84,0.006377520131046454
+narx,monte_carlo/online Newton/rmse_samples/85,0.005629435511619552
+narx,monte_carlo/online Newton/rmse_samples/86,0.005588941173353576
+narx,monte_carlo/online Newton/rmse_samples/87,0.005237940874687169
+narx,monte_carlo/online Newton/rmse_samples/88,0.005367444924142876
+narx,monte_carlo/online Newton/rmse_samples/89,0.006243325838674107
+narx,monte_carlo/online Newton/rmse_samples/90,0.006895820429540787
+narx,monte_carlo/online Newton/rmse_samples/91,0.005523854642104777
+narx,monte_carlo/online Newton/rmse_samples/92,0.005438588105692188
+narx,monte_carlo/online Newton/rmse_samples/93,0.005746655739112776
+narx,monte_carlo/online Newton/rmse_samples/94,0.006771691682450707
+narx,monte_carlo/online Newton/rmse_samples/95,0.005388046340549426
+narx,monte_carlo/online Newton/rmse_samples/96,0.006485326375429225
+narx,monte_carlo/online Newton/rmse_samples/97,0.005590581846436711
+narx,monte_carlo/online Newton/rmse_samples/98,0.006073435500119849
+narx,monte_carlo/online Newton/rmse_samples/99,0.0054727700779300895
+narx,monte_carlo/online Newton/rmse_samples/100,0.005931139680332092
+narx,monte_carlo/online Newton/rmse_samples/101,0.00563468151011249
+narx,monte_carlo/online Newton/rmse_samples/102,0.005057350444680747
+narx,monte_carlo/online Newton/rmse_samples/103,0.0057327240960715125
+narx,monte_carlo/online Newton/rmse_samples/104,0.00490837230701274
+narx,monte_carlo/online Newton/rmse_samples/105,0.005253138753953728
+narx,monte_carlo/online Newton/rmse_samples/106,0.005413850661499304
+narx,monte_carlo/online Newton/rmse_samples/107,0.005468464588331682
+narx,monte_carlo/online Newton/rmse_samples/108,0.005671763631527959
+narx,monte_carlo/online Newton/rmse_samples/109,0.005416795419425922
+narx,monte_carlo/online Newton/rmse_samples/110,0.005663408025885314
+narx,monte_carlo/online Newton/rmse_samples/111,0.005373680584525254
+narx,monte_carlo/online Newton/rmse_samples/112,0.0059873655048177125
+narx,monte_carlo/online Newton/rmse_samples/113,0.006428168047366798
+narx,monte_carlo/online Newton/rmse_samples/114,0.005222155398482176
+narx,monte_carlo/online Newton/rmse_samples/115,0.006506753897257598
+narx,monte_carlo/online Newton/rmse_samples/116,0.0054006233505306455
+narx,monte_carlo/online Newton/rmse_samples/117,0.005931465990454834
+narx,monte_carlo/online Newton/rmse_samples/118,0.005659774399213417
+narx,monte_carlo/online Newton/rmse_samples/119,0.005571211072473341
+narx,monte_carlo/online Newton/max_error_samples/0,0.02048479975778008
+narx,monte_carlo/online Newton/max_error_samples/1,0.01860433484619635
+narx,monte_carlo/online Newton/max_error_samples/2,0.021796728828738145
+narx,monte_carlo/online Newton/max_error_samples/3,0.022686497775683708
+narx,monte_carlo/online Newton/max_error_samples/4,0.03188653607031258
+narx,monte_carlo/online Newton/max_error_samples/5,0.021055805813894005
+narx,monte_carlo/online Newton/max_error_samples/6,0.020750716622782883
+narx,monte_carlo/online Newton/max_error_samples/7,0.020088260951447612
+narx,monte_carlo/online Newton/max_error_samples/8,0.016800933639069707
+narx,monte_carlo/online Newton/max_error_samples/9,0.024924485552392052
+narx,monte_carlo/online Newton/max_error_samples/10,0.02189419153188221
+narx,monte_carlo/online Newton/max_error_samples/11,0.027041714777950452
+narx,monte_carlo/online Newton/max_error_samples/12,0.01810695468929866
+narx,monte_carlo/online Newton/max_error_samples/13,0.02050862389374703
+narx,monte_carlo/online Newton/max_error_samples/14,0.02369272989629405
+narx,monte_carlo/online Newton/max_error_samples/15,0.02355019768258463
+narx,monte_carlo/online Newton/max_error_samples/16,0.019125276712600787
+narx,monte_carlo/online Newton/max_error_samples/17,0.024263808612514478
+narx,monte_carlo/online Newton/max_error_samples/18,0.021605415310067096
+narx,monte_carlo/online Newton/max_error_samples/19,0.021091095335995336
+narx,monte_carlo/online Newton/max_error_samples/20,0.020988344302386178
+narx,monte_carlo/online Newton/max_error_samples/21,0.020769362065318032
+narx,monte_carlo/online Newton/max_error_samples/22,0.021035293229466977
+narx,monte_carlo/online Newton/max_error_samples/23,0.01957525508911088
+narx,monte_carlo/online Newton/max_error_samples/24,0.02237248240978622
+narx,monte_carlo/online Newton/max_error_samples/25,0.02322959439492693
+narx,monte_carlo/online Newton/max_error_samples/26,0.0196715157890525
+narx,monte_carlo/online Newton/max_error_samples/27,0.024082344958556497
+narx,monte_carlo/online Newton/max_error_samples/28,0.021283382690384336
+narx,monte_carlo/online Newton/max_error_samples/29,0.019527003649145554
+narx,monte_carlo/online Newton/max_error_samples/30,0.019092006978964744
+narx,monte_carlo/online Newton/max_error_samples/31,0.018871074649547084
+narx,monte_carlo/online Newton/max_error_samples/32,0.022538020501452236
+narx,monte_carlo/online Newton/max_error_samples/33,0.01944230640653426
+narx,monte_carlo/online Newton/max_error_samples/34,0.01767659769016728
+narx,monte_carlo/online Newton/max_error_samples/35,0.02346393827624803
+narx,monte_carlo/online Newton/max_error_samples/36,0.020261207593882294
+narx,monte_carlo/online Newton/max_error_samples/37,0.023673814348109716
+narx,monte_carlo/online Newton/max_error_samples/38,0.023771596650260837
+narx,monte_carlo/online Newton/max_error_samples/39,0.03021616591075111
+narx,monte_carlo/online Newton/max_error_samples/40,0.017143423454644046
+narx,monte_carlo/online Newton/max_error_samples/41,0.022122505161663725
+narx,monte_carlo/online Newton/max_error_samples/42,0.0199199483130388
+narx,monte_carlo/online Newton/max_error_samples/43,0.023838911587370237
+narx,monte_carlo/online Newton/max_error_samples/44,0.020778906872378874
+narx,monte_carlo/online Newton/max_error_samples/45,0.018991579018657626
+narx,monte_carlo/online Newton/max_error_samples/46,0.02451933760856418
+narx,monte_carlo/online Newton/max_error_samples/47,0.02593716369377535
+narx,monte_carlo/online Newton/max_error_samples/48,0.019080737787766266
+narx,monte_carlo/online Newton/max_error_samples/49,0.022354836274648696
+narx,monte_carlo/online Newton/max_error_samples/50,0.020256257426345854
+narx,monte_carlo/online Newton/max_error_samples/51,0.022149440997018703
+narx,monte_carlo/online Newton/max_error_samples/52,0.024550623686851538
+narx,monte_carlo/online Newton/max_error_samples/53,0.017926963441658967
+narx,monte_carlo/online Newton/max_error_samples/54,0.019246673701729042
+narx,monte_carlo/online Newton/max_error_samples/55,0.019235031970265517
+narx,monte_carlo/online Newton/max_error_samples/56,0.025433669630192987
+narx,monte_carlo/online Newton/max_error_samples/57,0.02075824870489467
+narx,monte_carlo/online Newton/max_error_samples/58,0.02716439640655675
+narx,monte_carlo/online Newton/max_error_samples/59,0.02171186926692367
+narx,monte_carlo/online Newton/max_error_samples/60,0.02046616056318105
+narx,monte_carlo/online Newton/max_error_samples/61,0.020970315738340524
+narx,monte_carlo/online Newton/max_error_samples/62,0.016686716117610106
+narx,monte_carlo/online Newton/max_error_samples/63,0.02488649798072989
+narx,monte_carlo/online Newton/max_error_samples/64,0.020069758028917747
+narx,monte_carlo/online Newton/max_error_samples/65,0.02082731554264774
+narx,monte_carlo/online Newton/max_error_samples/66,0.02167845151288787
+narx,monte_carlo/online Newton/max_error_samples/67,0.022423597425343576
+narx,monte_carlo/online Newton/max_error_samples/68,0.02667268974999538
+narx,monte_carlo/online Newton/max_error_samples/69,0.017947062733595174
+narx,monte_carlo/online Newton/max_error_samples/70,0.021864477251439262
+narx,monte_carlo/online Newton/max_error_samples/71,0.01977342949955667
+narx,monte_carlo/online Newton/max_error_samples/72,0.0214851421981388
+narx,monte_carlo/online Newton/max_error_samples/73,0.02353702481263326
+narx,monte_carlo/online Newton/max_error_samples/74,0.03462743668298224
+narx,monte_carlo/online Newton/max_error_samples/75,0.02111462432790336
+narx,monte_carlo/online Newton/max_error_samples/76,0.02130198965637358
+narx,monte_carlo/online Newton/max_error_samples/77,0.019291208929575695
+narx,monte_carlo/online Newton/max_error_samples/78,0.021793972769358416
+narx,monte_carlo/online Newton/max_error_samples/79,0.0217725395827887
+narx,monte_carlo/online Newton/max_error_samples/80,0.02071988594878179
+narx,monte_carlo/online Newton/max_error_samples/81,0.02006761553490593
+narx,monte_carlo/online Newton/max_error_samples/82,0.01977616081481892
+narx,monte_carlo/online Newton/max_error_samples/83,0.0211704748325353
+narx,monte_carlo/online Newton/max_error_samples/84,0.021169916929119972
+narx,monte_carlo/online Newton/max_error_samples/85,0.021498432570390337
+narx,monte_carlo/online Newton/max_error_samples/86,0.0216839487399164
+narx,monte_carlo/online Newton/max_error_samples/87,0.01731925295687683
+narx,monte_carlo/online Newton/max_error_samples/88,0.019051743603642722
+narx,monte_carlo/online Newton/max_error_samples/89,0.02185075162705218
+narx,monte_carlo/online Newton/max_error_samples/90,0.020681675314190042
+narx,monte_carlo/online Newton/max_error_samples/91,0.021749608380057676
+narx,monte_carlo/online Newton/max_error_samples/92,0.01936466101900196
+narx,monte_carlo/online Newton/max_error_samples/93,0.018480369134728548
+narx,monte_carlo/online Newton/max_error_samples/94,0.022403848684469114
+narx,monte_carlo/online Newton/max_error_samples/95,0.022685038283269992
+narx,monte_carlo/online Newton/max_error_samples/96,0.027014504269805704
+narx,monte_carlo/online Newton/max_error_samples/97,0.018396896349889332
+narx,monte_carlo/online Newton/max_error_samples/98,0.019801843898981805
+narx,monte_carlo/online Newton/max_error_samples/99,0.01702786982163969
+narx,monte_carlo/online Newton/max_error_samples/100,0.02000643392405374
+narx,monte_carlo/online Newton/max_error_samples/101,0.02208954832525143
+narx,monte_carlo/online Newton/max_error_samples/102,0.01731031912589253
+narx,monte_carlo/online Newton/max_error_samples/103,0.01866409682694327
+narx,monte_carlo/online Newton/max_error_samples/104,0.01754181044199487
+narx,monte_carlo/online Newton/max_error_samples/105,0.01953074835532465
+narx,monte_carlo/online Newton/max_error_samples/106,0.017024795127110456
+narx,monte_carlo/online Newton/max_error_samples/107,0.02060284294696384
+narx,monte_carlo/online Newton/max_error_samples/108,0.019508488243009936
+narx,monte_carlo/online Newton/max_error_samples/109,0.027298730106665274
+narx,monte_carlo/online Newton/max_error_samples/110,0.019688933045735747
+narx,monte_carlo/online Newton/max_error_samples/111,0.022286105831527694
+narx,monte_carlo/online Newton/max_error_samples/112,0.01986463707512396
+narx,monte_carlo/online Newton/max_error_samples/113,0.02344333060391058
+narx,monte_carlo/online Newton/max_error_samples/114,0.017994909652096443
+narx,monte_carlo/online Newton/max_error_samples/115,0.02054431350460313
+narx,monte_carlo/online Newton/max_error_samples/116,0.020169773622055326
+narx,monte_carlo/online Newton/max_error_samples/117,0.020020153024404835
+narx,monte_carlo/online Newton/max_error_samples/118,0.022823722227583613
+narx,monte_carlo/online Newton/max_error_samples/119,0.019390521887303454
+narx,monte_carlo/online Newton/closed_loop_iterations_mean,1.8522023809523809
+narx,monte_carlo/online Newton/closed_loop_iterations_p95,2.0
+narx,monte_carlo/online Newton/closed_loop_iterations_max,2.0
+narx,monte_carlo/online Newton/hidden_evaluations_mean,2.852202380952381
+narx,monte_carlo/direct inverse/rmse_mean,0.005751333320749968
+narx,monte_carlo/direct inverse/rmse_p95,0.007728106829394946
+narx,monte_carlo/direct inverse/max_error_mean,0.03680966706029636
+narx,monte_carlo/direct inverse/max_error_p95,0.06372213956079155
+narx,monte_carlo/direct inverse/rms_input_mean,0.24548676216143953
+narx,monte_carlo/direct inverse/saturation_fraction_mean,0.0
+narx,monte_carlo/direct inverse/controller_time_per_step_ms,0.23259290356268789
+narx,monte_carlo/direct inverse/rmse_samples/0,0.006008189130913092
+narx,monte_carlo/direct inverse/rmse_samples/1,0.007727880966327253
+narx,monte_carlo/direct inverse/rmse_samples/2,0.005647021823047193
+narx,monte_carlo/direct inverse/rmse_samples/3,0.005237191923632867
+narx,monte_carlo/direct inverse/rmse_samples/4,0.004568348899781492
+narx,monte_carlo/direct inverse/rmse_samples/5,0.004638842508286362
+narx,monte_carlo/direct inverse/rmse_samples/6,0.006159852304397249
+narx,monte_carlo/direct inverse/rmse_samples/7,0.0046301933111027845
+narx,monte_carlo/direct inverse/rmse_samples/8,0.004669382746479395
+narx,monte_carlo/direct inverse/rmse_samples/9,0.004529841631937072
+narx,monte_carlo/direct inverse/rmse_samples/10,0.004376555825202675
+narx,monte_carlo/direct inverse/rmse_samples/11,0.006478666399752376
+narx,monte_carlo/direct inverse/rmse_samples/12,0.0045142737431377354
+narx,monte_carlo/direct inverse/rmse_samples/13,0.004313425882469752
+narx,monte_carlo/direct inverse/rmse_samples/14,0.005604518032295724
+narx,monte_carlo/direct inverse/rmse_samples/15,0.006409364417529823
+narx,monte_carlo/direct inverse/rmse_samples/16,0.004903279389249961
+narx,monte_carlo/direct inverse/rmse_samples/17,0.004805373536573107
+narx,monte_carlo/direct inverse/rmse_samples/18,0.006968347564698992
+narx,monte_carlo/direct inverse/rmse_samples/19,0.0061548932527450174
+narx,monte_carlo/direct inverse/rmse_samples/20,0.007421350692674849
+narx,monte_carlo/direct inverse/rmse_samples/21,0.004726044826463464
+narx,monte_carlo/direct inverse/rmse_samples/22,0.004956905526266075
+narx,monte_carlo/direct inverse/rmse_samples/23,0.005566833478131224
+narx,monte_carlo/direct inverse/rmse_samples/24,0.00477476838628367
+narx,monte_carlo/direct inverse/rmse_samples/25,0.00671540817280303
+narx,monte_carlo/direct inverse/rmse_samples/26,0.005924584867588972
+narx,monte_carlo/direct inverse/rmse_samples/27,0.004870139004719283
+narx,monte_carlo/direct inverse/rmse_samples/28,0.005025944750657882
+narx,monte_carlo/direct inverse/rmse_samples/29,0.005068787619995967
+narx,monte_carlo/direct inverse/rmse_samples/30,0.006300493795442353
+narx,monte_carlo/direct inverse/rmse_samples/31,0.004883710264667168
+narx,monte_carlo/direct inverse/rmse_samples/32,0.005021263562778867
+narx,monte_carlo/direct inverse/rmse_samples/33,0.00590626894166145
+narx,monte_carlo/direct inverse/rmse_samples/34,0.005488271556056843
+narx,monte_carlo/direct inverse/rmse_samples/35,0.005352236540230351
+narx,monte_carlo/direct inverse/rmse_samples/36,0.005354688524232973
+narx,monte_carlo/direct inverse/rmse_samples/37,0.005579421769336807
+narx,monte_carlo/direct inverse/rmse_samples/38,0.0065871353644914405
+narx,monte_carlo/direct inverse/rmse_samples/39,0.007532240501318591
+narx,monte_carlo/direct inverse/rmse_samples/40,0.006255236495168313
+narx,monte_carlo/direct inverse/rmse_samples/41,0.004470067397606891
+narx,monte_carlo/direct inverse/rmse_samples/42,0.008446612780826335
+narx,monte_carlo/direct inverse/rmse_samples/43,0.004627037009162926
+narx,monte_carlo/direct inverse/rmse_samples/44,0.006464081289396246
+narx,monte_carlo/direct inverse/rmse_samples/45,0.007159221555105309
+narx,monte_carlo/direct inverse/rmse_samples/46,0.005119056510866412
+narx,monte_carlo/direct inverse/rmse_samples/47,0.005588564488958659
+narx,monte_carlo/direct inverse/rmse_samples/48,0.004333634466526379
+narx,monte_carlo/direct inverse/rmse_samples/49,0.005527897862124034
+narx,monte_carlo/direct inverse/rmse_samples/50,0.007741610798648769
+narx,monte_carlo/direct inverse/rmse_samples/51,0.007790404992831535
+narx,monte_carlo/direct inverse/rmse_samples/52,0.004701271324257121
+narx,monte_carlo/direct inverse/rmse_samples/53,0.00524961785076299
+narx,monte_carlo/direct inverse/rmse_samples/54,0.005889953298139084
+narx,monte_carlo/direct inverse/rmse_samples/55,0.005391951288292409
+narx,monte_carlo/direct inverse/rmse_samples/56,0.005437508901375903
+narx,monte_carlo/direct inverse/rmse_samples/57,0.005618197613921487
+narx,monte_carlo/direct inverse/rmse_samples/58,0.005193303693898718
+narx,monte_carlo/direct inverse/rmse_samples/59,0.005583581605712612
+narx,monte_carlo/direct inverse/rmse_samples/60,0.005574173526525097
+narx,monte_carlo/direct inverse/rmse_samples/61,0.006075114364495839
+narx,monte_carlo/direct inverse/rmse_samples/62,0.005503021614002661
+narx,monte_carlo/direct inverse/rmse_samples/63,0.004266044958539107
+narx,monte_carlo/direct inverse/rmse_samples/64,0.007367206139345585
+narx,monte_carlo/direct inverse/rmse_samples/65,0.005583461631438036
+narx,monte_carlo/direct inverse/rmse_samples/66,0.004849931712517978
+narx,monte_carlo/direct inverse/rmse_samples/67,0.005637516875384007
+narx,monte_carlo/direct inverse/rmse_samples/68,0.006873015152088449
+narx,monte_carlo/direct inverse/rmse_samples/69,0.007732398227681124
+narx,monte_carlo/direct inverse/rmse_samples/70,0.0075373683523469945
+narx,monte_carlo/direct inverse/rmse_samples/71,0.004248791492911941
+narx,monte_carlo/direct inverse/rmse_samples/72,0.006260252966532584
+narx,monte_carlo/direct inverse/rmse_samples/73,0.005611860723943529
+narx,monte_carlo/direct inverse/rmse_samples/74,0.006061445101955832
+narx,monte_carlo/direct inverse/rmse_samples/75,0.00597882115612222
+narx,monte_carlo/direct inverse/rmse_samples/76,0.005267002681601936
+narx,monte_carlo/direct inverse/rmse_samples/77,0.005652104497368565
+narx,monte_carlo/direct inverse/rmse_samples/78,0.0041660045596289075
+narx,monte_carlo/direct inverse/rmse_samples/79,0.007789255297042594
+narx,monte_carlo/direct inverse/rmse_samples/80,0.006149251285396766
+narx,monte_carlo/direct inverse/rmse_samples/81,0.004273162192324952
+narx,monte_carlo/direct inverse/rmse_samples/82,0.006084351275846377
+narx,monte_carlo/direct inverse/rmse_samples/83,0.006773813658152633
+narx,monte_carlo/direct inverse/rmse_samples/84,0.0052798825649157
+narx,monte_carlo/direct inverse/rmse_samples/85,0.005715914862191034
+narx,monte_carlo/direct inverse/rmse_samples/86,0.004922667918077104
+narx,monte_carlo/direct inverse/rmse_samples/87,0.005596662698593534
+narx,monte_carlo/direct inverse/rmse_samples/88,0.006480478430835947
+narx,monte_carlo/direct inverse/rmse_samples/89,0.005436044552821023
+narx,monte_carlo/direct inverse/rmse_samples/90,0.008860317725740101
+narx,monte_carlo/direct inverse/rmse_samples/91,0.005902508285386487
+narx,monte_carlo/direct inverse/rmse_samples/92,0.00534302599065195
+narx,monte_carlo/direct inverse/rmse_samples/93,0.007021894013040251
+narx,monte_carlo/direct inverse/rmse_samples/94,0.00633857168114662
+narx,monte_carlo/direct inverse/rmse_samples/95,0.005469599587368158
+narx,monte_carlo/direct inverse/rmse_samples/96,0.007631493248784313
+narx,monte_carlo/direct inverse/rmse_samples/97,0.006714591531413531
+narx,monte_carlo/direct inverse/rmse_samples/98,0.0044836140711743515
+narx,monte_carlo/direct inverse/rmse_samples/99,0.0045391032585662
+narx,monte_carlo/direct inverse/rmse_samples/100,0.005435443840689623
+narx,monte_carlo/direct inverse/rmse_samples/101,0.00453875425255554
+narx,monte_carlo/direct inverse/rmse_samples/102,0.005001199278564167
+narx,monte_carlo/direct inverse/rmse_samples/103,0.006994166365486689
+narx,monte_carlo/direct inverse/rmse_samples/104,0.006273833843070377
+narx,monte_carlo/direct inverse/rmse_samples/105,0.00521587023646395
+narx,monte_carlo/direct inverse/rmse_samples/106,0.005418757408994812
+narx,monte_carlo/direct inverse/rmse_samples/107,0.005072857446490383
+narx,monte_carlo/direct inverse/rmse_samples/108,0.005510964184013185
+narx,monte_carlo/direct inverse/rmse_samples/109,0.00471167042931941
+narx,monte_carlo/direct inverse/rmse_samples/110,0.006772397936020441
+narx,monte_carlo/direct inverse/rmse_samples/111,0.005819548328916349
+narx,monte_carlo/direct inverse/rmse_samples/112,0.00668545416284974
+narx,monte_carlo/direct inverse/rmse_samples/113,0.0052821421041600505
+narx,monte_carlo/direct inverse/rmse_samples/114,0.00603365844962914
+narx,monte_carlo/direct inverse/rmse_samples/115,0.0054760211101421465
+narx,monte_carlo/direct inverse/rmse_samples/116,0.005230294025557192
+narx,monte_carlo/direct inverse/rmse_samples/117,0.007690836285648837
+narx,monte_carlo/direct inverse/rmse_samples/118,0.006260564717950325
+narx,monte_carlo/direct inverse/rmse_samples/119,0.0056930715606305655
+narx,monte_carlo/direct inverse/max_error_samples/0,0.06938597944299513
+narx,monte_carlo/direct inverse/max_error_samples/1,0.04206824078236399
+narx,monte_carlo/direct inverse/max_error_samples/2,0.04363145191479048
+narx,monte_carlo/direct inverse/max_error_samples/3,0.06107844892110921
+narx,monte_carlo/direct inverse/max_error_samples/4,0.03724719485379192
+narx,monte_carlo/direct inverse/max_error_samples/5,0.015771686809795522
+narx,monte_carlo/direct inverse/max_error_samples/6,0.02266418829504355
+narx,monte_carlo/direct inverse/max_error_samples/7,0.03462980343911935
+narx,monte_carlo/direct inverse/max_error_samples/8,0.04114901931191476
+narx,monte_carlo/direct inverse/max_error_samples/9,0.032703430310433934
+narx,monte_carlo/direct inverse/max_error_samples/10,0.0350879460174067
+narx,monte_carlo/direct inverse/max_error_samples/11,0.03606389935689151
+narx,monte_carlo/direct inverse/max_error_samples/12,0.015599385446812037
+narx,monte_carlo/direct inverse/max_error_samples/13,0.02634714725648559
+narx,monte_carlo/direct inverse/max_error_samples/14,0.03583771250451927
+narx,monte_carlo/direct inverse/max_error_samples/15,0.04256994367237347
+narx,monte_carlo/direct inverse/max_error_samples/16,0.031588326646034066
+narx,monte_carlo/direct inverse/max_error_samples/17,0.04438945096206072
+narx,monte_carlo/direct inverse/max_error_samples/18,0.02326563591624098
+narx,monte_carlo/direct inverse/max_error_samples/19,0.018596552291883967
+narx,monte_carlo/direct inverse/max_error_samples/20,0.047522142982214174
+narx,monte_carlo/direct inverse/max_error_samples/21,0.0506785310474409
+narx,monte_carlo/direct inverse/max_error_samples/22,0.021289128614146138
+narx,monte_carlo/direct inverse/max_error_samples/23,0.037344394579668934
+narx,monte_carlo/direct inverse/max_error_samples/24,0.03336848259826646
+narx,monte_carlo/direct inverse/max_error_samples/25,0.03150141393553355
+narx,monte_carlo/direct inverse/max_error_samples/26,0.056848861313173335
+narx,monte_carlo/direct inverse/max_error_samples/27,0.03449461917169145
+narx,monte_carlo/direct inverse/max_error_samples/28,0.02822284279643847
+narx,monte_carlo/direct inverse/max_error_samples/29,0.033696067056211455
+narx,monte_carlo/direct inverse/max_error_samples/30,0.020476909526448147
+narx,monte_carlo/direct inverse/max_error_samples/31,0.03342894934442496
+narx,monte_carlo/direct inverse/max_error_samples/32,0.04514301384942707
+narx,monte_carlo/direct inverse/max_error_samples/33,0.05030002556886902
+narx,monte_carlo/direct inverse/max_error_samples/34,0.04104188498382514
+narx,monte_carlo/direct inverse/max_error_samples/35,0.0335126597405534
+narx,monte_carlo/direct inverse/max_error_samples/36,0.03933759270599811
+narx,monte_carlo/direct inverse/max_error_samples/37,0.030959257491041035
+narx,monte_carlo/direct inverse/max_error_samples/38,0.036957929810120124
+narx,monte_carlo/direct inverse/max_error_samples/39,0.04401582206784196
+narx,monte_carlo/direct inverse/max_error_samples/40,0.02138010774556604
+narx,monte_carlo/direct inverse/max_error_samples/41,0.026914028940769826
+narx,monte_carlo/direct inverse/max_error_samples/42,0.08256740028754243
+narx,monte_carlo/direct inverse/max_error_samples/43,0.01612879538840698
+narx,monte_carlo/direct inverse/max_error_samples/44,0.021362872530011446
+narx,monte_carlo/direct inverse/max_error_samples/45,0.0209822321801586
+narx,monte_carlo/direct inverse/max_error_samples/46,0.025888763930205325
+narx,monte_carlo/direct inverse/max_error_samples/47,0.017837113531969765
+narx,monte_carlo/direct inverse/max_error_samples/48,0.02758159228219068
+narx,monte_carlo/direct inverse/max_error_samples/49,0.04455416747380217
+narx,monte_carlo/direct inverse/max_error_samples/50,0.06221140746261619
+narx,monte_carlo/direct inverse/max_error_samples/51,0.04433793204469191
+narx,monte_carlo/direct inverse/max_error_samples/52,0.013700073662058523
+narx,monte_carlo/direct inverse/max_error_samples/53,0.03813882727138504
+narx,monte_carlo/direct inverse/max_error_samples/54,0.053741519619307385
+narx,monte_carlo/direct inverse/max_error_samples/55,0.04045883462261751
+narx,monte_carlo/direct inverse/max_error_samples/56,0.0629276869318077
+narx,monte_carlo/direct inverse/max_error_samples/57,0.02850672739805032
+narx,monte_carlo/direct inverse/max_error_samples/58,0.03994571389696299
+narx,monte_carlo/direct inverse/max_error_samples/59,0.039227444597763915
+narx,monte_carlo/direct inverse/max_error_samples/60,0.03333918487961992
+narx,monte_carlo/direct inverse/max_error_samples/61,0.02821540920606526
+narx,monte_carlo/direct inverse/max_error_samples/62,0.02711685672107697
+narx,monte_carlo/direct inverse/max_error_samples/63,0.01578320868599226
+narx,monte_carlo/direct inverse/max_error_samples/64,0.03818893627852722
+narx,monte_carlo/direct inverse/max_error_samples/65,0.04613480259742615
+narx,monte_carlo/direct inverse/max_error_samples/66,0.04603124643765265
+narx,monte_carlo/direct inverse/max_error_samples/67,0.046848950468076515
+narx,monte_carlo/direct inverse/max_error_samples/68,0.03832294306494053
+narx,monte_carlo/direct inverse/max_error_samples/69,0.02411711841455374
+narx,monte_carlo/direct inverse/max_error_samples/70,0.05490598932738831
+narx,monte_carlo/direct inverse/max_error_samples/71,0.014418408698826409
+narx,monte_carlo/direct inverse/max_error_samples/72,0.04564357157958237
+narx,monte_carlo/direct inverse/max_error_samples/73,0.038161968152706345
+narx,monte_carlo/direct inverse/max_error_samples/74,0.0361493890616971
+narx,monte_carlo/direct inverse/max_error_samples/75,0.06342404272488611
+narx,monte_carlo/direct inverse/max_error_samples/76,0.031866266123777756
+narx,monte_carlo/direct inverse/max_error_samples/77,0.045576775790135846
+narx,monte_carlo/direct inverse/max_error_samples/78,0.01390976546913404
+narx,monte_carlo/direct inverse/max_error_samples/79,0.07076753055240641
+narx,monte_carlo/direct inverse/max_error_samples/80,0.03608515032704292
+narx,monte_carlo/direct inverse/max_error_samples/81,0.034212541691786266
+narx,monte_carlo/direct inverse/max_error_samples/82,0.03122344440373605
+narx,monte_carlo/direct inverse/max_error_samples/83,0.03402632964840002
+narx,monte_carlo/direct inverse/max_error_samples/84,0.03959570386956805
+narx,monte_carlo/direct inverse/max_error_samples/85,0.03478855969434464
+narx,monte_carlo/direct inverse/max_error_samples/86,0.056355281063790695
+narx,monte_carlo/direct inverse/max_error_samples/87,0.045998348062089606
+narx,monte_carlo/direct inverse/max_error_samples/88,0.033381103343381346
+narx,monte_carlo/direct inverse/max_error_samples/89,0.03999932667484353
+narx,monte_carlo/direct inverse/max_error_samples/90,0.023472369101909047
+narx,monte_carlo/direct inverse/max_error_samples/91,0.03410894391319093
+narx,monte_carlo/direct inverse/max_error_samples/92,0.030898623037821205
+narx,monte_carlo/direct inverse/max_error_samples/93,0.06109943667560741
+narx,monte_carlo/direct inverse/max_error_samples/94,0.01805418901847325
+narx,monte_carlo/direct inverse/max_error_samples/95,0.021638878341738586
+narx,monte_carlo/direct inverse/max_error_samples/96,0.02137644461700363
+narx,monte_carlo/direct inverse/max_error_samples/97,0.07228434563845547
+narx,monte_carlo/direct inverse/max_error_samples/98,0.013445695680723383
+narx,monte_carlo/direct inverse/max_error_samples/99,0.04606014632689381
+narx,monte_carlo/direct inverse/max_error_samples/100,0.02080406163742314
+narx,monte_carlo/direct inverse/max_error_samples/101,0.01430739003109602
+narx,monte_carlo/direct inverse/max_error_samples/102,0.015819473785026596
+narx,monte_carlo/direct inverse/max_error_samples/103,0.0322328222316235
+narx,monte_carlo/direct inverse/max_error_samples/104,0.06274021786097995
+narx,monte_carlo/direct inverse/max_error_samples/105,0.041160603476856995
+narx,monte_carlo/direct inverse/max_error_samples/106,0.031809306016748376
+narx,monte_carlo/direct inverse/max_error_samples/107,0.03787251417166954
+narx,monte_carlo/direct inverse/max_error_samples/108,0.048510848033986184
+narx,monte_carlo/direct inverse/max_error_samples/109,0.03620617020475635
+narx,monte_carlo/direct inverse/max_error_samples/110,0.06980064832388588
+narx,monte_carlo/direct inverse/max_error_samples/111,0.03535389158560893
+narx,monte_carlo/direct inverse/max_error_samples/112,0.027102957948557965
+narx,monte_carlo/direct inverse/max_error_samples/113,0.024047975457675362
+narx,monte_carlo/direct inverse/max_error_samples/114,0.021549564511692276
+narx,monte_carlo/direct inverse/max_error_samples/115,0.02949489472877264
+narx,monte_carlo/direct inverse/max_error_samples/116,0.06986422006005694
+narx,monte_carlo/direct inverse/max_error_samples/117,0.04298455156787897
+narx,monte_carlo/direct inverse/max_error_samples/118,0.06256719445451589
+narx,monte_carlo/direct inverse/max_error_samples/119,0.017694300648195584
+narx,monte_carlo/linear ARX inverse/rmse_mean,0.008449083612386943
+narx,monte_carlo/linear ARX inverse/rmse_p95,0.009279509160368196
+narx,monte_carlo/linear ARX inverse/max_error_mean,0.028282465090945
+narx,monte_carlo/linear ARX inverse/max_error_p95,0.0333423831523488
+narx,monte_carlo/linear ARX inverse/rms_input_mean,0.24670483813673172
+narx,monte_carlo/linear ARX inverse/saturation_fraction_mean,0.0
+narx,monte_carlo/linear ARX inverse/controller_time_per_step_ms,0.12788661070024837
+narx,monte_carlo/linear ARX inverse/rmse_samples/0,0.008961291249741479
+narx,monte_carlo/linear ARX inverse/rmse_samples/1,0.008842310411234166
+narx,monte_carlo/linear ARX inverse/rmse_samples/2,0.007943338146043708
+narx,monte_carlo/linear ARX inverse/rmse_samples/3,0.00855223653078835
+narx,monte_carlo/linear ARX inverse/rmse_samples/4,0.007872738910903836
+narx,monte_carlo/linear ARX inverse/rmse_samples/5,0.00821263335127078
+narx,monte_carlo/linear ARX inverse/rmse_samples/6,0.0077448832624427205
+narx,monte_carlo/linear ARX inverse/rmse_samples/7,0.007758664187438153
+narx,monte_carlo/linear ARX inverse/rmse_samples/8,0.007953485863420802
+narx,monte_carlo/linear ARX inverse/rmse_samples/9,0.008115277736139175
+narx,monte_carlo/linear ARX inverse/rmse_samples/10,0.008275912183773661
+narx,monte_carlo/linear ARX inverse/rmse_samples/11,0.007961861920730126
+narx,monte_carlo/linear ARX inverse/rmse_samples/12,0.007846364410031578
+narx,monte_carlo/linear ARX inverse/rmse_samples/13,0.007876147186474128
+narx,monte_carlo/linear ARX inverse/rmse_samples/14,0.00888935249328481
+narx,monte_carlo/linear ARX inverse/rmse_samples/15,0.009391599103717833
+narx,monte_carlo/linear ARX inverse/rmse_samples/16,0.008466618817565778
+narx,monte_carlo/linear ARX inverse/rmse_samples/17,0.007845287021499307
+narx,monte_carlo/linear ARX inverse/rmse_samples/18,0.00815718811080298
+narx,monte_carlo/linear ARX inverse/rmse_samples/19,0.007489112501092528
+narx,monte_carlo/linear ARX inverse/rmse_samples/20,0.008836643373193107
+narx,monte_carlo/linear ARX inverse/rmse_samples/21,0.007943366070891087
+narx,monte_carlo/linear ARX inverse/rmse_samples/22,0.008546381845202367
+narx,monte_carlo/linear ARX inverse/rmse_samples/23,0.007082464112542484
+narx,monte_carlo/linear ARX inverse/rmse_samples/24,0.008612797218546372
+narx,monte_carlo/linear ARX inverse/rmse_samples/25,0.009278900800953196
+narx,monte_carlo/linear ARX inverse/rmse_samples/26,0.008670367952664631
+narx,monte_carlo/linear ARX inverse/rmse_samples/27,0.008414190892627536
+narx,monte_carlo/linear ARX inverse/rmse_samples/28,0.00833846058569406
+narx,monte_carlo/linear ARX inverse/rmse_samples/29,0.008122213174472896
+narx,monte_carlo/linear ARX inverse/rmse_samples/30,0.00907509393029591
+narx,monte_carlo/linear ARX inverse/rmse_samples/31,0.008259562933678999
+narx,monte_carlo/linear ARX inverse/rmse_samples/32,0.008703938833428257
+narx,monte_carlo/linear ARX inverse/rmse_samples/33,0.00845266326419292
+narx,monte_carlo/linear ARX inverse/rmse_samples/34,0.008981288094887713
+narx,monte_carlo/linear ARX inverse/rmse_samples/35,0.007756889733746881
+narx,monte_carlo/linear ARX inverse/rmse_samples/36,0.00844717616620327
+narx,monte_carlo/linear ARX inverse/rmse_samples/37,0.009058691507714541
+narx,monte_carlo/linear ARX inverse/rmse_samples/38,0.007370251775878769
+narx,monte_carlo/linear ARX inverse/rmse_samples/39,0.009120066408749952
+narx,monte_carlo/linear ARX inverse/rmse_samples/40,0.008660597303608136
+narx,monte_carlo/linear ARX inverse/rmse_samples/41,0.008011142468164928
+narx,monte_carlo/linear ARX inverse/rmse_samples/42,0.00896918129973154
+narx,monte_carlo/linear ARX inverse/rmse_samples/43,0.007745612614465413
+narx,monte_carlo/linear ARX inverse/rmse_samples/44,0.0071866585877312
+narx,monte_carlo/linear ARX inverse/rmse_samples/45,0.008889579694589771
+narx,monte_carlo/linear ARX inverse/rmse_samples/46,0.007533820829311162
+narx,monte_carlo/linear ARX inverse/rmse_samples/47,0.00891149074333997
+narx,monte_carlo/linear ARX inverse/rmse_samples/48,0.00818122067179475
+narx,monte_carlo/linear ARX inverse/rmse_samples/49,0.008608243830047341
+narx,monte_carlo/linear ARX inverse/rmse_samples/50,0.00883820987217833
+narx,monte_carlo/linear ARX inverse/rmse_samples/51,0.008629060135494346
+narx,monte_carlo/linear ARX inverse/rmse_samples/52,0.008662042812200482
+narx,monte_carlo/linear ARX inverse/rmse_samples/53,0.008191823341149262
+narx,monte_carlo/linear ARX inverse/rmse_samples/54,0.008519243543854731
+narx,monte_carlo/linear ARX inverse/rmse_samples/55,0.008783888643000582
+narx,monte_carlo/linear ARX inverse/rmse_samples/56,0.00841596947061049
+narx,monte_carlo/linear ARX inverse/rmse_samples/57,0.009163644645096914
+narx,monte_carlo/linear ARX inverse/rmse_samples/58,0.008055840361055649
+narx,monte_carlo/linear ARX inverse/rmse_samples/59,0.00751997928072507
+narx,monte_carlo/linear ARX inverse/rmse_samples/60,0.007646730384285268
+narx,monte_carlo/linear ARX inverse/rmse_samples/61,0.007499931828379336
+narx,monte_carlo/linear ARX inverse/rmse_samples/62,0.008661855790101603
+narx,monte_carlo/linear ARX inverse/rmse_samples/63,0.007738964168504517
+narx,monte_carlo/linear ARX inverse/rmse_samples/64,0.009374991997772699
+narx,monte_carlo/linear ARX inverse/rmse_samples/65,0.008450346151809835
+narx,monte_carlo/linear ARX inverse/rmse_samples/66,0.008100367895433313
+narx,monte_carlo/linear ARX inverse/rmse_samples/67,0.008861995355519302
+narx,monte_carlo/linear ARX inverse/rmse_samples/68,0.009291067989253205
+narx,monte_carlo/linear ARX inverse/rmse_samples/69,0.00865663605673116
+narx,monte_carlo/linear ARX inverse/rmse_samples/70,0.00934059114562462
+narx,monte_carlo/linear ARX inverse/rmse_samples/71,0.0077177834426627664
+narx,monte_carlo/linear ARX inverse/rmse_samples/72,0.009043683047092405
+narx,monte_carlo/linear ARX inverse/rmse_samples/73,0.008134567457285104
+narx,monte_carlo/linear ARX inverse/rmse_samples/74,0.009232913156303533
+narx,monte_carlo/linear ARX inverse/rmse_samples/75,0.009130246245201354
+narx,monte_carlo/linear ARX inverse/rmse_samples/76,0.008835817919224368
+narx,monte_carlo/linear ARX inverse/rmse_samples/77,0.008982060707891284
+narx,monte_carlo/linear ARX inverse/rmse_samples/78,0.007955866290091014
+narx,monte_carlo/linear ARX inverse/rmse_samples/79,0.009122169554055922
+narx,monte_carlo/linear ARX inverse/rmse_samples/80,0.009173948102783226
+narx,monte_carlo/linear ARX inverse/rmse_samples/81,0.008287345235247726
+narx,monte_carlo/linear ARX inverse/rmse_samples/82,0.007805262630089402
+narx,monte_carlo/linear ARX inverse/rmse_samples/83,0.009185870268743518
+narx,monte_carlo/linear ARX inverse/rmse_samples/84,0.008604841761622031
+narx,monte_carlo/linear ARX inverse/rmse_samples/85,0.008169007524820564
+narx,monte_carlo/linear ARX inverse/rmse_samples/86,0.008018994708689876
+narx,monte_carlo/linear ARX inverse/rmse_samples/87,0.0075190937525708
+narx,monte_carlo/linear ARX inverse/rmse_samples/88,0.008730767239321209
+narx,monte_carlo/linear ARX inverse/rmse_samples/89,0.009218468431408729
+narx,monte_carlo/linear ARX inverse/rmse_samples/90,0.009001808609255724
+narx,monte_carlo/linear ARX inverse/rmse_samples/91,0.008439028857796628
+narx,monte_carlo/linear ARX inverse/rmse_samples/92,0.008720184344403437
+narx,monte_carlo/linear ARX inverse/rmse_samples/93,0.00841986848070485
+narx,monte_carlo/linear ARX inverse/rmse_samples/94,0.00899669131165208
+narx,monte_carlo/linear ARX inverse/rmse_samples/95,0.008391512351166263
+narx,monte_carlo/linear ARX inverse/rmse_samples/96,0.008666172756531209
+narx,monte_carlo/linear ARX inverse/rmse_samples/97,0.008389139122538684
+narx,monte_carlo/linear ARX inverse/rmse_samples/98,0.00803438340407977
+narx,monte_carlo/linear ARX inverse/rmse_samples/99,0.008406659480169977
+narx,monte_carlo/linear ARX inverse/rmse_samples/100,0.009307806216836108
+narx,monte_carlo/linear ARX inverse/rmse_samples/101,0.008038984720153358
+narx,monte_carlo/linear ARX inverse/rmse_samples/102,0.007997060648765656
+narx,monte_carlo/linear ARX inverse/rmse_samples/103,0.008871556181601766
+narx,monte_carlo/linear ARX inverse/rmse_samples/104,0.008202074727475498
+narx,monte_carlo/linear ARX inverse/rmse_samples/105,0.008511896950179643
+narx,monte_carlo/linear ARX inverse/rmse_samples/106,0.00848924452717473
+narx,monte_carlo/linear ARX inverse/rmse_samples/107,0.007517567106385202
+narx,monte_carlo/linear ARX inverse/rmse_samples/108,0.009074462519485182
+narx,monte_carlo/linear ARX inverse/rmse_samples/109,0.008142856742872283
+narx,monte_carlo/linear ARX inverse/rmse_samples/110,0.007934201931230268
+narx,monte_carlo/linear ARX inverse/rmse_samples/111,0.008938365362032838
+narx,monte_carlo/linear ARX inverse/rmse_samples/112,0.008502196621618913
+narx,monte_carlo/linear ARX inverse/rmse_samples/113,0.009152387150689287
+narx,monte_carlo/linear ARX inverse/rmse_samples/114,0.008878682147089331
+narx,monte_carlo/linear ARX inverse/rmse_samples/115,0.008989313899479264
+narx,monte_carlo/linear ARX inverse/rmse_samples/116,0.008402957979997678
+narx,monte_carlo/linear ARX inverse/rmse_samples/117,0.009427780551423511
+narx,monte_carlo/linear ARX inverse/rmse_samples/118,0.008761858251071994
+narx,monte_carlo/linear ARX inverse/rmse_samples/119,0.008086182071941417
+narx,monte_carlo/linear ARX inverse/max_error_samples/0,0.02963631257393829
+narx,monte_carlo/linear ARX inverse/max_error_samples/1,0.02646120580456043
+narx,monte_carlo/linear ARX inverse/max_error_samples/2,0.024034461737612776
+narx,monte_carlo/linear ARX inverse/max_error_samples/3,0.029954730646903658
+narx,monte_carlo/linear ARX inverse/max_error_samples/4,0.026828013112193374
+narx,monte_carlo/linear ARX inverse/max_error_samples/5,0.024590379496635808
+narx,monte_carlo/linear ARX inverse/max_error_samples/6,0.033163543056360156
+narx,monte_carlo/linear ARX inverse/max_error_samples/7,0.021487505870339235
+narx,monte_carlo/linear ARX inverse/max_error_samples/8,0.02656511535237822
+narx,monte_carlo/linear ARX inverse/max_error_samples/9,0.026413257406826058
+narx,monte_carlo/linear ARX inverse/max_error_samples/10,0.024640058559602326
+narx,monte_carlo/linear ARX inverse/max_error_samples/11,0.035828778520192436
+narx,monte_carlo/linear ARX inverse/max_error_samples/12,0.02474062122177099
+narx,monte_carlo/linear ARX inverse/max_error_samples/13,0.024654287887123358
+narx,monte_carlo/linear ARX inverse/max_error_samples/14,0.03271140945042645
+narx,monte_carlo/linear ARX inverse/max_error_samples/15,0.03333376310512407
+narx,monte_carlo/linear ARX inverse/max_error_samples/16,0.02713481872946169
+narx,monte_carlo/linear ARX inverse/max_error_samples/17,0.02967359363640531
+narx,monte_carlo/linear ARX inverse/max_error_samples/18,0.0262548602415098
+narx,monte_carlo/linear ARX inverse/max_error_samples/19,0.02314860952799219
+narx,monte_carlo/linear ARX inverse/max_error_samples/20,0.029362243696935426
+narx,monte_carlo/linear ARX inverse/max_error_samples/21,0.02513897815802096
+narx,monte_carlo/linear ARX inverse/max_error_samples/22,0.026768959779218608
+narx,monte_carlo/linear ARX inverse/max_error_samples/23,0.022429326963545586
+narx,monte_carlo/linear ARX inverse/max_error_samples/24,0.029921482608103674
+narx,monte_carlo/linear ARX inverse/max_error_samples/25,0.03204718832850354
+narx,monte_carlo/linear ARX inverse/max_error_samples/26,0.031459267963431924
+narx,monte_carlo/linear ARX inverse/max_error_samples/27,0.02748400706710334
+narx,monte_carlo/linear ARX inverse/max_error_samples/28,0.026655484829215922
+narx,monte_carlo/linear ARX inverse/max_error_samples/29,0.026550366232305184
+narx,monte_carlo/linear ARX inverse/max_error_samples/30,0.03169162746977081
+narx,monte_carlo/linear ARX inverse/max_error_samples/31,0.028460445034661865
+narx,monte_carlo/linear ARX inverse/max_error_samples/32,0.030060947336767983
+narx,monte_carlo/linear ARX inverse/max_error_samples/33,0.024252531313126928
+narx,monte_carlo/linear ARX inverse/max_error_samples/34,0.02833036087994731
+narx,monte_carlo/linear ARX inverse/max_error_samples/35,0.027405393774088696
+narx,monte_carlo/linear ARX inverse/max_error_samples/36,0.025591342433435617
+narx,monte_carlo/linear ARX inverse/max_error_samples/37,0.03223581535739315
+narx,monte_carlo/linear ARX inverse/max_error_samples/38,0.023649514626691147
+narx,monte_carlo/linear ARX inverse/max_error_samples/39,0.03695960844242035
+narx,monte_carlo/linear ARX inverse/max_error_samples/40,0.025037891470113312
+narx,monte_carlo/linear ARX inverse/max_error_samples/41,0.029951142571952877
+narx,monte_carlo/linear ARX inverse/max_error_samples/42,0.027218370907832707
+narx,monte_carlo/linear ARX inverse/max_error_samples/43,0.024399410473313128
+narx,monte_carlo/linear ARX inverse/max_error_samples/44,0.0259713830455111
+narx,monte_carlo/linear ARX inverse/max_error_samples/45,0.030388108778799876
+narx,monte_carlo/linear ARX inverse/max_error_samples/46,0.026377503846217874
+narx,monte_carlo/linear ARX inverse/max_error_samples/47,0.03633828132061031
+narx,monte_carlo/linear ARX inverse/max_error_samples/48,0.02314497646905085
+narx,monte_carlo/linear ARX inverse/max_error_samples/49,0.030902389122818532
+narx,monte_carlo/linear ARX inverse/max_error_samples/50,0.033018943729104536
+narx,monte_carlo/linear ARX inverse/max_error_samples/51,0.029688999484137193
+narx,monte_carlo/linear ARX inverse/max_error_samples/52,0.028194663677359177
+narx,monte_carlo/linear ARX inverse/max_error_samples/53,0.028268032675884937
+narx,monte_carlo/linear ARX inverse/max_error_samples/54,0.02759437284227788
+narx,monte_carlo/linear ARX inverse/max_error_samples/55,0.03045854368820304
+narx,monte_carlo/linear ARX inverse/max_error_samples/56,0.027841285046995644
+narx,monte_carlo/linear ARX inverse/max_error_samples/57,0.03298723638091184
+narx,monte_carlo/linear ARX inverse/max_error_samples/58,0.02865188877581948
+narx,monte_carlo/linear ARX inverse/max_error_samples/59,0.024869352230413987
+narx,monte_carlo/linear ARX inverse/max_error_samples/60,0.023054871896312897
+narx,monte_carlo/linear ARX inverse/max_error_samples/61,0.026208694734681383
+narx,monte_carlo/linear ARX inverse/max_error_samples/62,0.029227309980680773
+narx,monte_carlo/linear ARX inverse/max_error_samples/63,0.025458427770512583
+narx,monte_carlo/linear ARX inverse/max_error_samples/64,0.03350616404961876
+narx,monte_carlo/linear ARX inverse/max_error_samples/65,0.024264234594538792
+narx,monte_carlo/linear ARX inverse/max_error_samples/66,0.030300731417284794
+narx,monte_carlo/linear ARX inverse/max_error_samples/67,0.029857841148824928
+narx,monte_carlo/linear ARX inverse/max_error_samples/68,0.03326026466215306
+narx,monte_carlo/linear ARX inverse/max_error_samples/69,0.027652721605240606
+narx,monte_carlo/linear ARX inverse/max_error_samples/70,0.03409338584072834
+narx,monte_carlo/linear ARX inverse/max_error_samples/71,0.02591826761202656
+narx,monte_carlo/linear ARX inverse/max_error_samples/72,0.030654453214697064
+narx,monte_carlo/linear ARX inverse/max_error_samples/73,0.025250835768714973
+narx,monte_carlo/linear ARX inverse/max_error_samples/74,0.029352354459371014
+narx,monte_carlo/linear ARX inverse/max_error_samples/75,0.0328506767520052
+narx,monte_carlo/linear ARX inverse/max_error_samples/76,0.02741145737318546
+narx,monte_carlo/linear ARX inverse/max_error_samples/77,0.029177499968864238
+narx,monte_carlo/linear ARX inverse/max_error_samples/78,0.02361642471104758
+narx,monte_carlo/linear ARX inverse/max_error_samples/79,0.029309991815930515
+narx,monte_carlo/linear ARX inverse/max_error_samples/80,0.03001969323425884
+narx,monte_carlo/linear ARX inverse/max_error_samples/81,0.026212105323997693
+narx,monte_carlo/linear ARX inverse/max_error_samples/82,0.02698280993858827
+narx,monte_carlo/linear ARX inverse/max_error_samples/83,0.0322373289761185
+narx,monte_carlo/linear ARX inverse/max_error_samples/84,0.029731337458615406
+narx,monte_carlo/linear ARX inverse/max_error_samples/85,0.03030542942652361
+narx,monte_carlo/linear ARX inverse/max_error_samples/86,0.026766192124842995
+narx,monte_carlo/linear ARX inverse/max_error_samples/87,0.02578475050615576
+narx,monte_carlo/linear ARX inverse/max_error_samples/88,0.02932406621071608
+narx,monte_carlo/linear ARX inverse/max_error_samples/89,0.030454609371994446
+narx,monte_carlo/linear ARX inverse/max_error_samples/90,0.029131945536500645
+narx,monte_carlo/linear ARX inverse/max_error_samples/91,0.026862422651493502
+narx,monte_carlo/linear ARX inverse/max_error_samples/92,0.030653235377720606
+narx,monte_carlo/linear ARX inverse/max_error_samples/93,0.027887954303317152
+narx,monte_carlo/linear ARX inverse/max_error_samples/94,0.024911794869014858
+narx,monte_carlo/linear ARX inverse/max_error_samples/95,0.030916329173851835
+narx,monte_carlo/linear ARX inverse/max_error_samples/96,0.031051158757504364
+narx,monte_carlo/linear ARX inverse/max_error_samples/97,0.029794495222399825
+narx,monte_carlo/linear ARX inverse/max_error_samples/98,0.026207376445704793
+narx,monte_carlo/linear ARX inverse/max_error_samples/99,0.02519535433598714
+narx,monte_carlo/linear ARX inverse/max_error_samples/100,0.02906145743299818
+narx,monte_carlo/linear ARX inverse/max_error_samples/101,0.026539589623246273
+narx,monte_carlo/linear ARX inverse/max_error_samples/102,0.026106741705374324
+narx,monte_carlo/linear ARX inverse/max_error_samples/103,0.02734227473118137
+narx,monte_carlo/linear ARX inverse/max_error_samples/104,0.02804152854384795
+narx,monte_carlo/linear ARX inverse/max_error_samples/105,0.02819496025845851
+narx,monte_carlo/linear ARX inverse/max_error_samples/106,0.02843968934056297
+narx,monte_carlo/linear ARX inverse/max_error_samples/107,0.022354056821394984
+narx,monte_carlo/linear ARX inverse/max_error_samples/108,0.030056846624401865
+narx,monte_carlo/linear ARX inverse/max_error_samples/109,0.03623569531499884
+narx,monte_carlo/linear ARX inverse/max_error_samples/110,0.025934282735470375
+narx,monte_carlo/linear ARX inverse/max_error_samples/111,0.02940150393272881
+narx,monte_carlo/linear ARX inverse/max_error_samples/112,0.02816622099947578
+narx,monte_carlo/linear ARX inverse/max_error_samples/113,0.030939477267293333
+narx,monte_carlo/linear ARX inverse/max_error_samples/114,0.0275978056491382
+narx,monte_carlo/linear ARX inverse/max_error_samples/115,0.028999055052165226
+narx,monte_carlo/linear ARX inverse/max_error_samples/116,0.025427944056658467
+narx,monte_carlo/linear ARX inverse/max_error_samples/117,0.031017842211604304
+narx,monte_carlo/linear ARX inverse/max_error_samples/118,0.02788617006738635
+narx,monte_carlo/linear ARX inverse/max_error_samples/119,0.026282675153915174
+narx,alpha_crossing_plain,0.9606060606060605
+narx,alpha_crossing_slope,0.9606060606060605
+narx,closed_loop_conformal/seed,20262857
+narx,closed_loop_conformal/trajectories,20
+narx,closed_loop_conformal/horizon,280
+narx,closed_loop_conformal/sigma/0,0.03999258577823639
+narx,closed_loop_conformal/sigma/1,0.03709369897842407
+narx,closed_loop_conformal/scores/0,1.274312968825799
+narx,closed_loop_conformal/scores/1,1.1044779669932547
+narx,closed_loop_conformal/scores/2,1.26596664853196
+narx,closed_loop_conformal/scores/3,1.072844542988037
+narx,closed_loop_conformal/scores/4,1.6114934138021508
+narx,closed_loop_conformal/scores/5,1.2407038401691934
+narx,closed_loop_conformal/scores/6,1.209572934918873
+narx,closed_loop_conformal/scores/7,1.2404360509349945
+narx,closed_loop_conformal/scores/8,1.1406124795771404
+narx,closed_loop_conformal/scores/9,1.0964212483106228
+narx,closed_loop_conformal/scores/10,1.1749205257001527
+narx,closed_loop_conformal/scores/11,0.9430846783535239
+narx,closed_loop_conformal/scores/12,1.0355049724139465
+narx,closed_loop_conformal/scores/13,1.1323103638002106
+narx,closed_loop_conformal/scores/14,1.1024698358872225
+narx,closed_loop_conformal/scores/15,1.2421181844484208
+narx,closed_loop_conformal/scores/16,1.2263259202567336
+narx,closed_loop_conformal/scores/17,1.097378290167196
+narx,closed_loop_conformal/scores/18,1.0990825412641854
+narx,closed_loop_conformal/scores/19,1.192223782078752
+narx,closed_loop_conformal/fresh_residual_box/0,0.0644477885825455
+narx,closed_loop_conformal/fresh_residual_box/1,0.05977625159728996
+narx,closed_loop_conformal/final_residual_box/0,0.0644477885825455
+narx,closed_loop_conformal/final_residual_box/1,0.05977625159728996
+narx,closed_loop_conformal/coverage_guarantee,0.9523809523809523
+narx,closed_loop_conformal/fp_residual_max,5.960464477539063e-08
+servo,physical_state_dimension,2
+servo,input_dimension,1
+servo,controlled_output_dimension,1
+servo,forward_velocity_rmse,0.012436011375295635
+servo,forward_velocity_rmse_control_affine,0.0125383837819455
+servo,inverse_voltage_rmse_algebraic,0.0912848129236893
+servo,inverse_voltage_rmse_control_affine,0.09118823967641128
+servo,inverse_voltage_rmse_direct,0.1044624628810518
+servo,inverse_contraction_inf,0.6878243684768677
+servo,mean_iterations,5.145625114440918
+servo,physics_skip_D_u,0.1375
+servo,state_measurement_noise_std,0.004
+servo,paired_rmse_differences/implicit minus control-affine inverse/mean_difference,-0.00048661406021988253
+servo,paired_rmse_differences/implicit minus control-affine inverse/ci95_low,-0.000539759388949942
+servo,paired_rmse_differences/implicit minus control-affine inverse/ci95_high,-0.0004329026655602444
+servo,paired_rmse_differences/implicit minus control-affine inverse/fraction_negative,0.95
+servo,paired_rmse_differences/implicit minus direct inverse/mean_difference,-0.02352721080957091
+servo,paired_rmse_differences/implicit minus direct inverse/ci95_low,-0.024870273980878866
+servo,paired_rmse_differences/implicit minus direct inverse/ci95_high,-0.022109539918802993
+servo,paired_rmse_differences/implicit minus direct inverse/fraction_negative,1.0
+servo,paired_rmse_differences/implicit minus nominal computed torque/mean_difference,-0.005885864736327617
+servo,paired_rmse_differences/implicit minus nominal computed torque/ci95_low,-0.0067697537699601094
+servo,paired_rmse_differences/implicit minus nominal computed torque/ci95_high,-0.004953470562671136
+servo,paired_rmse_differences/implicit minus nominal computed torque/fraction_negative,0.8625
+servo,monte_carlo/implicit inverse/position_rmse_mean,0.04365106998189492
+servo,monte_carlo/implicit inverse/position_rmse_p95,0.06997822971267526
+servo,monte_carlo/implicit inverse/max_position_error_mean,0.09198641961128744
+servo,monte_carlo/implicit inverse/rms_voltage_mean,0.4434182041280784
+servo,monte_carlo/implicit inverse/saturation_fraction_mean,0.0
+servo,monte_carlo/implicit inverse/rmse_samples/0,0.05082147552369045
+servo,monte_carlo/implicit inverse/rmse_samples/1,0.03699216628313318
+servo,monte_carlo/implicit inverse/rmse_samples/2,0.03662013008768765
+servo,monte_carlo/implicit inverse/rmse_samples/3,0.036281096143298976
+servo,monte_carlo/implicit inverse/rmse_samples/4,0.03511317304060105
+servo,monte_carlo/implicit inverse/rmse_samples/5,0.04901690844934923
+servo,monte_carlo/implicit inverse/rmse_samples/6,0.029353243042121877
+servo,monte_carlo/implicit inverse/rmse_samples/7,0.03719943421745378
+servo,monte_carlo/implicit inverse/rmse_samples/8,0.03355869196192741
+servo,monte_carlo/implicit inverse/rmse_samples/9,0.04068106991301621
+servo,monte_carlo/implicit inverse/rmse_samples/10,0.05009350036190844
+servo,monte_carlo/implicit inverse/rmse_samples/11,0.06245223729087538
+servo,monte_carlo/implicit inverse/rmse_samples/12,0.04514314874763491
+servo,monte_carlo/implicit inverse/rmse_samples/13,0.02762181277912922
+servo,monte_carlo/implicit inverse/rmse_samples/14,0.039171763005906655
+servo,monte_carlo/implicit inverse/rmse_samples/15,0.04372467851547057
+servo,monte_carlo/implicit inverse/rmse_samples/16,0.049060674268650205
+servo,monte_carlo/implicit inverse/rmse_samples/17,0.07640459282638183
+servo,monte_carlo/implicit inverse/rmse_samples/18,0.043241586552821024
+servo,monte_carlo/implicit inverse/rmse_samples/19,0.024271188056192352
+servo,monte_carlo/implicit inverse/rmse_samples/20,0.032517909912049794
+servo,monte_carlo/implicit inverse/rmse_samples/21,0.06991680123371069
+servo,monte_carlo/implicit inverse/rmse_samples/22,0.03494408135838675
+servo,monte_carlo/implicit inverse/rmse_samples/23,0.029466466095887864
+servo,monte_carlo/implicit inverse/rmse_samples/24,0.04790572061353417
+servo,monte_carlo/implicit inverse/rmse_samples/25,0.03477107718529055
+servo,monte_carlo/implicit inverse/rmse_samples/26,0.0325804233533867
+servo,monte_carlo/implicit inverse/rmse_samples/27,0.03176365727344645
+servo,monte_carlo/implicit inverse/rmse_samples/28,0.02795752058371773
+servo,monte_carlo/implicit inverse/rmse_samples/29,0.04430401350262035
+servo,monte_carlo/implicit inverse/rmse_samples/30,0.07142773368564298
+servo,monte_carlo/implicit inverse/rmse_samples/31,0.04577698138224185
+servo,monte_carlo/implicit inverse/rmse_samples/32,0.06214395106200987
+servo,monte_carlo/implicit inverse/rmse_samples/33,0.042381572256880426
+servo,monte_carlo/implicit inverse/rmse_samples/34,0.06048880162443946
+servo,monte_carlo/implicit inverse/rmse_samples/35,0.04655977826086803
+servo,monte_carlo/implicit inverse/rmse_samples/36,0.056405547454513094
+servo,monte_carlo/implicit inverse/rmse_samples/37,0.025937219265909438
+servo,monte_carlo/implicit inverse/rmse_samples/38,0.046005525918132055
+servo,monte_carlo/implicit inverse/rmse_samples/39,0.054849241303590666
+servo,monte_carlo/implicit inverse/rmse_samples/40,0.0554439588656224
+servo,monte_carlo/implicit inverse/rmse_samples/41,0.030687705248352844
+servo,monte_carlo/implicit inverse/rmse_samples/42,0.041358651977797214
+servo,monte_carlo/implicit inverse/rmse_samples/43,0.053231895918116306
+servo,monte_carlo/implicit inverse/rmse_samples/44,0.071145370813002
+servo,monte_carlo/implicit inverse/rmse_samples/45,0.07506762334965716
+servo,monte_carlo/implicit inverse/rmse_samples/46,0.03454701320535345
+servo,monte_carlo/implicit inverse/rmse_samples/47,0.0509982109786969
+servo,monte_carlo/implicit inverse/rmse_samples/48,0.04970707312359105
+servo,monte_carlo/implicit inverse/rmse_samples/49,0.02665030464161015
+servo,monte_carlo/implicit inverse/rmse_samples/50,0.032252485221255935
+servo,monte_carlo/implicit inverse/rmse_samples/51,0.05823213915713205
+servo,monte_carlo/implicit inverse/rmse_samples/52,0.04272648008293051
+servo,monte_carlo/implicit inverse/rmse_samples/53,0.04391721514340457
+servo,monte_carlo/implicit inverse/rmse_samples/54,0.03707564509781799
+servo,monte_carlo/implicit inverse/rmse_samples/55,0.035751488959965695
+servo,monte_carlo/implicit inverse/rmse_samples/56,0.03479661885756173
+servo,monte_carlo/implicit inverse/rmse_samples/57,0.025857354787538925
+servo,monte_carlo/implicit inverse/rmse_samples/58,0.039812102748426635
+servo,monte_carlo/implicit inverse/rmse_samples/59,0.06181670079783725
+servo,monte_carlo/implicit inverse/rmse_samples/60,0.03138203060667242
+servo,monte_carlo/implicit inverse/rmse_samples/61,0.04499609562674677
+servo,monte_carlo/implicit inverse/rmse_samples/62,0.04014067301251531
+servo,monte_carlo/implicit inverse/rmse_samples/63,0.032154653356741524
+servo,monte_carlo/implicit inverse/rmse_samples/64,0.03420190648397038
+servo,monte_carlo/implicit inverse/rmse_samples/65,0.03827760452226191
+servo,monte_carlo/implicit inverse/rmse_samples/66,0.05826894664165878
+servo,monte_carlo/implicit inverse/rmse_samples/67,0.02730763894600632
+servo,monte_carlo/implicit inverse/rmse_samples/68,0.06916431396295576
+servo,monte_carlo/implicit inverse/rmse_samples/69,0.04351745119667213
+servo,monte_carlo/implicit inverse/rmse_samples/70,0.03544177946990393
+servo,monte_carlo/implicit inverse/rmse_samples/71,0.03371721310070078
+servo,monte_carlo/implicit inverse/rmse_samples/72,0.054503949749711685
+servo,monte_carlo/implicit inverse/rmse_samples/73,0.03433204217879405
+servo,monte_carlo/implicit inverse/rmse_samples/74,0.04446718575223147
+servo,monte_carlo/implicit inverse/rmse_samples/75,0.04164616733638792
+servo,monte_carlo/implicit inverse/rmse_samples/76,0.048495417020629934
+servo,monte_carlo/implicit inverse/rmse_samples/77,0.044612987626873206
+servo,monte_carlo/implicit inverse/rmse_samples/78,0.03688291119549427
+servo,monte_carlo/implicit inverse/rmse_samples/79,0.05257199739548489
+servo,monte_carlo/control-affine inverse/position_rmse_mean,0.0441376840421148
+servo,monte_carlo/control-affine inverse/position_rmse_p95,0.0705307463811993
+servo,monte_carlo/control-affine inverse/max_position_error_mean,0.09292252092857627
+servo,monte_carlo/control-affine inverse/rms_voltage_mean,0.443819143150565
+servo,monte_carlo/control-affine inverse/saturation_fraction_mean,0.0
+servo,monte_carlo/control-affine inverse/rmse_samples/0,0.05132239398042566
+servo,monte_carlo/control-affine inverse/rmse_samples/1,0.03776917718296528
+servo,monte_carlo/control-affine inverse/rmse_samples/2,0.0374471368123246
+servo,monte_carlo/control-affine inverse/rmse_samples/3,0.036705173198529915
+servo,monte_carlo/control-affine inverse/rmse_samples/4,0.03557772136014732
+servo,monte_carlo/control-affine inverse/rmse_samples/5,0.049752211586538295
+servo,monte_carlo/control-affine inverse/rmse_samples/6,0.029560153465507687
+servo,monte_carlo/control-affine inverse/rmse_samples/7,0.03780116773235983
+servo,monte_carlo/control-affine inverse/rmse_samples/8,0.03382423807439987
+servo,monte_carlo/control-affine inverse/rmse_samples/9,0.04158765342980064
+servo,monte_carlo/control-affine inverse/rmse_samples/10,0.050785815803029655
+servo,monte_carlo/control-affine inverse/rmse_samples/11,0.06249349744374354
+servo,monte_carlo/control-affine inverse/rmse_samples/12,0.045338842490110096
+servo,monte_carlo/control-affine inverse/rmse_samples/13,0.028058011604923314
+servo,monte_carlo/control-affine inverse/rmse_samples/14,0.04000051916337462
+servo,monte_carlo/control-affine inverse/rmse_samples/15,0.043847172088945535
+servo,monte_carlo/control-affine inverse/rmse_samples/16,0.04963486620735012
+servo,monte_carlo/control-affine inverse/rmse_samples/17,0.07696637174188979
+servo,monte_carlo/control-affine inverse/rmse_samples/18,0.04398301633829306
+servo,monte_carlo/control-affine inverse/rmse_samples/19,0.02461311617057244
+servo,monte_carlo/control-affine inverse/rmse_samples/20,0.03304233798870699
+servo,monte_carlo/control-affine inverse/rmse_samples/21,0.07047340651505515
+servo,monte_carlo/control-affine inverse/rmse_samples/22,0.03568937063224601
+servo,monte_carlo/control-affine inverse/rmse_samples/23,0.03032205900773088
+servo,monte_carlo/control-affine inverse/rmse_samples/24,0.048799258433351075
+servo,monte_carlo/control-affine inverse/rmse_samples/25,0.035139906673098624
+servo,monte_carlo/control-affine inverse/rmse_samples/26,0.03317375303633117
+servo,monte_carlo/control-affine inverse/rmse_samples/27,0.03219145905059783
+servo,monte_carlo/control-affine inverse/rmse_samples/28,0.02841935162573737
+servo,monte_carlo/control-affine inverse/rmse_samples/29,0.04486104163331762
+servo,monte_carlo/control-affine inverse/rmse_samples/30,0.07162020383793807
+servo,monte_carlo/control-affine inverse/rmse_samples/31,0.04612103706934373
+servo,monte_carlo/control-affine inverse/rmse_samples/32,0.06271288624731561
+servo,monte_carlo/control-affine inverse/rmse_samples/33,0.04277046727173837
+servo,monte_carlo/control-affine inverse/rmse_samples/34,0.06093946669043933
+servo,monte_carlo/control-affine inverse/rmse_samples/35,0.04707248103894061
+servo,monte_carlo/control-affine inverse/rmse_samples/36,0.0568832515306148
+servo,monte_carlo/control-affine inverse/rmse_samples/37,0.026478302314556182
+servo,monte_carlo/control-affine inverse/rmse_samples/38,0.04589806006715136
+servo,monte_carlo/control-affine inverse/rmse_samples/39,0.05515247831694859
+servo,monte_carlo/control-affine inverse/rmse_samples/40,0.05607397361586831
+servo,monte_carlo/control-affine inverse/rmse_samples/41,0.03138255097361012
+servo,monte_carlo/control-affine inverse/rmse_samples/42,0.042132901549287914
+servo,monte_carlo/control-affine inverse/rmse_samples/43,0.05318829691848785
+servo,monte_carlo/control-affine inverse/rmse_samples/44,0.07164947741699515
+servo,monte_carlo/control-affine inverse/rmse_samples/45,0.0755964646644143
+servo,monte_carlo/control-affine inverse/rmse_samples/46,0.035163224370222956
+servo,monte_carlo/control-affine inverse/rmse_samples/47,0.05125812346077725
+servo,monte_carlo/control-affine inverse/rmse_samples/48,0.04964689564903499
+servo,monte_carlo/control-affine inverse/rmse_samples/49,0.026881740525824708
+servo,monte_carlo/control-affine inverse/rmse_samples/50,0.032718591189692774
+servo,monte_carlo/control-affine inverse/rmse_samples/51,0.05874935141408843
+servo,monte_carlo/control-affine inverse/rmse_samples/52,0.043190501426778355
+servo,monte_carlo/control-affine inverse/rmse_samples/53,0.044821414001469405
+servo,monte_carlo/control-affine inverse/rmse_samples/54,0.038058329423848854
+servo,monte_carlo/control-affine inverse/rmse_samples/55,0.03629214494204352
+servo,monte_carlo/control-affine inverse/rmse_samples/56,0.03552361606620576
+servo,monte_carlo/control-affine inverse/rmse_samples/57,0.026068130622760165
+servo,monte_carlo/control-affine inverse/rmse_samples/58,0.040087545516728065
+servo,monte_carlo/control-affine inverse/rmse_samples/59,0.06234116389289109
+servo,monte_carlo/control-affine inverse/rmse_samples/60,0.03144034808960082
+servo,monte_carlo/control-affine inverse/rmse_samples/61,0.04568213785307923
+servo,monte_carlo/control-affine inverse/rmse_samples/62,0.040094530622701366
+servo,monte_carlo/control-affine inverse/rmse_samples/63,0.032763184867786455
+servo,monte_carlo/control-affine inverse/rmse_samples/64,0.03462357287970265
+servo,monte_carlo/control-affine inverse/rmse_samples/65,0.03882710033322989
+servo,monte_carlo/control-affine inverse/rmse_samples/66,0.05865973592652173
+servo,monte_carlo/control-affine inverse/rmse_samples/67,0.027759178525194272
+servo,monte_carlo/control-affine inverse/rmse_samples/68,0.06977081639503513
+servo,monte_carlo/control-affine inverse/rmse_samples/69,0.0437085391932513
+servo,monte_carlo/control-affine inverse/rmse_samples/70,0.03610156584905558
+servo,monte_carlo/control-affine inverse/rmse_samples/71,0.03402259485752488
+servo,monte_carlo/control-affine inverse/rmse_samples/72,0.05503181522032289
+servo,monte_carlo/control-affine inverse/rmse_samples/73,0.035339805158987866
+servo,monte_carlo/control-affine inverse/rmse_samples/74,0.045061649032264055
+servo,monte_carlo/control-affine inverse/rmse_samples/75,0.042049744161311374
+servo,monte_carlo/control-affine inverse/rmse_samples/76,0.048601244165029096
+servo,monte_carlo/control-affine inverse/rmse_samples/77,0.0451830306518292
+servo,monte_carlo/control-affine inverse/rmse_samples/78,0.03737096337247809
+servo,monte_carlo/control-affine inverse/rmse_samples/79,0.05326989371685766
+servo,monte_carlo/direct inverse/position_rmse_mean,0.06717828079146584
+servo,monte_carlo/direct inverse/position_rmse_p95,0.09924887350099125
+servo,monte_carlo/direct inverse/max_position_error_mean,0.12413776967845166
+servo,monte_carlo/direct inverse/rms_voltage_mean,0.4379428243885949
+servo,monte_carlo/direct inverse/saturation_fraction_mean,0.0
+servo,monte_carlo/direct inverse/rmse_samples/0,0.08025496455361575
+servo,monte_carlo/direct inverse/rmse_samples/1,0.04303397706146738
+servo,monte_carlo/direct inverse/rmse_samples/2,0.04698100117309711
+servo,monte_carlo/direct inverse/rmse_samples/3,0.058707847787347806
+servo,monte_carlo/direct inverse/rmse_samples/4,0.05348082964952289
+servo,monte_carlo/direct inverse/rmse_samples/5,0.07341183237503836
+servo,monte_carlo/direct inverse/rmse_samples/6,0.04633394228147553
+servo,monte_carlo/direct inverse/rmse_samples/7,0.05279880186174425
+servo,monte_carlo/direct inverse/rmse_samples/8,0.05155527513496847
+servo,monte_carlo/direct inverse/rmse_samples/9,0.06744267208040958
+servo,monte_carlo/direct inverse/rmse_samples/10,0.07902283119959633
+servo,monte_carlo/direct inverse/rmse_samples/11,0.09044995360436385
+servo,monte_carlo/direct inverse/rmse_samples/12,0.0725604484739671
+servo,monte_carlo/direct inverse/rmse_samples/13,0.03738263321829359
+servo,monte_carlo/direct inverse/rmse_samples/14,0.06161017997667843
+servo,monte_carlo/direct inverse/rmse_samples/15,0.06906913044964562
+servo,monte_carlo/direct inverse/rmse_samples/16,0.07861536505496403
+servo,monte_carlo/direct inverse/rmse_samples/17,0.10545157028795854
+servo,monte_carlo/direct inverse/rmse_samples/18,0.0704808190998408
+servo,monte_carlo/direct inverse/rmse_samples/19,0.049446835228440636
+servo,monte_carlo/direct inverse/rmse_samples/20,0.046854829143880145
+servo,monte_carlo/direct inverse/rmse_samples/21,0.1004736391687504
+servo,monte_carlo/direct inverse/rmse_samples/22,0.0417332474946009
+servo,monte_carlo/direct inverse/rmse_samples/23,0.050654510481324494
+servo,monte_carlo/direct inverse/rmse_samples/24,0.06978903217231248
+servo,monte_carlo/direct inverse/rmse_samples/25,0.05786483070491921
+servo,monte_carlo/direct inverse/rmse_samples/26,0.04935149307251013
+servo,monte_carlo/direct inverse/rmse_samples/27,0.04867831498655793
+servo,monte_carlo/direct inverse/rmse_samples/28,0.05516364201545534
+servo,monte_carlo/direct inverse/rmse_samples/29,0.06784740799519115
+servo,monte_carlo/direct inverse/rmse_samples/30,0.0989030291050516
+servo,monte_carlo/direct inverse/rmse_samples/31,0.0751704198155902
+servo,monte_carlo/direct inverse/rmse_samples/32,0.09144180761667474
+servo,monte_carlo/direct inverse/rmse_samples/33,0.05814999061645694
+servo,monte_carlo/direct inverse/rmse_samples/34,0.09118424945993306
+servo,monte_carlo/direct inverse/rmse_samples/35,0.07501914746435921
+servo,monte_carlo/direct inverse/rmse_samples/36,0.085023090265879
+servo,monte_carlo/direct inverse/rmse_samples/37,0.03694725421617459
+servo,monte_carlo/direct inverse/rmse_samples/38,0.0723627533105604
+servo,monte_carlo/direct inverse/rmse_samples/39,0.08359506902143816
+servo,monte_carlo/direct inverse/rmse_samples/40,0.08640057744317213
+servo,monte_carlo/direct inverse/rmse_samples/41,0.043702655641327075
+servo,monte_carlo/direct inverse/rmse_samples/42,0.06549788836333971
+servo,monte_carlo/direct inverse/rmse_samples/43,0.07985284451616174
+servo,monte_carlo/direct inverse/rmse_samples/44,0.10152073667864492
+servo,monte_carlo/direct inverse/rmse_samples/45,0.10345232924562626
+servo,monte_carlo/direct inverse/rmse_samples/46,0.04529862063395134
+servo,monte_carlo/direct inverse/rmse_samples/47,0.07770140807905414
+servo,monte_carlo/direct inverse/rmse_samples/48,0.07565459540599655
+servo,monte_carlo/direct inverse/rmse_samples/49,0.048492531314188125
+servo,monte_carlo/direct inverse/rmse_samples/50,0.058662644217870895
+servo,monte_carlo/direct inverse/rmse_samples/51,0.08849631698687986
+servo,monte_carlo/direct inverse/rmse_samples/52,0.0694505034461006
+servo,monte_carlo/direct inverse/rmse_samples/53,0.0680587871147595
+servo,monte_carlo/direct inverse/rmse_samples/54,0.05408109046266199
+servo,monte_carlo/direct inverse/rmse_samples/55,0.05974837681120891
+servo,monte_carlo/direct inverse/rmse_samples/56,0.05612416992387719
+servo,monte_carlo/direct inverse/rmse_samples/57,0.050138021196456564
+servo,monte_carlo/direct inverse/rmse_samples/58,0.06447935663426616
+servo,monte_carlo/direct inverse/rmse_samples/59,0.09019482349404777
+servo,monte_carlo/direct inverse/rmse_samples/60,0.05559174533412842
+servo,monte_carlo/direct inverse/rmse_samples/61,0.07191008968163688
+servo,monte_carlo/direct inverse/rmse_samples/62,0.06279227149750448
+servo,monte_carlo/direct inverse/rmse_samples/63,0.0574300702007378
+servo,monte_carlo/direct inverse/rmse_samples/64,0.059543360531142335
+servo,monte_carlo/direct inverse/rmse_samples/65,0.06378072707517018
+servo,monte_carlo/direct inverse/rmse_samples/66,0.08869518182415657
+servo,monte_carlo/direct inverse/rmse_samples/67,0.035279437798438694
+servo,monte_carlo/direct inverse/rmse_samples/68,0.09918441215005656
+servo,monte_carlo/direct inverse/rmse_samples/69,0.0691455286877943
+servo,monte_carlo/direct inverse/rmse_samples/70,0.06336324808783787
+servo,monte_carlo/direct inverse/rmse_samples/71,0.05694344042672109
+servo,monte_carlo/direct inverse/rmse_samples/72,0.0844843767776327
+servo,monte_carlo/direct inverse/rmse_samples/73,0.05968002541877277
+servo,monte_carlo/direct inverse/rmse_samples/74,0.07389579445861688
+servo,monte_carlo/direct inverse/rmse_samples/75,0.07020812502504688
+servo,monte_carlo/direct inverse/rmse_samples/76,0.07559871881435432
+servo,monte_carlo/direct inverse/rmse_samples/77,0.06610918593460074
+servo,monte_carlo/direct inverse/rmse_samples/78,0.04883692346719988
+servo,monte_carlo/direct inverse/rmse_samples/79,0.08048285383606946
+servo,monte_carlo/nominal computed torque/position_rmse_mean,0.049536934718222535
+servo,monte_carlo/nominal computed torque/position_rmse_p95,0.07968708078601817
+servo,monte_carlo/nominal computed torque/max_position_error_mean,0.10070852228782215
+servo,monte_carlo/nominal computed torque/rms_voltage_mean,0.4419986705356437
+servo,monte_carlo/nominal computed torque/saturation_fraction_mean,0.0
+servo,monte_carlo/nominal computed torque/rmse_samples/0,0.058275107135155255
+servo,monte_carlo/nominal computed torque/rmse_samples/1,0.034150323167553946
+servo,monte_carlo/nominal computed torque/rmse_samples/2,0.035037308715451805
+servo,monte_carlo/nominal computed torque/rmse_samples/3,0.04366192156207716
+servo,monte_carlo/nominal computed torque/rmse_samples/4,0.040379605807959684
+servo,monte_carlo/nominal computed torque/rmse_samples/5,0.05458655733058322
+servo,monte_carlo/nominal computed torque/rmse_samples/6,0.03500950277178149
+servo,monte_carlo/nominal computed torque/rmse_samples/7,0.03961175161298425
+servo,monte_carlo/nominal computed torque/rmse_samples/8,0.04063953383965426
+servo,monte_carlo/nominal computed torque/rmse_samples/9,0.04432341000303239
+servo,monte_carlo/nominal computed torque/rmse_samples/10,0.056638655559681714
+servo,monte_carlo/nominal computed torque/rmse_samples/11,0.07377678669780588
+servo,monte_carlo/nominal computed torque/rmse_samples/12,0.05603929757013184
+servo,monte_carlo/nominal computed torque/rmse_samples/13,0.028189978740749792
+servo,monte_carlo/nominal computed torque/rmse_samples/14,0.04224461608262041
+servo,monte_carlo/nominal computed torque/rmse_samples/15,0.05357333792078516
+servo,monte_carlo/nominal computed torque/rmse_samples/16,0.05604491234845442
+servo,monte_carlo/nominal computed torque/rmse_samples/17,0.08609028238528914
+servo,monte_carlo/nominal computed torque/rmse_samples/18,0.0475691352816833
+servo,monte_carlo/nominal computed torque/rmse_samples/19,0.029522726714774763
+servo,monte_carlo/nominal computed torque/rmse_samples/20,0.035506196778676495
+servo,monte_carlo/nominal computed torque/rmse_samples/21,0.07964053042769456
+servo,monte_carlo/nominal computed torque/rmse_samples/22,0.033015288562318966
+servo,monte_carlo/nominal computed torque/rmse_samples/23,0.02685051158257168
+servo,monte_carlo/nominal computed torque/rmse_samples/24,0.04666144034940418
+servo,monte_carlo/nominal computed torque/rmse_samples/25,0.0402689745830109
+servo,monte_carlo/nominal computed torque/rmse_samples/26,0.0327414176368014
+servo,monte_carlo/nominal computed torque/rmse_samples/27,0.034009098421312264
+servo,monte_carlo/nominal computed torque/rmse_samples/28,0.03331991409756802
+servo,monte_carlo/nominal computed torque/rmse_samples/29,0.050505394643226544
+servo,monte_carlo/nominal computed torque/rmse_samples/30,0.08258929026723384
+servo,monte_carlo/nominal computed torque/rmse_samples/31,0.054745201495667035
+servo,monte_carlo/nominal computed torque/rmse_samples/32,0.07129350832242591
+servo,monte_carlo/nominal computed torque/rmse_samples/33,0.048409378906437664
+servo,monte_carlo/nominal computed torque/rmse_samples/34,0.06923332777139508
+servo,monte_carlo/nominal computed torque/rmse_samples/35,0.05629275995899882
+servo,monte_carlo/nominal computed torque/rmse_samples/36,0.06578064153209401
+servo,monte_carlo/nominal computed torque/rmse_samples/37,0.022365950552861655
+servo,monte_carlo/nominal computed torque/rmse_samples/38,0.05743412305426294
+servo,monte_carlo/nominal computed torque/rmse_samples/39,0.06546846824564594
+servo,monte_carlo/nominal computed torque/rmse_samples/40,0.06430507325448677
+servo,monte_carlo/nominal computed torque/rmse_samples/41,0.031343089424471775
+servo,monte_carlo/nominal computed torque/rmse_samples/42,0.046286723624556304
+servo,monte_carlo/nominal computed torque/rmse_samples/43,0.0649635171698591
+servo,monte_carlo/nominal computed torque/rmse_samples/44,0.08057153759416687
+servo,monte_carlo/nominal computed torque/rmse_samples/45,0.08518365828254776
+servo,monte_carlo/nominal computed torque/rmse_samples/46,0.03279200158942431
+servo,monte_carlo/nominal computed torque/rmse_samples/47,0.05974640695965557
+servo,monte_carlo/nominal computed torque/rmse_samples/48,0.061065693161740084
+servo,monte_carlo/nominal computed torque/rmse_samples/49,0.03415344827201935
+servo,monte_carlo/nominal computed torque/rmse_samples/50,0.037692049812700745
+servo,monte_carlo/nominal computed torque/rmse_samples/51,0.06751911070692007
+servo,monte_carlo/nominal computed torque/rmse_samples/52,0.04962671829720518
+servo,monte_carlo/nominal computed torque/rmse_samples/53,0.0427196471375266
+servo,monte_carlo/nominal computed torque/rmse_samples/54,0.03354055050149593
+servo,monte_carlo/nominal computed torque/rmse_samples/55,0.04281239878419041
+servo,monte_carlo/nominal computed torque/rmse_samples/56,0.03337540775804703
+servo,monte_carlo/nominal computed torque/rmse_samples/57,0.03276065428646322
+servo,monte_carlo/nominal computed torque/rmse_samples/58,0.04657736676053446
+servo,monte_carlo/nominal computed torque/rmse_samples/59,0.07221988863269047
+servo,monte_carlo/nominal computed torque/rmse_samples/60,0.04082661174261375
+servo,monte_carlo/nominal computed torque/rmse_samples/61,0.05256123296892341
+servo,monte_carlo/nominal computed torque/rmse_samples/62,0.05107672771604053
+servo,monte_carlo/nominal computed torque/rmse_samples/63,0.03662592671119746
+servo,monte_carlo/nominal computed torque/rmse_samples/64,0.041488438590784105
+servo,monte_carlo/nominal computed torque/rmse_samples/65,0.04241555759078909
+servo,monte_carlo/nominal computed torque/rmse_samples/66,0.06741337090840362
+servo,monte_carlo/nominal computed torque/rmse_samples/67,0.026468990949898234
+servo,monte_carlo/nominal computed torque/rmse_samples/68,0.07860370016864021
+servo,monte_carlo/nominal computed torque/rmse_samples/69,0.052337187576886074
+servo,monte_carlo/nominal computed torque/rmse_samples/70,0.04120193988638401
+servo,monte_carlo/nominal computed torque/rmse_samples/71,0.04115191132734329
+servo,monte_carlo/nominal computed torque/rmse_samples/72,0.06427107765528958
+servo,monte_carlo/nominal computed torque/rmse_samples/73,0.03590506522277225
+servo,monte_carlo/nominal computed torque/rmse_samples/74,0.05058650381823934
+servo,monte_carlo/nominal computed torque/rmse_samples/75,0.05052468657721012
+servo,monte_carlo/nominal computed torque/rmse_samples/76,0.0591893616679364
+servo,monte_carlo/nominal computed torque/rmse_samples/77,0.0504552141441875
+servo,monte_carlo/nominal computed torque/rmse_samples/78,0.03976198992033706
+servo,monte_carlo/nominal computed torque/rmse_samples/79,0.05933817186540701

@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying manuscript when using this reproducibility package."
+type: software
+title: "Implicit Deep Learning Models for Robust Nonlinear Inverse Control: Reproducibility Package"
+version: 1.0.0
+authors:
+  - family-names: Calafiore
+    given-names: Giuseppe C.
+  - family-names: El Ghaoui
+    given-names: Laurent
+abstract: >-
+  Code and trained checkpoints for algebraic inversion of implicit neural
+  input-output models, with measured-history closed-loop robustness
+  certificates and finite-solver-residual bounds. Includes static MIMO,
+  nonlinear NARX, and physics-guided servo experiments.
+keywords:
+  - implicit deep learning
+  - model inversion
+  - nonlinear control
+  - NARX
+  - robustness certificates
+preferred-citation:
+  type: unpublished
+  title: "Implicit Deep Learning Models for Robust Nonlinear Inverse Control"
+  authors:
+    - family-names: Calafiore
+      given-names: Giuseppe C.
+    - family-names: El Ghaoui
+      given-names: Laurent
+  year: 2026
+  notes: "Manuscript. Publication identifiers will be added when available."

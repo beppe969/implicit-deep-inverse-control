@@ -1,0 +1,25 @@
+test_all_four_tables_export (test_reproducibility.PackagingTests.test_all_four_tables_export) ... ok
+test_csv_quotes_variant_names (test_reproducibility.PackagingTests.test_csv_quotes_variant_names) ... ok
+test_missing_scientific_values_fail (test_reproducibility.PackagingTests.test_missing_scientific_values_fail) ... ok
+test_nonfinite_expected_values_match_null (test_reproducibility.PackagingTests.test_nonfinite_expected_values_match_null) ... ok
+test_nonfinite_to_json_null (test_reproducibility.PackagingTests.test_nonfinite_to_json_null) ... ok
+test_output_overwrite_refused (test_reproducibility.PackagingTests.test_output_overwrite_refused) ... ok
+test_saved_main_and_variant_weights_agree (test_reproducibility.PackagingTests.test_saved_main_and_variant_weights_agree) ... ok
+test_scientific_difference_fails_comparison (test_reproducibility.PackagingTests.test_scientific_difference_fails_comparison) ... ok
+test_timing_differences_are_diagnostic (test_reproducibility.PackagingTests.test_timing_differences_are_diagnostic) ... ok
+test_bi_contraction (test_reproducibility.ScientificTests.test_bi_contraction) ... ok
+test_cyclic_forward_inverse_cycle_double (test_reproducibility.ScientificTests.test_cyclic_forward_inverse_cycle_double) ... ok
+test_forward_inverse_cycle_double (test_reproducibility.ScientificTests.test_forward_inverse_cycle_double) ... ok
+test_independent_numpy_equations (test_reproducibility.ScientificTests.test_independent_numpy_equations) ... ok
+test_inverse_sensitivity (test_reproducibility.ScientificTests.test_inverse_sensitivity) ... ok
+test_main_certificate_and_tubes (test_reproducibility.ScientificTests.test_main_certificate_and_tubes) ... ok
+test_paired_bootstrap_deterministic (test_reproducibility.ScientificTests.test_paired_bootstrap_deterministic) ... ok
+test_reference_manifest (test_reproducibility.ScientificTests.test_reference_manifest) ... ok
+test_shift_register (test_reproducibility.ScientificTests.test_shift_register) ... ok
+test_solver_residual_control_and_output_bounds (test_reproducibility.ScientificTests.test_solver_residual_control_and_output_bounds) ... ok
+test_uncertified_ablation_is_reported (test_reproducibility.ScientificTests.test_uncertified_ablation_is_reported) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.177s
+
+OK

@@ -1,0 +1,25 @@
+{
+  "static_inverse_rmse": 0.02310915827702672,
+  "NARX_rho_H": 0.6706798304285071,
+  "NARX_rmse": 0.005764506431937189,
+  "equation_tests": {
+    "implementation": "independent NumPy equations; float64",
+    "seed": 2091306,
+    "dense_cyclic_models": 36,
+    "queries_per_model": 64,
+    "activations": [
+      "tanh",
+      "ReLU",
+      "tanh + 0.25"
+    ],
+    "maximum_forward_inverse_cycle_error": 1.1102230246251565e-15,
+    "maximum_inequality_defects": {
+      "inverse_sensitivity": -0.006477562029879896,
+      "hidden_residual": -0.0005848085427159165,
+      "control_residual": -0.0010779930499890062,
+      "output_residual": -0.0008951877762150302,
+      "free_running_incremental": 0.0,
+      "free_running_absolute": 0.0
+    }
+  }
+}

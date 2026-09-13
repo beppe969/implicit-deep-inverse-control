@@ -1,0 +1,10 @@
+## Table III. Tracking over 120 uncertain NARX plants
+
+| Controller | Mean RMSE | 95th-percentile RMSE | Mean max. error | 95th-percentile max. error | Hidden evaluations |
+| --- | --- | --- | --- | --- | --- |
+| implicit inverse | 0.00576 | 0.00649 | 0.0213 | 0.0270 | 4.1 |
+| online Newton | 0.00576 | 0.00649 | 0.0213 | 0.0270 | 2.9 |
+| direct inverse | 0.00575 | 0.00773 | 0.0368 | 0.0637 | -- |
+| linear ARX inverse | 0.00845 | 0.00928 | 0.0283 | 0.0333 | -- |
+
+Measured feedback is noisy; tracking statistics use noise-free plant outputs. The theorem's output tube applies to measured output errors.

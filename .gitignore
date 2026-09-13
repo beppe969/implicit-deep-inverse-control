@@ -1,0 +1,33 @@
+# Local Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+# Fresh experiment outputs; frozen paper results stay tracked
+/runs/
+/audit/
+.mplconfig/
+# Local credentials and editor/OS files
+.env
+.env.*
+!.env.example
+.DS_Store
+__MACOSX/
+.vscode/
+.idea/
+# TeX build products
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+# Never commit private editorial material
+TECHNICAL_REVIEW*
+CHANGES.patch
+REVISION_LOG.md
+/editorial/
