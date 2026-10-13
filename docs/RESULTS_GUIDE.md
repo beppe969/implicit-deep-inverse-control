@@ -21,7 +21,7 @@ samples. The LaTeX files contain reusable `tabular` environments requiring
 
 ## Figures
 
-The numbering below follows the current lightly revised manuscript.
+The numbering below follows the current focused-repair manuscript.
 
 | Manuscript item | File stem in `figures/` | Generator |
 | --- | --- | --- |
@@ -33,8 +33,7 @@ The numbering below follows the current lightly revised manuscript.
 | Figure 6: servo trajectory | `servo_tracking` | `run_servo()` |
 | Figure 7: servo Monte Carlo | `servo_monte_carlo` | `run_servo()` |
 
-PDF and PNG versions of all seven figures are supplied. The six original
-experimental pairs are preserved byte-for-byte. Figure 1 is additionally supplied
+PDF and PNG versions of all seven figures are supplied. The six experimental pairs are regenerated from the repaired evaluations. Figure 1 is additionally supplied
 as a standalone extraction from the current manuscript. Rebuild it in a
 separate directory using `pdflatex io_architecture.tex`, with the `standalone` and
 TikZ packages installed.
@@ -61,7 +60,7 @@ The selected calibration envelope is incorporated in `d_bar_total`.
 
 `narx/variants/<name>` includes open-loop metrics and the corresponding closed-loop
 results. The main-model variant uses fresh matched calibration; other variants
-use preliminary envelopes. A spectral radius above one gives unavailable tube
+use preliminary envelopes plus the saved `uncertainty_center_allowance`. A spectral radius above one gives unavailable tube
 radii in the reference results.
 
 ## Evaluation statistics

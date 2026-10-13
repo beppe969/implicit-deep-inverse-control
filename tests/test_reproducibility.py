@@ -107,7 +107,7 @@ class ScientificTests(unittest.TestCase):
     def test_uncertified_ablation_is_reported(self):
         n = ARCHIVE['narx']['variants']['control-affine (B_u=0)']
         self.assertGreater(n['rho_H'], 1.)
-        self.assertTrue(all(not np.isfinite(x) for x in n['u_tube']))
+        self.assertTrue(all(x is None or not np.isfinite(x) for x in n['u_tube']))
 
     def test_shift_register(self):
         J, Gy, Gu, Py = ex.narx_shift_matrices()
@@ -141,6 +141,7 @@ class PackagingTests(unittest.TestCase):
                 rows = list(csv.reader(stream))
             self.assertTrue(all(len(row) == 3 for row in rows))
             self.assertEqual(rows[1][1], 'name, with comma/value')
+            self.assertNotIn(b'\r\n', path.read_bytes())
 
     def test_nonfinite_to_json_null(self):
         with tempfile.TemporaryDirectory() as tmp:

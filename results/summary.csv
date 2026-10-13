@@ -1,21 +1,25 @@
 experiment,metric,value
 static,forward_rmse,0.025793618339551874
-static,inverse_rmse_algebraic,0.02310915827702672
+static,inverse_rmse_algebraic,0.023109159044718438
 static,inverse_rmse_direct,0.01983007959844559
 static,inverse_rmse_newton,0.023109156359218324
-static,learned_model_cycle_rmse,7.707761266022537e-08
-static,true_cycle_rmse_algebraic,0.023042364599821688
+static,learned_model_cycle_rmse,7.6831519710502e-08
+static,true_cycle_rmse_algebraic,0.023042365428427938
 static,true_cycle_rmse_direct,0.019579347185822556
-static,noisy_inverse_rmse_algebraic,0.050839890300025774
+static,true_cycle_rmse_newton,0.02304236376496762
+static,noisy_inverse_rmse_algebraic,0.050839889937718596
 static,noisy_inverse_rmse_direct,0.049161890337057965
+static,noisy_inverse_rmse_newton,0.05083989094247584
 static,mean_iterations,7.185333251953125
 static,p95_iterations,9.0
 static,max_iterations,9.0
 static,newton_mean_iterations,2.9839999675750732
 static,newton_mean_hidden_evaluations,3.9826667308807373
 static,newton_max_iterations,4.0
-static,time_ratio_newton_over_algebraic,2.4894236576354842
+static,time_ratio_newton_over_algebraic,1.6760883038215488
 static,inverse_contraction_inf,0.6863285899162292
+static,solver_residual_max,9.685754776000977e-08
+static,solver_converged_fraction,1.0
 narx,input_dimension,2
 narx,output_dimension,2
 narx,regressor_dimension,10
@@ -28,10 +32,10 @@ narx,calibration_horizon,280
 narx,closed_loop_horizon,280
 narx,measurement_noise_std,0.012
 narx,forward_rmse,0.004433558939308465
-narx,inverse_rmse_algebraic,0.005400730754209922
+narx,inverse_rmse_algebraic,0.0054007308337799135
 narx,inverse_rmse_direct,0.011198717940985996
-narx,inverse_rmse_linear,0.01095187354644552
-narx,learned_model_cycle_rmse,3.0016542144364315e-08
+narx,inverse_rmse_linear,0.01095187438210504
+narx,learned_model_cycle_rmse,3.0172526179057295e-08
 narx,inverse_contraction_inf,0.6367357969284058
 narx,mean_iterations,4.960302829742432
 narx,p95_iterations,5.0
@@ -44,53 +48,54 @@ narx,rho_majorant_linear_zero_dynamics,0.5948629620379418
 narx,reference_input_max,0.5159569382667542
 narx,alpha_crossing_plain,0.9606060606060605
 narx,alpha_crossing_slope,0.9606060606060605
-narx,implicit inverse:rmse_mean,0.005764506431937189
-narx,implicit inverse:rmse_p95,0.006485711728816711
-narx,implicit inverse:max_error_mean,0.02134608200820741
-narx,implicit inverse:max_error_p95,0.02701584896700982
-narx,implicit inverse:rms_input_mean,0.24390648853774274
+narx,implicit inverse:rmse_mean,0.005764506410143383
+narx,implicit inverse:rmse_p95,0.0064857109250912245
+narx,implicit inverse:max_error_mean,0.021346081774898114
+narx,implicit inverse:max_error_p95,0.02701584970502478
+narx,implicit inverse:rms_input_mean,0.2439064884661584
 narx,implicit inverse:saturation_fraction_mean,0.0
-narx,implicit inverse:controller_time_per_step_ms,1.089574892843562
-narx,implicit inverse:closed_loop_iterations_mean,4.059315476190476
+narx,implicit inverse:controller_time_per_step_ms,0.5191723107131452
+narx,implicit inverse:solver_residual_max,1.993030309677124e-07
+narx,implicit inverse:closed_loop_iterations_mean,4.0598214285714285
 narx,implicit inverse:closed_loop_iterations_p95,5.0
 narx,implicit inverse:closed_loop_iterations_max,5.0
-narx,implicit inverse:hidden_evaluations_mean,4.059315476190476
+narx,implicit inverse:hidden_evaluations_mean,4.0598214285714285
 narx,implicit inverse:tube_plain_output_tube_exceedance_fraction_after_burn,0.0
 narx,implicit inverse:tube_plain_input_tube_exceedance_fraction_after_burn,0.0
-narx,implicit inverse:tube_plain_output_tube_max_ratio_after_burn,0.7214047156896776
-narx,implicit inverse:tube_plain_input_tube_max_ratio_after_burn,0.14696905487153444
+narx,implicit inverse:tube_plain_output_tube_max_ratio_after_burn,0.7214043286864569
+narx,implicit inverse:tube_plain_input_tube_max_ratio_after_burn,0.14696908571937783
 narx,implicit inverse:tube_slope_output_tube_exceedance_fraction_after_burn,0.0
 narx,implicit inverse:tube_slope_input_tube_exceedance_fraction_after_burn,0.0
-narx,implicit inverse:tube_slope_output_tube_max_ratio_after_burn,0.7214047156896776
-narx,implicit inverse:tube_slope_input_tube_max_ratio_after_burn,0.14696905487153444
-narx,online Newton:rmse_mean,0.005764507119691164
-narx,online Newton:rmse_p95,0.006485712402821475
-narx,online Newton:max_error_mean,0.021346083871715476
+narx,implicit inverse:tube_slope_output_tube_max_ratio_after_burn,0.7214043286864569
+narx,implicit inverse:tube_slope_input_tube_max_ratio_after_burn,0.14696908571937783
+narx,online Newton:rmse_mean,0.00576450712225392
+narx,online Newton:rmse_p95,0.006485712402798601
+narx,online Newton:max_error_mean,0.021346083871683182
 narx,online Newton:max_error_p95,0.02701586479521294
-narx,online Newton:rms_input_mean,0.24390648193170097
+narx,online Newton:rms_input_mean,0.2439064819325603
 narx,online Newton:saturation_fraction_mean,0.0
-narx,online Newton:controller_time_per_step_ms,1.8719062357149596
-narx,online Newton:closed_loop_iterations_mean,1.8522023809523809
+narx,online Newton:controller_time_per_step_ms,0.8782663785701013
+narx,online Newton:closed_loop_iterations_mean,1.852172619047619
 narx,online Newton:closed_loop_iterations_p95,2.0
 narx,online Newton:closed_loop_iterations_max,2.0
-narx,online Newton:hidden_evaluations_mean,2.852202380952381
-narx,direct inverse:rmse_mean,0.005751333320749968
-narx,direct inverse:rmse_p95,0.007728106829394946
+narx,online Newton:hidden_evaluations_mean,2.852172619047619
+narx,direct inverse:rmse_mean,0.0057513333207496525
+narx,direct inverse:rmse_p95,0.007728106829374632
 narx,direct inverse:max_error_mean,0.03680966706029636
 narx,direct inverse:max_error_p95,0.06372213956079155
 narx,direct inverse:rms_input_mean,0.24548676216143953
 narx,direct inverse:saturation_fraction_mean,0.0
-narx,direct inverse:controller_time_per_step_ms,0.23259290356268789
-narx,linear ARX inverse:rmse_mean,0.008449083612386943
-narx,linear ARX inverse:rmse_p95,0.009279509160368196
-narx,linear ARX inverse:max_error_mean,0.028282465090945
-narx,linear ARX inverse:max_error_p95,0.0333423831523488
-narx,linear ARX inverse:rms_input_mean,0.24670483813673172
+narx,direct inverse:controller_time_per_step_ms,0.10016103571380038
+narx,linear ARX inverse:rmse_mean,0.00844908537369462
+narx,linear ARX inverse:rmse_p95,0.009279511969582587
+narx,linear ARX inverse:max_error_mean,0.028282473393523182
+narx,linear ARX inverse:max_error_p95,0.033342420888574774
+narx,linear ARX inverse:rms_input_mean,0.2467048381702672
 narx,linear ARX inverse:saturation_fraction_mean,0.0
-narx,linear ARX inverse:controller_time_per_step_ms,0.12788661070024837
+narx,linear ARX inverse:controller_time_per_step_ms,0.04710412500068222
 narx,variant[main]:forward_rmse,0.004433558939308465
-narx,variant[main]:inverse_rmse_algebraic,0.005400730754209922
-narx,variant[main]:learned_model_cycle_rmse,3.0016542144364315e-08
+narx,variant[main]:inverse_rmse_algebraic,0.0054007308337799135
+narx,variant[main]:learned_model_cycle_rmse,3.0172526179057295e-08
 narx,variant[main]:inverse_contraction_inf,0.6367357969284058
 narx,variant[main]:rho_absA,0.0
 narx,variant[main]:rho_absAi,0.08207902429220779
@@ -99,25 +104,26 @@ narx,variant[main]:p95_iterations,5.0
 narx,variant[main]:S_chi_inf,1.528632388642756
 narx,variant[main]:rho_H,0.6706798304285071
 narx,variant[main]:rho_nominal_memory,0.660381725155756
-narx,variant[main]:closed_loop:rmse_mean,0.005764506431937189
-narx,variant[main]:closed_loop:rmse_p95,0.006485711728816711
-narx,variant[main]:closed_loop:max_error_mean,0.02134608200820741
-narx,variant[main]:closed_loop:max_error_p95,0.02701584896700982
-narx,variant[main]:closed_loop:rms_input_mean,0.24390648853774274
+narx,variant[main]:closed_loop:rmse_mean,0.005764506410143383
+narx,variant[main]:closed_loop:rmse_p95,0.0064857109250912245
+narx,variant[main]:closed_loop:max_error_mean,0.021346081774898114
+narx,variant[main]:closed_loop:max_error_p95,0.02701584970502478
+narx,variant[main]:closed_loop:rms_input_mean,0.2439064884661584
 narx,variant[main]:closed_loop:saturation_fraction_mean,0.0
-narx,variant[main]:closed_loop:controller_time_per_step_ms,1.089574892843562
-narx,variant[main]:closed_loop:closed_loop_iterations_mean,4.059315476190476
+narx,variant[main]:closed_loop:controller_time_per_step_ms,0.5191723107131452
+narx,variant[main]:closed_loop:solver_residual_max,1.993030309677124e-07
+narx,variant[main]:closed_loop:closed_loop_iterations_mean,4.0598214285714285
 narx,variant[main]:closed_loop:closed_loop_iterations_p95,5.0
 narx,variant[main]:closed_loop:closed_loop_iterations_max,5.0
-narx,variant[main]:closed_loop:hidden_evaluations_mean,4.059315476190476
+narx,variant[main]:closed_loop:hidden_evaluations_mean,4.0598214285714285
 narx,variant[main]:closed_loop:tube_plain_output_tube_exceedance_fraction_after_burn,0.0
 narx,variant[main]:closed_loop:tube_plain_input_tube_exceedance_fraction_after_burn,0.0
-narx,variant[main]:closed_loop:tube_plain_output_tube_max_ratio_after_burn,0.7214047156896776
-narx,variant[main]:closed_loop:tube_plain_input_tube_max_ratio_after_burn,0.14696905487153444
+narx,variant[main]:closed_loop:tube_plain_output_tube_max_ratio_after_burn,0.7214043286864569
+narx,variant[main]:closed_loop:tube_plain_input_tube_max_ratio_after_burn,0.14696908571937783
 narx,variant[main]:closed_loop:tube_slope_output_tube_exceedance_fraction_after_burn,0.0
 narx,variant[main]:closed_loop:tube_slope_input_tube_exceedance_fraction_after_burn,0.0
-narx,variant[main]:closed_loop:tube_slope_output_tube_max_ratio_after_burn,0.7214047156896776
-narx,variant[main]:closed_loop:tube_slope_input_tube_max_ratio_after_burn,0.14696905487153444
+narx,variant[main]:closed_loop:tube_slope_output_tube_max_ratio_after_burn,0.7214043286864569
+narx,variant[main]:closed_loop:tube_slope_input_tube_max_ratio_after_burn,0.14696908571937783
 narx,variant[control-affine (B_u=0)]:forward_rmse,0.005994018885244888
 narx,variant[control-affine (B_u=0)]:inverse_rmse_algebraic,0.0072674223114854095
 narx,variant[control-affine (B_u=0)]:learned_model_cycle_rmse,4.4285960853224954e-08
@@ -129,42 +135,44 @@ narx,variant[control-affine (B_u=0)]:p95_iterations,2.0
 narx,variant[control-affine (B_u=0)]:S_chi_inf,7.451609067812142
 narx,variant[control-affine (B_u=0)]:rho_H,2.1609347655579625
 narx,variant[control-affine (B_u=0)]:rho_nominal_memory,2.1460569697925562
-narx,variant[control-affine (B_u=0)]:closed_loop:rmse_mean,0.005789993924558158
-narx,variant[control-affine (B_u=0)]:closed_loop:rmse_p95,0.007018164272790228
-narx,variant[control-affine (B_u=0)]:closed_loop:max_error_mean,0.02352170519398332
-narx,variant[control-affine (B_u=0)]:closed_loop:max_error_p95,0.038504150435274345
-narx,variant[control-affine (B_u=0)]:closed_loop:rms_input_mean,0.24504121929068765
+narx,variant[control-affine (B_u=0)]:closed_loop:rmse_mean,0.005789793038151964
+narx,variant[control-affine (B_u=0)]:closed_loop:rmse_p95,0.007019527379236122
+narx,variant[control-affine (B_u=0)]:closed_loop:max_error_mean,0.023522043035388598
+narx,variant[control-affine (B_u=0)]:closed_loop:max_error_p95,0.03850155125966937
+narx,variant[control-affine (B_u=0)]:closed_loop:rms_input_mean,0.2450412830712429
 narx,variant[control-affine (B_u=0)]:closed_loop:saturation_fraction_mean,0.0
-narx,variant[control-affine (B_u=0)]:closed_loop:controller_time_per_step_ms,0.6530404571484334
+narx,variant[control-affine (B_u=0)]:closed_loop:controller_time_per_step_ms,0.3283175250000373
+narx,variant[control-affine (B_u=0)]:closed_loop:solver_residual_max,0.0
 narx,variant[control-affine (B_u=0)]:closed_loop:closed_loop_iterations_mean,2.0
 narx,variant[control-affine (B_u=0)]:closed_loop:closed_loop_iterations_p95,2.0
 narx,variant[control-affine (B_u=0)]:closed_loop:closed_loop_iterations_max,2.0
 narx,variant[control-affine (B_u=0)]:closed_loop:hidden_evaluations_mean,2.0
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:forward_rmse,0.008883531789094781
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:inverse_rmse_algebraic,0.01075271873470002
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:learned_model_cycle_rmse,4.206214611909809e-08
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:inverse_contraction_inf,0.0
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:rho_absA,0.0
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:rho_absAi,0.0
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:mean_iterations,2.0
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:p95_iterations,2.0
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:S_chi_inf,1.4282136839860926
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:rho_H,0.6381169806107643
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:rho_nominal_memory,0.6283309685512177
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:rmse_mean,0.008130573976117727
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:rmse_p95,0.008910020724674972
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:max_error_mean,0.02777980274721262
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:max_error_p95,0.03304208358537843
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:rms_input_mean,0.24640369229955753
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:saturation_fraction_mean,0.0
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:controller_time_per_step_ms,0.634009325027104
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:closed_loop_iterations_mean,2.0
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:closed_loop_iterations_p95,2.0
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:closed_loop_iterations_max,2.0
-narx,variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:hidden_evaluations_mean,2.0
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:forward_rmse",0.008883531789094781
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:inverse_rmse_algebraic",0.01075271873470002
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:learned_model_cycle_rmse",4.206214611909809e-08
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:inverse_contraction_inf",0.0
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:rho_absA",0.0
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:rho_absAi",0.0
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:mean_iterations",2.0
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:p95_iterations",2.0
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:S_chi_inf",1.4282136839860926
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:rho_H",0.6381169806107643
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:rho_nominal_memory",0.6283309685512177
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:rmse_mean",0.008130229245568433
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:rmse_p95",0.008908816218993715
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:max_error_mean",0.02778015021032394
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:max_error_p95",0.033048096832890235
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:rms_input_mean",0.24640392124404248
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:saturation_fraction_mean",0.0
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:controller_time_per_step_ms",0.3154793500008119
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:solver_residual_max",0.0
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:closed_loop_iterations_mean",2.0
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:closed_loop_iterations_p95",2.0
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:closed_loop_iterations_max",2.0
+narx,"variant[control-affine (B_u=0), lambda_s=3e-3]:closed_loop:hidden_evaluations_mean",2.0
 narx,variant[lambda_s=0]:forward_rmse,0.0033993370755581423
-narx,variant[lambda_s=0]:inverse_rmse_algebraic,0.004141143524882753
-narx,variant[lambda_s=0]:learned_model_cycle_rmse,4.01449140775603e-08
+narx,variant[lambda_s=0]:inverse_rmse_algebraic,0.004141143752057899
+narx,variant[lambda_s=0]:learned_model_cycle_rmse,4.015997309295621e-08
 narx,variant[lambda_s=0]:inverse_contraction_inf,0.6050782799720764
 narx,variant[lambda_s=0]:rho_absA,0.0
 narx,variant[lambda_s=0]:rho_absAi,0.18290139960908017
@@ -173,20 +181,21 @@ narx,variant[lambda_s=0]:p95_iterations,5.0
 narx,variant[lambda_s=0]:S_chi_inf,2.731621341556653
 narx,variant[lambda_s=0]:rho_H,0.9791002904384842
 narx,variant[lambda_s=0]:rho_nominal_memory,0.9683396888754014
-narx,variant[lambda_s=0]:closed_loop:rmse_mean,0.0053850285243458446
-narx,variant[lambda_s=0]:closed_loop:rmse_p95,0.006184410102780399
-narx,variant[lambda_s=0]:closed_loop:max_error_mean,0.02025586245825739
-narx,variant[lambda_s=0]:closed_loop:max_error_p95,0.027001074277573058
-narx,variant[lambda_s=0]:closed_loop:rms_input_mean,0.24369205761223872
+narx,variant[lambda_s=0]:closed_loop:rmse_mean,0.005385023745991777
+narx,variant[lambda_s=0]:closed_loop:rmse_p95,0.006184667341837873
+narx,variant[lambda_s=0]:closed_loop:max_error_mean,0.020255911877365765
+narx,variant[lambda_s=0]:closed_loop:max_error_p95,0.027001252576057292
+narx,variant[lambda_s=0]:closed_loop:rms_input_mean,0.24369203167594802
 narx,variant[lambda_s=0]:closed_loop:saturation_fraction_mean,0.0
-narx,variant[lambda_s=0]:closed_loop:controller_time_per_step_ms,1.1275250178625487
-narx,variant[lambda_s=0]:closed_loop:closed_loop_iterations_mean,4.120595238095238
+narx,variant[lambda_s=0]:closed_loop:controller_time_per_step_ms,0.5225265714295395
+narx,variant[lambda_s=0]:closed_loop:solver_residual_max,1.9976869225502014e-07
+narx,variant[lambda_s=0]:closed_loop:closed_loop_iterations_mean,4.120238095238095
 narx,variant[lambda_s=0]:closed_loop:closed_loop_iterations_p95,5.0
 narx,variant[lambda_s=0]:closed_loop:closed_loop_iterations_max,5.0
-narx,variant[lambda_s=0]:closed_loop:hidden_evaluations_mean,4.120595238095238
+narx,variant[lambda_s=0]:closed_loop:hidden_evaluations_mean,4.120238095238095
 narx,variant[lambda_s=1e-3]:forward_rmse,0.005722721911875533
-narx,variant[lambda_s=1e-3]:inverse_rmse_algebraic,0.006943600130343141
-narx,variant[lambda_s=1e-3]:learned_model_cycle_rmse,3.466370454753358e-08
+narx,variant[lambda_s=1e-3]:inverse_rmse_algebraic,0.006943600024685394
+narx,variant[lambda_s=1e-3]:learned_model_cycle_rmse,3.461772801160065e-08
 narx,variant[lambda_s=1e-3]:inverse_contraction_inf,0.629085898399353
 narx,variant[lambda_s=1e-3]:rho_absA,0.0
 narx,variant[lambda_s=1e-3]:rho_absAi,0.11812074147433503
@@ -195,20 +204,21 @@ narx,variant[lambda_s=1e-3]:p95_iterations,6.0
 narx,variant[lambda_s=1e-3]:S_chi_inf,1.394550468118127
 narx,variant[lambda_s=1e-3]:rho_H,0.6350352934271511
 narx,variant[lambda_s=1e-3]:rho_nominal_memory,0.6250965364083149
-narx,variant[lambda_s=1e-3]:closed_loop:rmse_mean,0.005991069780050857
-narx,variant[lambda_s=1e-3]:closed_loop:rmse_p95,0.006972606116545518
-narx,variant[lambda_s=1e-3]:closed_loop:max_error_mean,0.022032630060294787
-narx,variant[lambda_s=1e-3]:closed_loop:max_error_p95,0.027266737613505045
-narx,variant[lambda_s=1e-3]:closed_loop:rms_input_mean,0.24432466691292537
+narx,variant[lambda_s=1e-3]:closed_loop:rmse_mean,0.005990979288034385
+narx,variant[lambda_s=1e-3]:closed_loop:rmse_p95,0.006970445689256986
+narx,variant[lambda_s=1e-3]:closed_loop:max_error_mean,0.022031728203376993
+narx,variant[lambda_s=1e-3]:closed_loop:max_error_p95,0.02726941624951114
+narx,variant[lambda_s=1e-3]:closed_loop:rms_input_mean,0.24432467781899228
 narx,variant[lambda_s=1e-3]:closed_loop:saturation_fraction_mean,0.0
-narx,variant[lambda_s=1e-3]:closed_loop:controller_time_per_step_ms,1.1108010000124782
+narx,variant[lambda_s=1e-3]:closed_loop:controller_time_per_step_ms,0.4870075678569817
+narx,variant[lambda_s=1e-3]:closed_loop:solver_residual_max,1.993030309677124e-07
 narx,variant[lambda_s=1e-3]:closed_loop:closed_loop_iterations_mean,4.037708333333334
 narx,variant[lambda_s=1e-3]:closed_loop:closed_loop_iterations_p95,5.0
 narx,variant[lambda_s=1e-3]:closed_loop:closed_loop_iterations_max,5.0
 narx,variant[lambda_s=1e-3]:closed_loop:hidden_evaluations_mean,4.037708333333334
 narx,variant[implicit forward (A!=0)]:forward_rmse,0.00433621672279407
-narx,variant[implicit forward (A!=0)]:inverse_rmse_algebraic,0.005257569229875677
-narx,variant[implicit forward (A!=0)]:learned_model_cycle_rmse,4.1732344117832053e-08
+narx,variant[implicit forward (A!=0)]:inverse_rmse_algebraic,0.005257569126159477
+narx,variant[implicit forward (A!=0)]:learned_model_cycle_rmse,4.200732895017597e-08
 narx,variant[implicit forward (A!=0)]:inverse_contraction_inf,0.33056381344795227
 narx,variant[implicit forward (A!=0)]:rho_absA,0.1079173365297296
 narx,variant[implicit forward (A!=0)]:rho_absAi,0.09959380910384089
@@ -217,33 +227,36 @@ narx,variant[implicit forward (A!=0)]:p95_iterations,7.0
 narx,variant[implicit forward (A!=0)]:S_chi_inf,1.4683493549079707
 narx,variant[implicit forward (A!=0)]:rho_H,0.6506706860632854
 narx,variant[implicit forward (A!=0)]:rho_nominal_memory,0.6404316319213753
-narx,variant[implicit forward (A!=0)]:closed_loop:rmse_mean,0.005784463882173855
-narx,variant[implicit forward (A!=0)]:closed_loop:rmse_p95,0.006589413660377666
-narx,variant[implicit forward (A!=0)]:closed_loop:max_error_mean,0.021550655957601104
-narx,variant[implicit forward (A!=0)]:closed_loop:max_error_p95,0.026949189033051105
-narx,variant[implicit forward (A!=0)]:closed_loop:rms_input_mean,0.24370161304238055
+narx,variant[implicit forward (A!=0)]:closed_loop:rmse_mean,0.005784416709611037
+narx,variant[implicit forward (A!=0)]:closed_loop:rmse_p95,0.006589573216539709
+narx,variant[implicit forward (A!=0)]:closed_loop:max_error_mean,0.021550730552302343
+narx,variant[implicit forward (A!=0)]:closed_loop:max_error_p95,0.02695055703432255
+narx,variant[implicit forward (A!=0)]:closed_loop:rms_input_mean,0.24370156116578592
 narx,variant[implicit forward (A!=0)]:closed_loop:saturation_fraction_mean,0.0
-narx,variant[implicit forward (A!=0)]:closed_loop:controller_time_per_step_ms,1.618122742866035
-narx,variant[implicit forward (A!=0)]:closed_loop:closed_loop_iterations_mean,5.6570238095238095
+narx,variant[implicit forward (A!=0)]:closed_loop:controller_time_per_step_ms,0.6350408750001131
+narx,variant[implicit forward (A!=0)]:closed_loop:solver_residual_max,1.993030309677124e-07
+narx,variant[implicit forward (A!=0)]:closed_loop:closed_loop_iterations_mean,5.6588988095238095
 narx,variant[implicit forward (A!=0)]:closed_loop:closed_loop_iterations_p95,6.0
 narx,variant[implicit forward (A!=0)]:closed_loop:closed_loop_iterations_max,7.0
-narx,variant[implicit forward (A!=0)]:closed_loop:hidden_evaluations_mean,5.6570238095238095
+narx,variant[implicit forward (A!=0)]:closed_loop:hidden_evaluations_mean,5.6588988095238095
 servo,physical_state_dimension,2
 servo,input_dimension,1
 servo,controlled_output_dimension,1
 servo,forward_velocity_rmse,0.012436011375295635
 servo,forward_velocity_rmse_control_affine,0.0125383837819455
-servo,inverse_voltage_rmse_algebraic,0.0912848129236893
+servo,inverse_voltage_rmse_algebraic,0.09128481379938601
 servo,inverse_voltage_rmse_control_affine,0.09118823967641128
 servo,inverse_voltage_rmse_direct,0.1044624628810518
 servo,inverse_contraction_inf,0.6878243684768677
 servo,mean_iterations,5.145625114440918
+servo,solver_residual_max,9.685754776000977e-08
+servo,solver_converged_fraction,1.0
 servo,physics_skip_D_u,0.1375
 servo,state_measurement_noise_std,0.004
-servo,implicit inverse:position_rmse_mean,0.04365106998189492
-servo,implicit inverse:position_rmse_p95,0.06997822971267526
-servo,implicit inverse:max_position_error_mean,0.09198641961128744
-servo,implicit inverse:rms_voltage_mean,0.4434182041280784
+servo,implicit inverse:position_rmse_mean,0.043651069627723735
+servo,implicit inverse:position_rmse_p95,0.0699782277591969
+servo,implicit inverse:max_position_error_mean,0.09198641993007897
+servo,implicit inverse:rms_voltage_mean,0.44341820380437164
 servo,implicit inverse:saturation_fraction_mean,0.0
 servo,control-affine inverse:position_rmse_mean,0.0441376840421148
 servo,control-affine inverse:position_rmse_p95,0.0705307463811993

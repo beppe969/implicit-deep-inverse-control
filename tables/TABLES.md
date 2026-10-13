@@ -12,7 +12,7 @@ Values are rounded as in the manuscript. See metrics.csv for full-precision scal
 | Hidden-layer evaluations (mean) | 7.19 | 3.98 | -- |
 | Iterations (mean / max) | 7.19 / 9 | 2.98 / 4 | -- |
 
-Newton true-map cycle and noisy-target cells follow the manuscript's same-root convention: the archived JSON stores these two metrics for the algebraic inverse only. The independently stored Newton input-recovery RMSE verifies the clean-target root comparison. Iteration counts can vary at the float32 stopping threshold.
+All three methods are evaluated explicitly on the same clean and noisy targets. Completed algebraic-inverse queries are frozen at their first residual crossing. Iteration counts can vary at the float32 stopping threshold.
 
 ## Table II. NARX models and certificates
 
@@ -27,7 +27,7 @@ Newton true-map cycle and noisy-target cells follow the manuscript's same-root c
 | Direct inverse | -- | 11.20 | -- | -- | -- | 5.75 |
 | Linear ARX inverse | -- | 10.95 | -- | -- | -- | 8.45 |
 
-Only the main model uses fresh matched closed-loop calibration. Other tube values are conditional calculations from preliminary open-loop envelopes. An unavailable tube is shown as --.
+Only the main model uses fresh matched closed-loop calibration. Other tube values use preliminary open-loop envelopes plus recentering allowances. The physical uncertainty center is shared by every controller and variant. An unavailable tube is shown as --.
 
 ## Table III. Tracking over 120 uncertain NARX plants
 

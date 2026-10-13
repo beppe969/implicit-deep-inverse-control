@@ -1,9 +1,9 @@
 # Numerical implementation and reproducibility details
 
 This document accompanies *Implicit Deep Learning Models for Robust Nonlinear
-Inverse Control* by Giuseppe C. Calafiore and Laurent El Ghaoui. Experiment
-definitions and the paper's trained checkpoints originate from `revision_v3.zip`.
-The scientific scripts and archived figure files are preserved byte-for-byte.
+Inverse Control* by Giuseppe C. Calafiore and Laurent El Ghaoui. This release applies the focused repair to `paper_package_submission.zip`.
+The three supplied checkpoint files are unchanged. Evaluation outputs and
+experimental figures are regenerated with the repaired code.
 
 ## 1. Reproduction routes and scope
 
@@ -39,13 +39,12 @@ alongside the output. Detailed local validation is in `validation/REPORT.md`.
 Retraining can change the fitted weights in finite precision. The checkpoint
 route is the regression target for reproducing the numerical tables to the
 paper's reported accuracy. The separate training comparison documents any
-changes, while retaining the original reference results. The original training
+changes, while retaining the original reference results. Training was not rerun in this focused repair; the original training
 environment was not included with the supplied checkpoints.
 
-The original entry points under `code/` remain available for inspection.
-`code/experiments.py` and `code/review_checks.py` write to root-level results and
-figures when invoked directly, so use the safe commands above for ordinary
-reproduction. `code/sweep_lambda.py` is an optional preliminary model-selection
+The experiment functions remain available under `code/`. Direct invocation of
+`code/experiments.py` writes root-level results; use the safe commands above.
+`code/review_checks.py` redirects to the non-destructive audit command. `code/sweep_lambda.py` is an optional preliminary model-selection
 utility. Fresh matched calibration is required after selecting a controller.
 
 ## 2. Architectures and optimization
@@ -60,7 +59,7 @@ All supplied learned forward maps use componentwise tanh. Unless specified other
 
 The direct-inverse model standardizes its inputs and targets using training statistics. Its `depth=3` implementation comprises two hidden tanh layers and a linear output layer. The current input enters the implicit hidden features through B_u. Setting B_u = 0 gives the constant-input-gain control-affine ablation.
 
-A fitted linear map supplies the fixed explicit skip matrices in the static and NARX studies. In the servo, nominal physics supplies the known drift and the scalar explicit gain D_u = 0.1375. The output matrix C is smoothly rescaled to enforce the specified inverse-contraction budget. The cyclic-forward variant also rescales A to satisfy the forward budget 0.35. Its training uses 20 unrolled hidden iterations; evaluation uses a convergence test.
+A fitted linear map supplies the fixed explicit skip matrices in the static and NARX studies. In the servo, nominal physics supplies the known drift and the scalar explicit gain D_u = 0.1375. The output matrix C is norm-rescaled to enforce the specified inverse-contraction budget. The cyclic-forward variant also rescales A to satisfy the forward budget 0.35. Its training uses 20 unrolled hidden iterations; evaluation uses a convergence test.
 
 | Study and model | Adam steps | Batch size | Learning rate | Weight decay |
 |---|---:|---:|---:|---:|
@@ -91,7 +90,12 @@ The identification set consists of 180 independent trajectories of length 110. T
 
 The closed-loop reference has 280 steps and the target error matrix is F = 0.1 I. Each controller sees measured outputs; the nominal plant evolves with its true history. The synthetic additive perturbation terms use deviations of the measured regressor and input from the model reference. Their componentwise ranges are given in Appendix D. Process noise is uniform with componentwise bound 0.003, and the constant bias is sampled within componentwise bound 0.004. Inputs are clipped to [-2.2, 2.2]. The main-model certificate leaves a positive margin to this constraint, and saturation was absent in the reported main-model runs.
 
-The four principal controllers use identical uncertainty and noise draws across 120 runs. Tracking RMSE is computed from the true output. The theorem and tube diagnostics use the measured output. Reported steady-state tube ratios discard the first 40 samples; the separate audit also checks the complete transient comparison and the all-time enlarged invariant box. Additional perturbation scales 1.5 and 2 are empirical stress tests outside the originally specified uncertainty family.
+All four principal controllers and all six model variants use identical uncertainty
+and noise draws across 120 runs. The physical perturbation center is the main
+model's reference and is held fixed for every comparison. Each variant retains
+its own model-consistent reference for its certificate. A componentwise
+recentering allowance is added to its conditional envelope; see the formula
+in `docs/FOCUSED_REPAIR.md`. Tracking RMSE is computed from the true output. The theorem and tube diagnostics use the measured output. Reported steady-state tube ratios discard the first 40 samples; the separate audit also checks the complete transient comparison and the all-time enlarged invariant box. Additional perturbation scales 1.5 and 2 are empirical stress tests outside the originally specified uncertainty family.
 
 ### Physics-guided servo
 
@@ -105,7 +109,18 @@ This state-informed example demonstrates the dimensional distinction between the
 
 Stand-alone inverse tests initialize the hidden iterate at zero and use tolerance 1e-7, with a cap of 100 iterations. Closed-loop inverse solves use tolerance 2e-7 and warm starts. Reference generation uses tolerance 1e-8. The inverse routine explicitly returns the fixed-point residual at the reconstructed solution; the residual-to-control bounds use that residual.
 
-The solver records each query's first tolerance crossing. Batched execution continues updating the hidden array until every query is finished. Thus mean iteration counts describe individual stopping counts; they are not a direct measurement of the actual hardware workload of the entire batched implementation.
+The solver tests the fixed-point residual at the current hidden vector and freezes
+that vector at the query's first tolerance crossing. The returned control is
+reconstructed from that same vector. Completed queries remain frozen while
+other queries continue. The returned `converged` flag exposes cap hits; calls
+without diagnostics raise on an unmet tolerance. NARX and servo deployment
+check the residual budget. Iteration counts are per-query map evaluations;
+batch execution may still evaluate masked rows. These counts describe the
+query's stopping work rather than the total batched hardware workload.
+Reference-generation tolerance is 1e-8 in float32 and may reach the iteration
+cap; this numerical reference approximation is separate from the enforced
+2e-7 deployment budget. Batch/permutation regressions test stopping independence;
+ordinary BLAS rounding across batch shapes is allowed at float32 precision.
 
 Newton evaluates the learned forward map and its exact Jacobian, with a cap of 25 outer iterations. The static test uses residual/stall tolerances 5e-7; the closed-loop test uses residual tolerance 2e-7 and default stall tolerance 1e-7. Newton and algebraic inversion reach essentially identical roots. For the explicit A = 0 forward models, Newton can require fewer hidden-layer evaluations, although each step additionally solves a Jacobian system.
 
@@ -125,6 +140,6 @@ Fresh calibration bounds the full measured prediction residual. The additional n
 
 RMSE averages across time and output coordinates. Maximum vector-output errors use the Euclidean norm. Bootstrap comparisons resample paired differences across the same simulated plant/noise draws, with 20000 resamples and a 95% percentile interval. The saved JSON files retain the individual run metrics needed to recompute these summaries.
 
-`results/all_results.json` and `results/summary.csv` are the original numerical reference outputs. For downstream parsing, use `tables/results_portable.json` and `tables/metrics.csv`; these normalize unavailable values and quote CSV fields containing commas. The `conformal` fields record preliminary open-loop calibration; `closed_loop_conformal` records final main-model calibration. Trained parameters are in `static_models.pt`, `narx_models.pt`, and `servo_models.pt`. All six experimental figure pairs supplied in the baseline are retained byte-for-byte in `figures/`. The architecture drawing is also provided as a standalone extraction from the current manuscript.
+`results/all_results.json` and `results/summary.csv` are the repaired numerical reference outputs. For downstream parsing, use `tables/results_portable.json` and `tables/metrics.csv`; these normalize unavailable values and quote CSV fields containing commas. The `conformal` fields record preliminary open-loop calibration; `closed_loop_conformal` records final main-model calibration. Trained parameters are in `static_models.pt`, `narx_models.pt`, and `servo_models.pt`. All six experimental figure pairs are regenerated in `figures/`. The architecture drawing is also provided as a standalone extraction from the current manuscript.
 
 The additional audit checks the central static metrics and all six NARX variants. It also tests the algebraic equations with an independent NumPy implementation on 36 randomly generated dense cyclic models, using 64 queries per model. The activations include tanh, ReLU, and tanh shifted by 0.25. These tests check implementations and expose possible algebraic mistakes; the mathematical guarantees rest on the manuscript's proofs and assumptions.

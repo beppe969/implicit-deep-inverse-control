@@ -1,61 +1,84 @@
-# Local reproducibility validation
+# Local validation report — 13 October 2026
 
-All scientific inputs originate from the current source package. The SHA-256 checks confirm that the original numerical scripts and archived results agree with `revision_v3.zip`. The added runner uses isolated workspaces and preserves those references.
+## Scope and environment
 
-## Executed checks
+This report records validation of the focused repair of the supplied submission
+package. The original three trained tensor files are unchanged. All evaluations
+were regenerated from those checkpoints; training was not rerun.
 
-| Route | Outcome | Local elapsed time |
-| --- | --- | ---: |
-| Full checkpoint regeneration | Passed 2,446/2,446 scientific comparisons | 26.4 s |
-| Independent equation and NARX audit | Passed | 15.9 s |
-| Full training and evaluation | Completed with recorded reference differences | 101.4 s |
-| Unit/equation test suite | 20 tests passed | See unit_tests.txt |
-| Final static-checkpoint smoke test | Passed | Recorded locally during packaging |
+The environment was Linux x86-64 CPU, Python 3.13.5, PyTorch 2.10.0+cpu,
+NumPy 2.3.5, and Matplotlib 3.10.8. Exact environment metadata is saved in
+`checkpoints/environment.json`. Numerical tolerances and timing interpretation
+are described in `../NUMERICAL_DETAILS.md`.
 
-Elapsed times are observations on the preparation machine. Other workloads ran during part of the verification, so these values serve as rough run-duration guidance. Installation time is excluded.
+## Completed checks
 
-## Checkpoint reproduction
+| Check | Result | Evidence |
+|---|---|---|
+| Release-input SHA-256 verification | Passed, 47 scientific files | `integrity.json` |
+| Unit and packaging regressions | 27 tests passed | `unit_tests.txt` |
+| Focused stopping and physical-centering tests | 7 tests passed | `focused_tests.txt` |
+| Full checkpoint evaluation | All three studies completed | `checkpoints/evaluation.txt` |
+| Independent repeat against the new reference outputs | 2475/2475 scientific scalar comparisons passed | `checkpoints/comparison.json` |
+| Independent static and NARX audit | Passed | `audit/independent_validation.json` |
+| Independent NumPy equation tests | 36 dense cyclic models, 64 queries each | `audit/independent_validation.json` |
 
-The complete saved-weight run regenerated all three experiments and all six experimental figure pairs. All 2,446 scientific values passed the tolerance `3e-7 + 1e-4 * abs(reference)`. There were no missing expected scientific fields. The 91 timing and stopping/statistical diagnostic fields were recorded separately.
+The repeated run uses absolute tolerance 3e-07 and relative tolerance
+0.0001. Timing fields are treated as diagnostics. The largest reported
+scientific scalar difference between the reference regeneration and its repeat
+was approximately 7.41e-08.
+The archived run manifests verify the scientific inputs before and after each
+safe reproduction command.
 
-All four manuscript tables were exported in CSV, Markdown, and LaTeX. The PDF figures were rendered and inspected. The original architecture diagram was separately compiled from its extracted TikZ source.
+The independent NumPy tests use tanh, ReLU, and shifted tanh. The maximum
+forward–inverse cycle error is 1.11e-15.
+The tested componentwise inequalities have nonpositive maximum defects. These
+are numerical checks of the equations and implementations, rather than an
+exhaustive formal verification of the theorems.
 
-| Quantity | Paper reference | Recomputed from checkpoints | Retrained model |
-| --- | ---: | ---: | ---: |
-| Static algebraic inverse RMSE | 0.02310915828 | 0.02310915828 | 0.02311336954 |
-| NARX main rho(H) | 0.6706798304 | 0.6706798304 | 0.6705987176 |
-| NARX main mean tracking RMSE | 0.005764506432 | 0.005764506432 | 0.005767365693 |
-| Servo implicit mean position RMSE | 0.04365106998 | 0.04365106998 | 0.04365106998 |
+## Main NARX audit
 
-Detailed checkpoint output is in `checkpoints/results.json`; field-level comparisons are in `checkpoints/comparison.json`.
+| Quantity | Recomputed value |
+|---|---|
+| Mean true-output tracking RMSE | 0.00576450641014 |
+| Spectral radius rho(H) | 0.670679830429 |
+| Spectral radius rho(Q) | 0.521869038739 |
+| Final measured-residual box | [0.0644477885908, 0.0597762516049] |
+| Output tube | [0.0820207005785, 0.0767669355842] |
+| Control-deviation tube | [0.181046027119, 0.197525242023] |
+| Held-out trajectories satisfying the residual envelope | 120 / 120 |
+| Maximum output-tube ratio after sample 40 | 0.721404328686 |
+| Maximum input-tube ratio after sample 40 | 0.146969085719 |
+| Maximum all-time regressor ratio to twice the steady-state tube | 0.967742504997 |
+| Componentwise input margins for the inflated tube | [1.32195100749, 1.35331281413] |
 
-## Full from-scratch training
+The largest one-step and transient comparison defects are
+7.445e-09. This is a float32 roundoff effect and
+is below the audit tolerance of 1e-6. The reported residual-budget checks pass.
+Calibration uses 20 trajectories of length 280 and the documented seed 20262857.
+The 20/21 statement is the manuscript's finite-horizon marginal coverage result
+under exchangeability. The observed 120/120 evaluation result is empirical.
 
-The final training run executed the original optimization routines for every model. It completed the complete evaluation and regenerated every experimental figure. Under the strict checkpoint comparison threshold, 1,134 of 2,446 numeric fields differed from the archived reference. All differences are retained in `training/comparison.json`.
+## Independence and comparison repairs
 
-The most relevant comparisons across the six NARX variants are:
+The focused tests verify that freezing completed queries removes the stopping
+rule's dependence on the other queries in the batch. Scalar tests compare
+individual, permuted, and chunked execution exactly. Tests on the fitted
+multivariate model allow floating-point kernel differences with batch shape.
+A separate test holds the physical uncertainty center fixed while changing the
+certificate reference and checks equality of the resulting physical trajectories.
+The recentering allowance is checked against its defining componentwise bound.
 
-| Variant | Reference rho(H) | Retrained rho(H) | Relative change in forward RMSE | Relative change in CL RMSE |
-| --- | ---: | ---: | ---: | ---: |
-| main | 0.670680 | 0.670599 | +0.033% | +0.050% |
-| control-affine (B_u=0) | 2.160935 | 2.160978 | -0.951% | -0.166% |
-| control-affine (B_u=0), lambda_s=3e-3 | 0.638117 | 0.642169 | +0.529% | +0.930% |
-| lambda_s=0 | 0.979100 | 0.979063 | +0.001% | -0.000% |
-| lambda_s=1e-3 | 0.635035 | 0.634938 | +0.081% | +0.027% |
-| implicit forward (A!=0) | 0.650671 | 0.651988 | +1.758% | -0.052% |
+The recorded before/after comparison is in `before_after.json`; the original
+numerical reference is retained in `baseline_results.json` for provenance.
+The repaired ablations use one physical plant for every compared model and add
+the required reference-center allowance to their conditional certificates.
 
-These are fresh finite-precision fits. The original training environment was not supplied. The package therefore uses saved-weight evaluation as the accurate table-reproduction route and preserves newly trained results as separate evidence. The runner records successful training with reference differences as `completed_with_reference_differences`; this is separate from passing the checkpoint regression gate.
+## Publication status and limits
 
-## Independent numerical audit
-
-The separate NumPy implementation tested 36 dense cyclic models with 64 queries per model. It used tanh and ReLU, together with tanh shifted by 0.25. The maximum forward/inverse cycle error was 1.110e-15. All tested componentwise inequality defects were nonpositive.
-
-The NARX audit reconstructed the fresh calibration and obtained empirical envelope coverage of 1.000 over the 120 evaluation trajectories. It checked the complete measured-history comparison and the enlarged invariant box. Full quantities and containment margins are in `audit/independent_validation.json`.
-
-## Environment and scope
-
-Python 3.13.5; PyTorch 2.10.0+cpu; NumPy 2.3.5; Matplotlib 3.10.8. The computation used Linux x86_64 and one PyTorch thread. Full version records are supplied in the environment JSON files.
-
-The workflow YAML and citation YAML were parsed locally. Citation field names and the unpublished-reference type were checked against the official CFF schema documentation. GitHub-hosted workflow execution was not performed. Fresh installation from the network was also not tested; the numerical validation used the installed pinned versions.
-
-The software archive contains no manuscript review or blue revision files. The code/data license and the actual repository URL remain release decisions for the authors.
+No GitHub push or remote GitHub Actions run was performed. The workflow commands
+were exercised locally. Full retraining and training-seed variability remain
+outside this repair. The three checkpoint files are preserved byte-for-byte.
+The main probabilistic certificate retains its stated matched-law assumptions;
+variant tubes have conditional preliminary-envelope validity and the servo study
+remains empirical.

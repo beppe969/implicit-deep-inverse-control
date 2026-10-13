@@ -1,0 +1,37 @@
+[checkpoints] static
+      restored model; minibatch RNG replayed
+[static] completed in 1.06 s
+[checkpoints] narx
+    training variant: main
+      restored variant:main; minibatch RNG replayed
+    training variant: control-affine (B_u=0)
+      restored variant:control-affine (B_u=0); minibatch RNG replayed
+    training variant: control-affine (B_u=0), lambda_s=3e-3
+      restored variant:control-affine (B_u=0), lambda_s=3e-3; minibatch RNG replayed
+    training variant: lambda_s=0
+      restored variant:lambda_s=0; minibatch RNG replayed
+    training variant: lambda_s=1e-3
+      restored variant:lambda_s=1e-3; minibatch RNG replayed
+    training variant: implicit forward (A!=0)
+      restored variant:implicit forward (A!=0); minibatch RNG replayed
+    main: fwd 0.00443  inv 0.00540  rho_H 0.6707
+    control-affine (B_u=0): fwd 0.00599  inv 0.00727  rho_H 2.1609
+    control-affine (B_u=0), lambda_s=3e-3: fwd 0.00888  inv 0.01075  rho_H 0.6381
+    lambda_s=0: fwd 0.00340  inv 0.00414  rho_H 0.9791
+    lambda_s=1e-3: fwd 0.00572  inv 0.00694  rho_H 0.6350
+    implicit forward (A!=0): fwd 0.00434  inv 0.00526  rho_H 0.6507
+    closed loop: implicit inverse
+    closed loop: online Newton
+    closed loop: direct inverse
+    closed loop: linear ARX inverse
+    closed loop: control-affine (B_u=0)
+    closed loop: control-affine (B_u=0), lambda_s=3e-3
+    closed loop: lambda_s=0
+    closed loop: lambda_s=1e-3
+    closed loop: implicit forward (A!=0)
+    closed loop: envelope violation batch
+[narx] completed in 12.74 s
+[checkpoints] servo
+      restored model; minibatch RNG replayed
+      restored control_affine; minibatch RNG replayed
+[servo] completed in 2.05 s

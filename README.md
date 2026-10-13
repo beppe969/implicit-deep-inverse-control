@@ -1,134 +1,89 @@
 # Implicit Deep Learning Models for Robust Nonlinear Inverse Control
 
-**Giuseppe C. Calafiore and Laurent El Ghaoui**
+Reproducibility package for the paper **Implicit Deep Learning Models for Robust
+Nonlinear Inverse Control**, by Giuseppe C. Calafiore and Laurent El Ghaoui.
 
-Reproducibility package for the accompanying manuscript. The repository contains
-the numerical studies and their trained checkpoints, together with scripts for
-regenerating the reported tables and figures.
+## Focused repair — 13 October 2026
 
-An implicit predictor represents hidden features by an equilibrium equation.
-Algebraic elimination of the explicit input channel produces a consistent inverse
-of the same fitted model. The control certificate propagates measured-history
-errors through a nonnegative comparison system and accounts for finite inverse
-solver accuracy.
+The three supplied trained checkpoints are preserved byte-for-byte. All evaluation
+results and the six experimental figure pairs have been regenerated. The NARX
+physical uncertainty center is fixed across every controller and model variant.
+The inverse solver freezes each query at its own certified residual crossing.
+Variant certificates include the allowance for their different reference centers.
 
-<p align="center">
-  <img src="figures/io_architecture.png" alt="Measured history conditions the implicit inverse; a desired next output determines the plant input." width="800">
-</p>
+The mathematical certificate and all training settings are retained. See
+[the repair record](docs/FOCUSED_REPAIR.md) and [validation report](validation/REPORT.md).
 
-## Quick start
+## Install
 
-The validated environment is **Python 3.13.5 on Linux x86_64, using CPU PyTorch**.
-The experiment code uses one PyTorch thread. No external dataset is required;
-all benchmark data are generated from the supplied equations and seeds.
+Validated on Linux x86-64 CPU with Python 3.13.5, PyTorch 2.10.0+cpu,
+NumPy 2.3.5, and Matplotlib 3.10.8.
 
 ```bash
-python3.13 -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
-
-# Install the official CPU build first, then the remaining pinned dependencies.
+python -m pip install --upgrade pip
 python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
 python -m pip install -r requirements.txt
+```
 
+On macOS, install the supported PyTorch build through `pip install -r requirements.txt`
+in the virtual environment. The published regression report is for Linux CPU;
+platform-dependent floating-point differences and timing changes can occur.
+
+## Reproduce
+
+Run from the repository root:
+
+```bash
 python reproduce.py check
 python reproduce.py test
-python reproduce.py checkpoints --output runs/paper-checkpoints
+python reproduce.py checkpoints
+python reproduce.py audit
 ```
 
-The final command regenerates all three studies from the saved model weights. It
-writes six experimental figure pairs and a numerical comparison report. The
-four manuscript tables are exported in CSV, Markdown, and LaTeX. The command
-returns a nonzero exit status when checkpoint regression tolerances are exceeded.
+`check` verifies release hashes. `test` runs the unit and algebraic regressions.
+`checkpoints` rebuilds data and evaluates every model from its saved parameters,
+including the final matched closed-loop calibration. It exports all four tables
+and regenerates the six experimental figures. `audit` independently recomputes
+the main certificate and all variant metrics, and tests the algebraic inequalities
+with a separate NumPy implementation.
 
-Every run uses a **new workspace**. The paper's reference files in `results/` and
-`figures/` remain unchanged. Omitting `--output` creates a timestamped directory
-under `runs/`; supplying an existing output directory is an error.
+Every numerical command creates a new workspace under `runs/`. A new directory
+can be selected with `--output`. Existing output directories are refused; released
+results and checkpoint files are left unchanged.
 
-## Reproduction routes
-
-| Command | Purpose |
-| --- | --- |
-| `python reproduce.py check` | Verify the SHA-256 hashes of the 21 frozen scientific inputs. |
-| `python reproduce.py test` | Run 20 unit and scientific-equation tests. |
-| `python reproduce.py checkpoints` | Regenerate all evaluations from supplied model weights. |
-| `python reproduce.py train` | Retrain all models from scratch, then evaluate them. |
-| `python reproduce.py audit` | Check NARX tubes and transients, including independent equation tests. |
-| `python reproduce.py tables` | Export tables directly from the archived JSON; no numerical libraries needed. |
-
-Add `--experiment static`, `--experiment narx`, or `--experiment servo` to the
-checkpoint and training commands to run one study. A small inversion example is
-available through `python examples/minimal_inverse.py`.
-
-The checkpoint route replays the random minibatch draws that the original
-training calls would consume. This preserves the later random draws while
-skipping optimization. Training uses the original optimizer routines. See
-[reproduction details](docs/REPRODUCIBILITY.md) for the comparison policy.
-
-## Experiments and reference results
-
-**Static MIMO inversion** compares the algebraic inverse with a separately trained
-inverse and Newton root finding. The **nonlinear NARX study** evaluates the
-measured-history certificate and its architectural ablations. The
-**physics-guided servo** evaluates uncertain closed-loop position tracking using
-a scalar voltage-to-next-velocity inverse.
-
-| Reference quantity | Archived value |
-| --- | ---: |
-| NARX main-model certificate, rho(H) | 0.67067983 |
-| NARX implicit-inverse mean tracking RMSE | 0.00576451 |
-| NARX direct-inverse mean tracking RMSE | 0.00575133 |
-| Servo implicit-inverse mean position RMSE | 0.04365107 |
-| Servo direct-inverse mean position RMSE | 0.06717828 |
-
-See [all four tables](tables/TABLES.md) and the
-[figure and result map](docs/RESULTS_GUIDE.md). The complete implementation
-supplement is [NUMERICAL_DETAILS.md](NUMERICAL_DETAILS.md).
-
-The probabilistic calibration statement applies to the fixed main NARX
-closed-loop law over a 280-step horizon. Variant tube calculations use
-preliminary envelopes. The servo example is an empirical state-informed tracking
-study. These distinctions are documented in the numerical supplement.
-
-## Validation
-
-The complete checkpoint rerun passed **2,446 numerical comparisons**, with timing
-and stopping-count diagnostics reported separately. All 20 unit tests passed.
-The independent tests covered 36 dense cyclic models, with 64 queries per model.
-Full from-scratch training and evaluation also completed; the resulting numerical
-differences are retained in the training comparison report.
-
-The supplied weights are the reference for reproducing the paper's tables.
-Retraining results are recorded separately. The validation environment and all
-checks are documented in [validation/REPORT.md](validation/REPORT.md).
-
-## Repository layout
-
-```text
-code/              Frozen scientific scripts from the current source package
-scripts/           Safe-run support and table exporters
-examples/          Minimal checkpoint inversion example
-tests/             Unit and scientific regression tests
-results/           Original model weights and paper result files
-figures/           Original experimental graphics and architecture drawing
-tables/            Generated table exports and portable numeric results
-docs/              Reproduction guide and release instructions
-validation/        Local run reports and environment records
-.github/workflows/ Automated smoke tests and manual full reproduction
+```bash
+python reproduce.py checkpoints --experiment narx --output runs/my-narx-check
+python reproduce.py tables --output runs/my-tables
+python reproduce.py train --output runs/my-training-run
 ```
 
-The original `code/experiments.py` and `code/review_checks.py` update the
-root-level outputs when called directly. Use `reproduce.py` for normal runs.
+The training route is supplied for full retraining. Training was not rerun for
+this repair. Finite-precision retraining can yield different fitted parameters;
+the checkpoint route is the numerical regression target.
 
-## Citation and release status
+## Contents
 
-Citation metadata is in [CITATION.cff](CITATION.cff); a BibTeX entry is supplied in
-[CITATION.bib](CITATION.bib). The manuscript is identified as unpublished pending
-bibliographic updates. Repository and DOI fields can be added at release time.
+`code/` contains the models and experiments. `results/` contains full-precision
+reference metrics and the three tensor checkpoints. `figures/` contains PDF and
+PNG figure files. `tables/` contains the four manuscript tables in CSV, Markdown,
+and LaTeX, together with portable JSON. `validation/` contains the actual release
+checks. The full numerical protocol is in [NUMERICAL_DETAILS.md](NUMERICAL_DETAILS.md).
 
-The source package contained no explicit software license. The repository owner
-should complete the [license selection](LICENSE_STATUS.md) before public release.
-The [release checklist](docs/RELEASE_CHECKLIST.md) includes the GitHub upload and
-archival steps.
+The GitHub package contains the numerical materials. The blue-marked manuscript
+and its clean counterpart are distributed in the separate paper package.
 
-This work is financially supported by the VinUniversity Center for Environmental
-Intelligence under Grant No. VUNI.CEI.FS_0015, as acknowledged in the manuscript.
+## Interpretation
+
+The 120 NARX realizations and 80 servo realizations are paired across controllers.
+There is one training seed per model configuration. Bootstrap intervals quantify
+plant/noise variation conditional on the fitted models. Only the main NARX model
+has fresh matched closed-loop calibration. Its 20/21 coverage claim is marginal
+and limited to a new 280-sample trajectory from that fixed closed-loop law.
+Variant tubes remain conditional on their preliminary residual envelopes. The
+servo is an empirical state-informed example.
+
+GitHub Actions definitions are included. They have not been run on GitHub for this
+release; their numerical commands have been tested locally. No remote repository
+has been modified. See [LICENSE_STATUS.md](LICENSE_STATUS.md) before reuse.

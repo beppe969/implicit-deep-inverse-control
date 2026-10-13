@@ -1,0 +1,12 @@
+test_center_allowance_dominates_recentering_difference (test_focused_repair.PhysicalPlantTests.test_center_allowance_dominates_recentering_difference) ... ok
+test_certificate_reference_does_not_change_physical_plant (test_focused_repair.PhysicalPlantTests.test_certificate_reference_does_not_change_physical_plant) ... ok
+test_partial_center_rejected (test_focused_repair.PhysicalPlantTests.test_partial_center_rejected) ... ok
+test_actual_model_batches_agree_to_roundoff (test_focused_repair.StoppingTests.test_actual_model_batches_agree_to_roundoff) ... ok
+test_cap_exposed_and_uncertified_default_rejected (test_focused_repair.StoppingTests.test_cap_exposed_and_uncertified_default_rejected) ... ok
+test_individual_batch_permutation_and_chunking (test_focused_repair.StoppingTests.test_individual_batch_permutation_and_chunking) ... ok
+test_returned_residual_and_first_crossing (test_focused_repair.StoppingTests.test_returned_residual_and_first_crossing) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.077s
+
+OK

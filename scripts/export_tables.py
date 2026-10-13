@@ -28,7 +28,7 @@ def tex_escape(text: str) -> str:
 
 def write_table(folder: Path, name: str, title: str, headers: list[str], rows: list[list[str]], notes: str) -> str:
     with (folder / (name + '.csv')).open('w', newline='', encoding='utf-8') as stream:
-        writer = csv.writer(stream)
+        writer = csv.writer(stream, lineterminator="\n")
         writer.writerow(headers)
         writer.writerows(rows)
     lines = ['## ' + title, '', '| ' + ' | '.join(headers) + ' |',
@@ -55,14 +55,13 @@ def export_tables(results: dict, folder: Path) -> None:
         s = results['static']
         rows = [
             ['Inverse RMSE', fmt(s['inverse_rmse_algebraic']), fmt(s['inverse_rmse_newton']), fmt(s['inverse_rmse_direct'])],
-            ['True-map cycle RMSE', fmt(s['true_cycle_rmse_algebraic']), fmt(s['true_cycle_rmse_algebraic']), fmt(s['true_cycle_rmse_direct'])],
-            ['Noisy-target inverse RMSE', fmt(s['noisy_inverse_rmse_algebraic']), fmt(s['noisy_inverse_rmse_algebraic']), fmt(s['noisy_inverse_rmse_direct'])],
+            ['True-map cycle RMSE', fmt(s['true_cycle_rmse_algebraic']), fmt(s['true_cycle_rmse_newton']), fmt(s['true_cycle_rmse_direct'])],
+            ['Noisy-target inverse RMSE', fmt(s['noisy_inverse_rmse_algebraic']), fmt(s['noisy_inverse_rmse_newton']), fmt(s['noisy_inverse_rmse_direct'])],
             ['Hidden-layer evaluations (mean)', fmt(s['mean_iterations'], 2), fmt(s['newton_mean_hidden_evaluations'], 2), '--'],
             ['Iterations (mean / max)', f"{s['mean_iterations']:.2f} / {s['max_iterations']:.0f}",
              f"{s['newton_mean_iterations']:.2f} / {s['newton_max_iterations']:.0f}", '--']]
-        notes = ('Newton true-map cycle and noisy-target cells follow the manuscript\'s same-root convention: '
-                 'the archived JSON stores these two metrics for the algebraic inverse only. '
-                 'The independently stored Newton input-recovery RMSE verifies the clean-target root comparison. '
+        notes = ('All three methods are evaluated explicitly on the same clean and noisy targets. '
+                 'Completed algebraic-inverse queries are frozen at their first residual crossing. '
                  'Iteration counts can vary at the float32 stopping threshold.')
         combined.append(write_table(folder, 'table_I_static', 'Table I. Static MIMO inversion',
                                     ['Metric', 'Algebraic', 'Newton', 'Direct'], rows, notes))
@@ -89,7 +88,8 @@ def export_tables(results: dict, folder: Path) -> None:
                     ['Model', 'Forward RMSE x 1e3', 'Inverse RMSE x 1e3', 'Inverse contraction', 'rho(H)',
                      'Max. input-tube radius', 'CL RMSE x 1e3'], rows,
                     'Only the main model uses fresh matched closed-loop calibration. '
-                    'Other tube values are conditional calculations from preliminary open-loop envelopes. '
+                    'Other tube values use preliminary open-loop envelopes plus recentering allowances. '
+                    'The physical uncertainty center is shared by every controller and variant. '
                     'An unavailable tube is shown as --.'))
         rows = []
         for method in ['implicit inverse', 'online Newton', 'direct inverse', 'linear ARX inverse']:

@@ -15,9 +15,9 @@
     "servo"
   ],
   "seconds_by_experiment": {
-    "static": 1.517291178999983,
-    "narx": 16.732057808000036,
-    "servo": 2.576599842999997
+    "static": 1.0513326529999176,
+    "narx": 12.566439320999962,
+    "servo": 1.995009894000077
   },
   "restored_checkpoints": {
     "static": [

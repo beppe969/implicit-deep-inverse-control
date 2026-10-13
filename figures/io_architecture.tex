@@ -1,3 +1,4 @@
+\pdfminorversion=4
 \documentclass[tikz,border=3pt]{standalone}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
@@ -9,7 +10,7 @@
  \node[block] (hist) {$\chi_k$\\I/O history};
  \node[block,right=4mm of hist] (inv) {implicit inverse\\$\Mcal_{\chi_k}^{-1}$};
  \node[block,right=4mm of inv] (plant) {physical\\plant};
- \node[above=3mm of inv] (target) {$y_{k+1}^{\rm d}$};
+ \node[above=3mm of inv] (target) {$v_k$};
  \node[right=3mm of plant] (out) {$y_{k+1}$};
  \draw[->] (hist)--(inv);
  \draw[->] (target)--(inv);

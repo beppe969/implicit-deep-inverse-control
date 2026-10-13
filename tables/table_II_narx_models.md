@@ -11,4 +11,4 @@
 | Direct inverse | -- | 11.20 | -- | -- | -- | 5.75 |
 | Linear ARX inverse | -- | 10.95 | -- | -- | -- | 8.45 |
 
-Only the main model uses fresh matched closed-loop calibration. Other tube values are conditional calculations from preliminary open-loop envelopes. An unavailable tube is shown as --.
+Only the main model uses fresh matched closed-loop calibration. Other tube values use preliminary open-loop envelopes plus recentering allowances. The physical uncertainty center is shared by every controller and variant. An unavailable tube is shown as --.

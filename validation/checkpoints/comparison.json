@@ -7,221 +7,221 @@
   ],
   "rtol": 0.0001,
   "atol": 3e-07,
-  "scientific_values_checked": 2446,
-  "scientific_values_passed": 2446,
+  "scientific_values_checked": 2475,
+  "scientific_values_passed": 2475,
   "scientific_values_failed": 0,
   "missing_reference_fields": [],
   "failures": [],
   "largest_absolute_differences": [
     {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/55",
-      "reference": 0.03045854368820304,
-      "recomputed": 0.03045865103966596,
-      "absolute_difference": 1.073514629204575e-07,
-      "tolerance": 3.3458543688203045e-06
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/115",
+      "reference": 0.028999113456016735,
+      "recomputed": 0.028999039316785838,
+      "absolute_difference": 7.413923089685803e-08,
+      "tolerance": 3.1999113456016738e-06
     },
     {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/49",
-      "reference": 0.030902389122818532,
-      "recomputed": 0.030902477831543405,
-      "absolute_difference": 8.870872487271031e-08,
-      "tolerance": 3.3902389122818535e-06
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/44",
+      "reference": 0.025971333702803318,
+      "recomputed": 0.02597140767601231,
+      "absolute_difference": 7.397320899230064e-08,
+      "tolerance": 2.8971333702803322e-06
     },
     {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/39",
-      "reference": 0.03695960844242035,
-      "recomputed": 0.03695952907266534,
-      "absolute_difference": 7.936975501138255e-08,
-      "tolerance": 3.995960844242035e-06
-    },
-    {
-      "path": "narx/conformal/per_sample_q999_box/0",
-      "reference": 0.046589963138103485,
-      "recomputed": 0.046589892357587814,
-      "absolute_difference": 7.078051567077637e-08,
-      "tolerance": 4.958996313810349e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/5",
-      "reference": 0.024590379496635808,
-      "recomputed": 0.024590446083497437,
-      "absolute_difference": 6.658686162869243e-08,
-      "tolerance": 2.759037949663581e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/21",
-      "reference": 0.02513897815802096,
-      "recomputed": 0.025138917255372976,
-      "absolute_difference": 6.090264798377931e-08,
-      "tolerance": 2.8138978158020962e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/1",
-      "reference": 0.02646120580456043,
-      "recomputed": 0.02646126637444111,
-      "absolute_difference": 6.05698806804833e-08,
-      "tolerance": 2.946120580456043e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/31",
-      "reference": 0.028460445034661865,
-      "recomputed": 0.02846050519573129,
-      "absolute_difference": 6.016106942480226e-08,
-      "tolerance": 3.146044503466187e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/26",
-      "reference": 0.031459267963431924,
-      "recomputed": 0.031459327680484685,
-      "absolute_difference": 5.971705276108796e-08,
-      "tolerance": 3.4459267963431925e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/105",
-      "reference": 0.02819496025845851,
-      "recomputed": 0.028195019812036277,
-      "absolute_difference": 5.955357776712966e-08,
-      "tolerance": 3.119496025845851e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/98",
-      "reference": 0.026207376445704793,
-      "recomputed": 0.026207435581306417,
-      "absolute_difference": 5.913560162384979e-08,
-      "tolerance": 2.9207376445704797e-06
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/104",
+      "reference": 0.02804158946710343,
+      "recomputed": 0.02804151704325522,
+      "absolute_difference": 7.242384821026793e-08,
+      "tolerance": 3.1041589467103432e-06
     },
     {
       "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/33",
-      "reference": 0.024252531313126928,
+      "reference": 0.024252519215274573,
       "recomputed": 0.02425259008247656,
-      "absolute_difference": 5.87693496333086e-08,
-      "tolerance": 2.725253131312693e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/51",
-      "reference": 0.029688999484137193,
-      "recomputed": 0.029688940727031456,
-      "absolute_difference": 5.8757105736439996e-08,
-      "tolerance": 3.2688999484137197e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/113",
-      "reference": 0.030939477267293333,
-      "recomputed": 0.03093953478481941,
-      "absolute_difference": 5.751752607530136e-08,
-      "tolerance": 3.3939477267293334e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/79",
-      "reference": 0.029309991815930515,
-      "recomputed": 0.029309935235231614,
-      "absolute_difference": 5.658069890043804e-08,
-      "tolerance": 3.2309991815930518e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/40",
-      "reference": 0.025037891470113312,
-      "recomputed": 0.025037941563522605,
-      "absolute_difference": 5.0093409292156776e-08,
-      "tolerance": 2.8037891470113315e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/59",
-      "reference": 0.024869352230413987,
-      "recomputed": 0.02486940185868564,
-      "absolute_difference": 4.962827165194694e-08,
-      "tolerance": 2.786935223041399e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/64",
-      "reference": 0.03350616404961876,
-      "recomputed": 0.03350621289928827,
-      "absolute_difference": 4.884966951085312e-08,
-      "tolerance": 3.6506164049618763e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/108",
-      "reference": 0.030056846624401865,
-      "recomputed": 0.030056891683596508,
-      "absolute_difference": 4.505919464284358e-08,
-      "tolerance": 3.305684662440187e-06
+      "absolute_difference": 7.086720198862251e-08,
+      "tolerance": 2.7252519215274575e-06
     },
     {
       "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/112",
-      "reference": 0.02816622099947578,
+      "reference": 0.028166201249417534,
       "recomputed": 0.02816626531879236,
-      "absolute_difference": 4.4319316581248325e-08,
-      "tolerance": 3.116622099947578e-06
+      "absolute_difference": 6.406937482633657e-08,
+      "tolerance": 3.1166201249417538e-06
     },
     {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/35",
-      "reference": 0.027405393774088696,
-      "recomputed": 0.027405352593350026,
-      "absolute_difference": 4.118073866979377e-08,
-      "tolerance": 3.04053937740887e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/10",
-      "reference": 0.024640058559602326,
-      "recomputed": 0.02464009960620985,
-      "absolute_difference": 4.104660752263234e-08,
-      "tolerance": 2.764005855960233e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/77",
-      "reference": 0.029177499968864238,
-      "recomputed": 0.02917754001067811,
-      "absolute_difference": 4.004181387157191e-08,
-      "tolerance": 3.217749996886424e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_p95",
-      "reference": 0.0333423831523488,
-      "recomputed": 0.03334242008780317,
-      "absolute_difference": 3.693545436861401e-08,
-      "tolerance": 3.6342383152348806e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/69",
-      "reference": 0.027652721605240606,
-      "recomputed": 0.02765275799519808,
-      "absolute_difference": 3.6389957474430856e-08,
-      "tolerance": 3.065272160524061e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/15",
-      "reference": 0.03333376310512407,
-      "recomputed": 0.033333799413514484,
-      "absolute_difference": 3.63083904122985e-08,
-      "tolerance": 3.6333763105124076e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/24",
-      "reference": 0.029921482608103674,
-      "recomputed": 0.029921517735848432,
-      "absolute_difference": 3.5127744758139956e-08,
-      "tolerance": 3.292148260810368e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/29",
-      "reference": 0.026550366232305184,
-      "recomputed": 0.026550400475506362,
-      "absolute_difference": 3.424320117739743e-08,
-      "tolerance": 2.955036623230519e-06
-    },
-    {
-      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/62",
-      "reference": 0.029227309980680773,
-      "recomputed": 0.029227343675789486,
-      "absolute_difference": 3.369510871362169e-08,
-      "tolerance": 3.2227309980680774e-06
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/43",
+      "reference": 0.02439946740179259,
+      "recomputed": 0.024399410487719233,
+      "absolute_difference": 5.6914073356950645e-08,
+      "tolerance": 2.7399467401792592e-06
     },
     {
       "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/2",
-      "reference": 0.024034461737612776,
+      "reference": 0.024034541037109558,
       "recomputed": 0.02403449532143256,
-      "absolute_difference": 3.358381978416092e-08,
-      "tolerance": 2.703446173761278e-06
+      "absolute_difference": 4.5715676997432064e-08,
+      "tolerance": 2.703454103710956e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/70",
+      "reference": 0.03409334232565303,
+      "recomputed": 0.034093385818114774,
+      "absolute_difference": 4.349246174317756e-08,
+      "tolerance": 3.7093342325653033e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/30",
+      "reference": 0.03169165998700052,
+      "recomputed": 0.03169161689898619,
+      "absolute_difference": 4.308801433011711e-08,
+      "tolerance": 3.4691659987000523e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/10",
+      "reference": 0.024640058549061435,
+      "recomputed": 0.02464009960620985,
+      "absolute_difference": 4.1057148413709e-08,
+      "tolerance": 2.7640058549061435e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/113",
+      "reference": 0.030939505969879176,
+      "recomputed": 0.03093953478481941,
+      "absolute_difference": 2.8814940232491093e-08,
+      "tolerance": 3.3939505969879178e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/27",
+      "reference": 0.027484007070708524,
+      "recomputed": 0.0274840334149818,
+      "absolute_difference": 2.6344273276746044e-08,
+      "tolerance": 3.0484007070708526e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/102",
+      "reference": 0.026106741641607464,
+      "recomputed": 0.026106767689298566,
+      "absolute_difference": 2.6047691101260817e-08,
+      "tolerance": 2.9106741641607468e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/81",
+      "reference": 0.026212105323997693,
+      "recomputed": 0.026212130917999354,
+      "absolute_difference": 2.5594001661077836e-08,
+      "tolerance": 2.9212105323997697e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/24",
+      "reference": 0.029921492391419526,
+      "recomputed": 0.029921517735848432,
+      "absolute_difference": 2.5344428906254324e-08,
+      "tolerance": 3.2921492391419528e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/4",
+      "reference": 0.026828013166901466,
+      "recomputed": 0.026828038145512236,
+      "absolute_difference": 2.4978610770054477e-08,
+      "tolerance": 2.982801316690147e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/68",
+      "reference": 0.03326031883734941,
+      "recomputed": 0.03326029409025301,
+      "absolute_difference": 2.474709639987971e-08,
+      "tolerance": 3.626031883734941e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/38",
+      "reference": 0.0236495146434538,
+      "recomputed": 0.023649490131578278,
+      "absolute_difference": 2.4511875522381654e-08,
+      "tolerance": 2.6649514643453802e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/95",
+      "reference": 0.030916332882695307,
+      "recomputed": 0.030916308818722402,
+      "absolute_difference": 2.406397290460882e-08,
+      "tolerance": 3.391633288269531e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/59",
+      "reference": 0.0248694253761215,
+      "recomputed": 0.02486940185868564,
+      "absolute_difference": 2.3517435859821134e-08,
+      "tolerance": 2.7869425376121503e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/12",
+      "reference": 0.024740621227515216,
+      "recomputed": 0.024740644744109714,
+      "absolute_difference": 2.3516594498118604e-08,
+      "tolerance": 2.774062122751522e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/1",
+      "reference": 0.02646124305666608,
+      "recomputed": 0.02646126637444111,
+      "absolute_difference": 2.331777503028487e-08,
+      "tolerance": 2.946124305666608e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/117",
+      "reference": 0.031017819942761718,
+      "recomputed": 0.031017842227241514,
+      "absolute_difference": 2.2284479796186307e-08,
+      "tolerance": 3.401781994276172e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/73",
+      "reference": 0.025250835715781017,
+      "recomputed": 0.0252508576183596,
+      "absolute_difference": 2.190257858414313e-08,
+      "tolerance": 2.8250835715781018e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/86",
+      "reference": 0.026766197380929096,
+      "recomputed": 0.026766219237031413,
+      "absolute_difference": 2.1856102316863968e-08,
+      "tolerance": 2.9766197380929096e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/116",
+      "reference": 0.02542796579642635,
+      "recomputed": 0.025427944152030105,
+      "absolute_difference": 2.1644396244052677e-08,
+      "tolerance": 2.842796579642635e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/28",
+      "reference": 0.02665550625725607,
+      "recomputed": 0.02665548483372575,
+      "absolute_difference": 2.1423530321279527e-08,
+      "tolerance": 2.9655506257256074e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/103",
+      "reference": 0.02734229608741827,
+      "recomputed": 0.02734227479327897,
+      "absolute_difference": 2.1294139299077308e-08,
+      "tolerance": 3.034229608741827e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/88",
+      "reference": 0.029324066222081897,
+      "recomputed": 0.029324046756655075,
+      "absolute_difference": 1.9465426822490306e-08,
+      "tolerance": 3.23240662220819e-06
+    },
+    {
+      "path": "narx/monte_carlo/linear ARX inverse/max_error_samples/87",
+      "reference": 0.02578473879929846,
+      "recomputed": 0.02578472027236054,
+      "absolute_difference": 1.8526937917845432e-08,
+      "tolerance": 2.878473879929846e-06
     }
   ],
   "diagnostic_values_excluded_from_gate": 91,
@@ -270,10 +270,10 @@
     },
     {
       "path": "static/time_ratio_newton_over_algebraic",
-      "reference": 2.4894236576354842,
-      "recomputed": 3.3984049215335017,
-      "absolute_difference": 0.9089812638980175,
-      "tolerance": 0.00024924236576354846
+      "reference": 1.6760883038215488,
+      "recomputed": 1.9442799568928102,
+      "absolute_difference": 0.26819165307126136,
+      "tolerance": 0.0001679088303821549
     },
     {
       "path": "narx/mean_iterations",
@@ -340,17 +340,17 @@
     },
     {
       "path": "narx/variants/main/closed_loop/controller_time_per_step_ms",
-      "reference": 1.089574892843562,
-      "recomputed": 0.6797719857134764,
-      "absolute_difference": 0.4098029071300856,
-      "tolerance": 0.0001092574892843562
+      "reference": 0.5191723107131452,
+      "recomputed": 0.470627653567135,
+      "absolute_difference": 0.048544657146010195,
+      "tolerance": 5.221723107131452e-05
     },
     {
       "path": "narx/variants/main/closed_loop/closed_loop_iterations_mean",
-      "reference": 4.059315476190476,
-      "recomputed": 4.059315476190476,
+      "reference": 4.0598214285714285,
+      "recomputed": 4.0598214285714285,
       "absolute_difference": 0.0,
-      "tolerance": 0.00040623154761904766
+      "tolerance": 0.0004062821428571429
     },
     {
       "path": "narx/variants/main/closed_loop/closed_loop_iterations_p95",
@@ -368,10 +368,10 @@
     },
     {
       "path": "narx/variants/main/closed_loop/hidden_evaluations_mean",
-      "reference": 4.059315476190476,
-      "recomputed": 4.059315476190476,
+      "reference": 4.0598214285714285,
+      "recomputed": 4.0598214285714285,
       "absolute_difference": 0.0,
-      "tolerance": 0.00040623154761904766
+      "tolerance": 0.0004062821428571429
     },
     {
       "path": "narx/variants/control-affine (B_u=0)/mean_iterations",
@@ -389,10 +389,10 @@
     },
     {
       "path": "narx/variants/control-affine (B_u=0)/closed_loop/controller_time_per_step_ms",
-      "reference": 0.6530404571484334,
-      "recomputed": 0.3766771714282413,
-      "absolute_difference": 0.2763632857201921,
-      "tolerance": 6.560404571484333e-05
+      "reference": 0.3283175250000373,
+      "recomputed": 0.3047752499932293,
+      "absolute_difference": 0.023542275006808,
+      "tolerance": 3.3131752500003734e-05
     },
     {
       "path": "narx/variants/control-affine (B_u=0)/closed_loop/closed_loop_iterations_mean",
@@ -438,10 +438,10 @@
     },
     {
       "path": "narx/variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop/controller_time_per_step_ms",
-      "reference": 0.634009325027104,
-      "recomputed": 0.40903866428416386,
-      "absolute_difference": 0.2249706607429402,
-      "tolerance": 6.37009325027104e-05
+      "reference": 0.3154793500008119,
+      "recomputed": 0.2862796714290588,
+      "absolute_difference": 0.029199678571753096,
+      "tolerance": 3.184793500008119e-05
     },
     {
       "path": "narx/variants/control-affine (B_u=0), lambda_s=3e-3/closed_loop/closed_loop_iterations_mean",
@@ -487,17 +487,17 @@
     },
     {
       "path": "narx/variants/lambda_s=0/closed_loop/controller_time_per_step_ms",
-      "reference": 1.1275250178625487,
-      "recomputed": 0.6437005178560591,
-      "absolute_difference": 0.4838245000064896,
-      "tolerance": 0.00011305250178625487
+      "reference": 0.5225265714295395,
+      "recomputed": 0.50677858214304,
+      "absolute_difference": 0.015747989286499564,
+      "tolerance": 5.255265714295395e-05
     },
     {
       "path": "narx/variants/lambda_s=0/closed_loop/closed_loop_iterations_mean",
-      "reference": 4.120595238095238,
-      "recomputed": 4.120595238095238,
+      "reference": 4.120238095238095,
+      "recomputed": 4.120238095238095,
       "absolute_difference": 0.0,
-      "tolerance": 0.00041235952380952386
+      "tolerance": 0.00041232380952380956
     },
     {
       "path": "narx/variants/lambda_s=0/closed_loop/closed_loop_iterations_p95",
@@ -515,10 +515,10 @@
     },
     {
       "path": "narx/variants/lambda_s=0/closed_loop/hidden_evaluations_mean",
-      "reference": 4.120595238095238,
-      "recomputed": 4.120595238095238,
+      "reference": 4.120238095238095,
+      "recomputed": 4.120238095238095,
       "absolute_difference": 0.0,
-      "tolerance": 0.00041235952380952386
+      "tolerance": 0.00041232380952380956
     },
     {
       "path": "narx/variants/lambda_s=1e-3/mean_iterations",
@@ -536,10 +536,10 @@
     },
     {
       "path": "narx/variants/lambda_s=1e-3/closed_loop/controller_time_per_step_ms",
-      "reference": 1.1108010000124782,
-      "recomputed": 0.6160905607170467,
-      "absolute_difference": 0.49471043929543146,
-      "tolerance": 0.00011138010000124781
+      "reference": 0.4870075678569817,
+      "recomputed": 0.4988363178613651,
+      "absolute_difference": 0.011828750004383437,
+      "tolerance": 4.900075678569817e-05
     },
     {
       "path": "narx/variants/lambda_s=1e-3/closed_loop/closed_loop_iterations_mean",
@@ -585,17 +585,17 @@
     },
     {
       "path": "narx/variants/implicit forward (A!=0)/closed_loop/controller_time_per_step_ms",
-      "reference": 1.618122742866035,
-      "recomputed": 0.8485767785730657,
-      "absolute_difference": 0.7695459642929693,
-      "tolerance": 0.0001621122742866035
+      "reference": 0.6350408750001131,
+      "recomputed": 0.6414181035649692,
+      "absolute_difference": 0.006377228564856119,
+      "tolerance": 6.38040875000113e-05
     },
     {
       "path": "narx/variants/implicit forward (A!=0)/closed_loop/closed_loop_iterations_mean",
-      "reference": 5.6570238095238095,
-      "recomputed": 5.6570238095238095,
+      "reference": 5.6588988095238095,
+      "recomputed": 5.6588988095238095,
       "absolute_difference": 0.0,
-      "tolerance": 0.0005660023809523809
+      "tolerance": 0.000566189880952381
     },
     {
       "path": "narx/variants/implicit forward (A!=0)/closed_loop/closed_loop_iterations_p95",
@@ -613,24 +613,24 @@
     },
     {
       "path": "narx/variants/implicit forward (A!=0)/closed_loop/hidden_evaluations_mean",
-      "reference": 5.6570238095238095,
-      "recomputed": 5.6570238095238095,
+      "reference": 5.6588988095238095,
+      "recomputed": 5.6588988095238095,
       "absolute_difference": 0.0,
-      "tolerance": 0.0005660023809523809
+      "tolerance": 0.000566189880952381
     },
     {
       "path": "narx/variants/implicit forward (A!=0)/closed_loop_newton/controller_time_per_step_ms",
-      "reference": 31.24281551786063,
-      "recomputed": 17.57286471071353,
-      "absolute_difference": 13.6699508071471,
-      "tolerance": 0.003124581551786063
+      "reference": 13.070739017856527,
+      "recomputed": 13.063603053568938,
+      "absolute_difference": 0.007135964287588337,
+      "tolerance": 0.0013073739017856526
     },
     {
       "path": "narx/variants/implicit forward (A!=0)/closed_loop_newton/closed_loop_iterations_mean",
-      "reference": 1.8951785714285714,
-      "recomputed": 1.8951488095238096,
-      "absolute_difference": 2.976190476178253e-05,
-      "tolerance": 0.00018981785714285715
+      "reference": 1.895595238095238,
+      "recomputed": 1.895595238095238,
+      "absolute_difference": 0.0,
+      "tolerance": 0.00018985952380952382
     },
     {
       "path": "narx/variants/implicit forward (A!=0)/closed_loop_newton/closed_loop_iterations_p95",
@@ -648,24 +648,24 @@
     },
     {
       "path": "narx/variants/implicit forward (A!=0)/closed_loop_newton/hidden_evaluations_mean",
-      "reference": 348.2890476190476,
-      "recomputed": 347.82979166666667,
-      "absolute_difference": 0.45925595238094274,
-      "tolerance": 0.034829204761904764
+      "reference": 368.73247023809523,
+      "recomputed": 368.73247023809523,
+      "absolute_difference": 0.0,
+      "tolerance": 0.03687354702380952
     },
     {
       "path": "narx/envelope_violation/scale_1.5/controller_time_per_step_ms",
-      "reference": 1.1017829999949365,
-      "recomputed": 0.6010966535705669,
-      "absolute_difference": 0.5006863464243696,
-      "tolerance": 0.00011047829999949364
+      "reference": 0.505259625000625,
+      "recomputed": 0.48380690714030344,
+      "absolute_difference": 0.021452717860321602,
+      "tolerance": 5.082596250006251e-05
     },
     {
       "path": "narx/envelope_violation/scale_1.5/closed_loop_iterations_mean",
-      "reference": 4.058630952380953,
-      "recomputed": 4.058630952380953,
+      "reference": 4.058452380952381,
+      "recomputed": 4.058452380952381,
       "absolute_difference": 0.0,
-      "tolerance": 0.0004061630952380953
+      "tolerance": 0.0004061452380952381
     },
     {
       "path": "narx/envelope_violation/scale_1.5/closed_loop_iterations_p95",
@@ -683,24 +683,24 @@
     },
     {
       "path": "narx/envelope_violation/scale_1.5/hidden_evaluations_mean",
-      "reference": 4.058630952380953,
-      "recomputed": 4.058630952380953,
+      "reference": 4.058452380952381,
+      "recomputed": 4.058452380952381,
       "absolute_difference": 0.0,
-      "tolerance": 0.0004061630952380953
+      "tolerance": 0.0004061452380952381
     },
     {
       "path": "narx/envelope_violation/scale_2.0/controller_time_per_step_ms",
-      "reference": 1.1002504571381775,
-      "recomputed": 0.6671613178560116,
-      "absolute_difference": 0.43308913928216586,
-      "tolerance": 0.00011032504571381775
+      "reference": 0.48951815714275426,
+      "recomputed": 0.48677337500505147,
+      "absolute_difference": 0.0027447821377027948,
+      "tolerance": 4.925181571427543e-05
     },
     {
       "path": "narx/envelope_violation/scale_2.0/closed_loop_iterations_mean",
-      "reference": 4.059047619047619,
-      "recomputed": 4.059047619047619,
+      "reference": 4.05889880952381,
+      "recomputed": 4.05889880952381,
       "absolute_difference": 0.0,
-      "tolerance": 0.00040620476190476195
+      "tolerance": 0.00040618988095238103
     },
     {
       "path": "narx/envelope_violation/scale_2.0/closed_loop_iterations_p95",
@@ -718,17 +718,17 @@
     },
     {
       "path": "narx/envelope_violation/scale_2.0/hidden_evaluations_mean",
-      "reference": 4.059047619047619,
-      "recomputed": 4.059047619047619,
+      "reference": 4.05889880952381,
+      "recomputed": 4.05889880952381,
       "absolute_difference": 0.0,
-      "tolerance": 0.00040620476190476195
+      "tolerance": 0.00040618988095238103
     },
     {
       "path": "narx/paired_rmse_differences/implicit minus online Newton/fraction_negative",
-      "reference": 0.6,
-      "recomputed": 0.6,
+      "reference": 0.625,
+      "recomputed": 0.625,
       "absolute_difference": 0.0,
-      "tolerance": 6.03e-05
+      "tolerance": 6.28e-05
     },
     {
       "path": "narx/paired_rmse_differences/implicit minus direct inverse/fraction_negative",
@@ -753,17 +753,17 @@
     },
     {
       "path": "narx/monte_carlo/implicit inverse/controller_time_per_step_ms",
-      "reference": 1.089574892843562,
-      "recomputed": 0.6797719857134764,
-      "absolute_difference": 0.4098029071300856,
-      "tolerance": 0.0001092574892843562
+      "reference": 0.5191723107131452,
+      "recomputed": 0.470627653567135,
+      "absolute_difference": 0.048544657146010195,
+      "tolerance": 5.221723107131452e-05
     },
     {
       "path": "narx/monte_carlo/implicit inverse/closed_loop_iterations_mean",
-      "reference": 4.059315476190476,
-      "recomputed": 4.059315476190476,
+      "reference": 4.0598214285714285,
+      "recomputed": 4.0598214285714285,
       "absolute_difference": 0.0,
-      "tolerance": 0.00040623154761904766
+      "tolerance": 0.0004062821428571429
     },
     {
       "path": "narx/monte_carlo/implicit inverse/closed_loop_iterations_p95",
@@ -781,24 +781,24 @@
     },
     {
       "path": "narx/monte_carlo/implicit inverse/hidden_evaluations_mean",
-      "reference": 4.059315476190476,
-      "recomputed": 4.059315476190476,
+      "reference": 4.0598214285714285,
+      "recomputed": 4.0598214285714285,
       "absolute_difference": 0.0,
-      "tolerance": 0.00040623154761904766
+      "tolerance": 0.0004062821428571429
     },
     {
       "path": "narx/monte_carlo/online Newton/controller_time_per_step_ms",
-      "reference": 1.8719062357149596,
-      "recomputed": 1.1901174499992553,
-      "absolute_difference": 0.6817887857157043,
-      "tolerance": 0.000187490623571496
+      "reference": 0.8782663785701013,
+      "recomputed": 0.816409860712903,
+      "absolute_difference": 0.06185651785719826,
+      "tolerance": 8.812663785701012e-05
     },
     {
       "path": "narx/monte_carlo/online Newton/closed_loop_iterations_mean",
-      "reference": 1.8522023809523809,
-      "recomputed": 1.8522023809523809,
+      "reference": 1.852172619047619,
+      "recomputed": 1.852172619047619,
       "absolute_difference": 0.0,
-      "tolerance": 0.0001855202380952381
+      "tolerance": 0.00018551726190476194
     },
     {
       "path": "narx/monte_carlo/online Newton/closed_loop_iterations_p95",
@@ -816,24 +816,24 @@
     },
     {
       "path": "narx/monte_carlo/online Newton/hidden_evaluations_mean",
-      "reference": 2.852202380952381,
-      "recomputed": 2.852202380952381,
+      "reference": 2.852172619047619,
+      "recomputed": 2.852172619047619,
       "absolute_difference": 0.0,
-      "tolerance": 0.0002855202380952381
+      "tolerance": 0.0002855172619047619
     },
     {
       "path": "narx/monte_carlo/direct inverse/controller_time_per_step_ms",
-      "reference": 0.23259290356268789,
-      "recomputed": 0.13242030357056528,
-      "absolute_difference": 0.10017259999212261,
-      "tolerance": 2.355929035626879e-05
+      "reference": 0.10016103571380038,
+      "recomputed": 0.0974615357084271,
+      "absolute_difference": 0.0026995000053732787,
+      "tolerance": 1.0316103571380038e-05
     },
     {
       "path": "narx/monte_carlo/linear ARX inverse/controller_time_per_step_ms",
-      "reference": 0.12788661070024837,
-      "recomputed": 0.09071382500138725,
-      "absolute_difference": 0.03717278569886112,
-      "tolerance": 1.3088661070024838e-05
+      "reference": 0.04710412500068222,
+      "recomputed": 0.04760562142434667,
+      "absolute_difference": 0.0005014964236644479,
+      "tolerance": 5.010412500068222e-06
     },
     {
       "path": "servo/mean_iterations",

@@ -1,6 +1,6 @@
 [checkpoints] static
       restored model; minibatch RNG replayed
-[static] completed in 1.52 s
+[static] completed in 1.05 s
 [checkpoints] narx
     training variant: main
       restored variant:main; minibatch RNG replayed
@@ -30,8 +30,8 @@
     closed loop: lambda_s=1e-3
     closed loop: implicit forward (A!=0)
     closed loop: envelope violation batch
-[narx] completed in 16.73 s
+[narx] completed in 12.57 s
 [checkpoints] servo
       restored model; minibatch RNG replayed
       restored control_affine; minibatch RNG replayed
-[servo] completed in 2.58 s
+[servo] completed in 2.00 s

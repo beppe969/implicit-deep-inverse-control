@@ -8,4 +8,4 @@
 | Hidden-layer evaluations (mean) | 7.19 | 3.98 | -- |
 | Iterations (mean / max) | 7.19 / 9 | 2.98 / 4 | -- |
 
-Newton true-map cycle and noisy-target cells follow the manuscript's same-root convention: the archived JSON stores these two metrics for the algebraic inverse only. The independently stored Newton input-recovery RMSE verifies the clean-target root comparison. Iteration counts can vary at the float32 stopping threshold.
+All three methods are evaluated explicitly on the same clean and noisy targets. Completed algebraic-inverse queries are frozen at their first residual crossing. Iteration counts can vary at the float32 stopping threshold.

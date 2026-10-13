@@ -1,4 +1,4 @@
-"""Non-destructive audit of the checkpoints supplied in revision_v3.zip.
+"""Non-destructive audit of the released trained checkpoints and the repaired evaluation protocol.
 
 Run: python code/audit_light_revision.py
 Outputs: audit/independent_validation.json
@@ -59,7 +59,11 @@ def audit_static() -> dict:
     und = direct(noisy)
     un, ni, ne = ex.newton_inverse(model, q, y0[te], torch.zeros_like(u[te]),
                                   tol=5e-7, stall=5e-7)
+    unn, _, _ = ex.newton_inverse(model, q, noisy, torch.zeros_like(u[te]),
+                                 tol=5e-7, stall=5e-7)
     out = {
+        'true_cycle_rmse_newton':ex.rms((ex.true_static(un)-y0[te]).numpy()),
+        'noisy_inverse_rmse_newton':ex.rms((unn-u[te]).numpy()),
         'inverse_rmse_algebraic':ex.rms((ua-u[te]).numpy()),
         'inverse_rmse_direct':ex.rms((ud-u[te]).numpy()),
         'inverse_rmse_newton':ex.rms((un-u[te]).numpy()),
@@ -95,6 +99,9 @@ def audit_narx() -> dict:
     bias, w = np.full(2,.004), np.full(2,.003)
     clean = ex.true_narx(chi[te],u[te])
     variants = {}
+    main_sd = ck['variant:main']
+    main_for_center = restore_model(main_sd,10,2,48,.68)
+    _, common_cr, common_ur, _ = ex.build_reference(main_for_center,280)
     model = None
     for name, saved in n['variants'].items():
         mdl = restore_model(ck['variant:'+name],10,2,48,.68,
@@ -110,9 +117,11 @@ def audit_narx() -> dict:
             finalcal = ex.calibrate_closed_loop(mdl,aux,yr,cr,ur,F,Ec,Eu,bias,w,sigma,preliminary['d_bar'])
             dbar=np.asarray(finalcal['final_residual_box'])+bias
         else:
-            dbar=np.asarray(preliminary['d_bar'])+bias
+            center_allowance=ex.uncertainty_center_allowance(cr,ur,common_cr,common_ur,Ec,Eu)
+            dbar=np.asarray(preliminary['d_bar'])+bias+center_allowance
         cert=ex.certificate(sens,F,Ec,Eu,dbar,w,np.full(48,2e-7))
-        met,traj=ex.closed_loop_narx('implicit inverse',mdl,aux,yr,cr,ur,F,Ec,Eu,bias,w)
+        met,traj=ex.closed_loop_narx('implicit inverse',mdl,aux,yr,cr,ur,F,Ec,Eu,bias,w,
+                                      plant_chi_ref=common_cr,plant_u_ref=common_ur)
         data={'forward_rmse':ex.rms((pred-clean).numpy()),
               'inverse_rmse_algebraic':ex.rms((ua-u[te]).numpy()),
               'learned_model_cycle_rmse':ex.rms((mdl(chi[te],ua)-clean).numpy()),
@@ -124,6 +133,8 @@ def audit_narx() -> dict:
         for k in ['forward_rmse','inverse_rmse_algebraic','rho_H']:
             relative_check(data[k],saved[k],name+' '+k)
         relative_check(data['closed_loop_rmse'],saved['closed_loop']['rmse_mean'],name+' CL RMSE')
+        if cert['rho_H'] < 1:
+            np.testing.assert_allclose(cert['u_tube'], saved['u_tube'], atol=3e-7, rtol=1e-4)
         variants[name]=data
         if name=='main':
             model=mdl; main_sens=sens; main_cert=cert
@@ -252,7 +263,7 @@ def json_safe(value):
     return value
 
 if __name__=='__main__':
-    result={'baseline':'revision_v3.zip; original checkpoints preserved',
+    result={'baseline':'paper_package_submission.zip; supplied checkpoints preserved',
             'runtime':{'python':platform.python_version(),'torch':torch.__version__,'numpy':np.__version__},
             'static':audit_static(),'narx':audit_narx(),
             'independent_equation_tests':independent_equation_tests(),

@@ -45,7 +45,7 @@ def export_metrics(results: dict, path: Path) -> None:
     """RFC-style quoted CSV; commas in variant names remain inside one field."""
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open('w', newline='', encoding='utf-8') as stream:
-        writer = csv.writer(stream)
+        writer = csv.writer(stream, lineterminator="\n")
         writer.writerow(['experiment', 'metric_path', 'value'])
         for key, val in numeric_leaves(results):
             if val is None or isinstance(val, float) and not math.isfinite(val):

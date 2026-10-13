@@ -1,7 +1,6 @@
 """Reproducibility script for
 
-    Implicit Input--Output Model Inversion for Robust Nonlinear Control
-    (revised version)
+    Implicit Deep Learning Models for Robust Nonlinear Inverse Control
 
 Usage:  python experiments.py [static|narx|servo|all]
 
@@ -94,10 +93,10 @@ class AlgebraicImplicitMap(nn.Module):
         y = base(chi) + D_chi chi + C h + D_u u + c.
 
     * ``kappa_f = 0`` gives a feedforward hidden block (A = 0).  For
-      ``kappa_f > 0`` the forward hidden matrix A is trainable and smoothly
+      ``kappa_f > 0`` the forward hidden matrix A is trainable and norm-
       scaled so that ||A||_inf < kappa_f; the forward equilibrium is then
       computed by fixed-point iteration (unrolled during training).
-    * C is smoothly normalized so that ||A - B_u D_u^{-1} C||_inf < kappa_i,
+    * C is norm-rescaled so that ||A - B_u D_u^{-1} C||_inf < kappa_i,
       which enforces the inverse contraction budget.
     * ``input_features=False`` removes B_u (control-affine ablation).
     """
@@ -164,7 +163,7 @@ class AlgebraicImplicitMap(nn.Module):
             return self.C_raw
         raw_loop = -self.B_u @ self.D_u_inv @ self.C_raw
         nr = max_row_sum(raw_loop)
-        # smooth scaling: ||A_i||_inf <= ||A||_inf + budget*nr/(budget+nr) < kappa_i
+        # Norm-based scaling: ||A_i||_inf <= ||A||_inf + budget*nr/(budget+nr) < kappa_i
         scale = budget / (budget + nr + 1e-8)
         return self.C_raw * scale
 
@@ -238,6 +237,23 @@ class AlgebraicImplicitMap(nn.Module):
         warm: Optional[torch.Tensor] = None,
         return_info: bool = False,
     ):
+        """Return each query at its own first certified fixed-point residual.
+
+        A completed hidden vector is frozen while other queries continue.
+        The tested vector itself is returned, so ``residual`` is the residual
+        at the reconstructed control. ``iterations`` counts fixed-point map
+        evaluations per query (the last evaluation certifies the returned h).
+        A cap hit is exposed through ``converged``; without diagnostics it
+        raises instead of silently presenting an uncertified solution.
+        """
+        if not math.isfinite(tol) or tol <= 0 or max_iter < 1:
+            raise ValueError("tol must be positive and finite; max_iter must be at least one")
+        if chi.ndim != 2 or y.ndim != 2 or chi.shape != (y.shape[0], self.qdim):
+            raise ValueError("chi and y must be two-dimensional batches with matching rows")
+        if y.shape[1] != self.udim or y.shape[0] == 0:
+            raise ValueError("y must contain at least one query of output dimension udim")
+        if warm is not None and warm.shape != (y.shape[0], self.hdim):
+            raise ValueError("warm must have shape (number of queries, hidden dimension)")
         C = self.effective_C()
         A_i = self.inverse_A()
         y_bar, rhs = self._inverse_affine(chi, y)
@@ -247,24 +263,29 @@ class AlgebraicImplicitMap(nn.Module):
         for k in range(max_iter):
             h_new = torch.tanh(h @ A_i.T + rhs)
             r = torch.max(torch.abs(h_new - h), dim=1).values
-            done = active & (r <= tol)
-            its[done] = k + 1
-            active &= ~done
-            h = h_new
-            if not torch.any(active):
+            its[active] = k + 1
+            active &= r > tol
+            if not torch.any(active) or k + 1 == max_iter:
                 break
-        its[active] = max_iter
+            # Freeze the vector whose residual has just met tolerance.
+            h = torch.where(active.unsqueeze(1), h_new, h)
+        z = h @ A_i.T + rhs
+        fp = torch.max(torch.abs(h - torch.tanh(z)), dim=1).values
+        converged = torch.isfinite(fp) & (fp <= tol)
         u = (y_bar - h @ C.T) @ self.D_u_inv.T
         if return_info:
-            z = h @ A_i.T + rhs
-            fp = torch.max(torch.abs(h - torch.tanh(z)), dim=1).values
             return u, {
                 "h": h,
-                "z": z,  # inverse pre-activation, used for slope bounds
+                "z": z,
                 "iterations": its,
                 "residual": fp,
+                "converged": converged,
                 "kappa_inf": float(max_row_sum(A_i).item()),
             }
+        if not torch.all(converged):
+            raise RuntimeError(f"Inverse residual tolerance {tol:g} was not met; "
+                               f"largest returned residual is {float(fp.max()):.6g}. "
+                               "Use return_info=True to inspect capped queries.")
         return u
 
     def sensitivity_penalty(self) -> torch.Tensor:
@@ -370,7 +391,7 @@ def fit_forward(
         loss = torch.mean((pred - y[idx]) ** 2)
         if sensitivity_weight > 0 and model.qdim:
             # Psi_s = ||S_chi||_inf, the exact componentwise inverse-sensitivity
-            # bound of Proposition 7, differentiated through the resolvent.
+            # bound of Proposition 2, differentiated through the resolvent.
             loss = loss + sensitivity_weight * model.sensitivity_penalty()
         opt.zero_grad(set_to_none=True)
         loss.backward()
@@ -517,6 +538,9 @@ def run_static() -> dict:
         t0 = time.perf_counter()
         un, nits, nevals = newton_inverse(model, chi[te], y0[te], torch.zeros_like(u[te]), tol=5e-7, stall=5e-7)
         t_newton = time.perf_counter() - t0
+        # Evaluate the noisy-target Newton cells directly on the same targets.
+        un_noisy, _, _ = newton_inverse(model, chi[te], yn, torch.zeros_like(u[te]),
+                                       tol=5e-7, stall=5e-7)
         t0 = time.perf_counter()
         _ = model.inverse(chi[te], y0[te])
         t_alg = time.perf_counter() - t0
@@ -529,8 +553,10 @@ def run_static() -> dict:
         "learned_model_cycle_rmse": rms((model_cycle - y0[te]).numpy()),
         "true_cycle_rmse_algebraic": rms((true_cycle_a - y0[te]).numpy()),
         "true_cycle_rmse_direct": rms((true_cycle_d - y0[te]).numpy()),
+        "true_cycle_rmse_newton": rms((true_static(un) - y0[te]).numpy()),
         "noisy_inverse_rmse_algebraic": rms((una - u[te]).numpy()),
         "noisy_inverse_rmse_direct": rms((und - u[te]).numpy()),
+        "noisy_inverse_rmse_newton": rms((un_noisy - u[te]).numpy()),
         "mean_iterations": float(info["iterations"].float().mean().item()),
         "p95_iterations": float(torch.quantile(info["iterations"].float(), 0.95).item()),
         "max_iterations": float(info["iterations"].max().item()),
@@ -539,6 +565,8 @@ def run_static() -> dict:
         "newton_max_iterations": float(nits.max().item()),
         "time_ratio_newton_over_algebraic": float(t_newton / max(t_alg, 1e-9)),
         "inverse_contraction_inf": info["kappa_inf"],
+        "solver_residual_max": float(info["residual"].max()),
+        "solver_converged_fraction": float(info["converged"].float().mean()),
         "Dhat": Dhat.numpy().tolist(),
     }
 
@@ -713,6 +741,19 @@ def certificate(sens: dict, F, E_chi, E_u, d_bar, w_bound, r_fp_bar) -> dict:
     return out
 
 
+def uncertainty_center_allowance(chi_ref, u_ref, plant_chi_ref, plant_u_ref, E_chi, E_u):
+    """Uniform extra offset when a certificate uses a different reference.
+
+    Triangle inequality gives E_chi|q-chi_center| + E_u|u-u_center|
+    <= E_chi|q-chi_ref| + E_u|u-u_ref| + this coordinatewise allowance.
+    """
+    cr, ur, pc, pu = map(np.asarray, (chi_ref, u_ref, plant_chi_ref, plant_u_ref))
+    if cr.shape != pc.shape or ur.shape != pu.shape or len(cr) != len(ur) + 1:
+        raise ValueError("Reference and center arrays must have matching T+1/T shapes")
+    return np.max(np.abs(cr[:-1] - pc[:-1]) @ np.asarray(E_chi).T
+                  + np.abs(ur - pu) @ np.asarray(E_u).T, axis=0)
+
+
 def slope_bounds(model: AlgebraicImplicitMap, z_ref: np.ndarray, chi_box: np.ndarray, F, lam_prev: np.ndarray) -> np.ndarray:
     """Propose slopes from inverse-solution intervals. These are diagnostic:
     forward equilibria and all solver iterates need separate containment
@@ -757,14 +798,27 @@ def build_reference(model: AlgebraicImplicitMap, T: int):
 
 
 def closed_loop_narx(controller: str, model, aux, y_ref, chi_ref, u_ref, F, E_chi, E_u, bias_bound, w_bound,
-                     nruns=120, seed=SEED + 20, scale_uncertainty=1.0, burn=40, init_range=0.15):
-    """Monte Carlo closed loop over the uncertain plant family (84).
+                     nruns=120, seed=SEED + 20, scale_uncertainty=1.0, burn=40, init_range=0.15,
+                     *, plant_chi_ref=None, plant_u_ref=None):
+    """Monte Carlo closed loop over the uncertain plant family in the paper.
 
     The controller only sees *measured* outputs (noise std MEAS_NOISE_STD) and
     builds its regressor q from them; the plant evolves on its true history.
     Tracking metrics are reported for the true output; the tube check uses the
-    measured error, which is the quantity bounded by the theorem."""
+    measured error, which is the quantity bounded by the theorem.
+
+    ``chi_ref, u_ref`` describe this controller's model-consistent reference.
+    ``plant_chi_ref, plant_u_ref`` define the physical uncertainty center.
+    The latter pair must be shared by all compared controllers and variants.
+    Omitting both uses the model reference (appropriate for the main model).
+    """
     T = len(u_ref)
+    if (plant_chi_ref is None) != (plant_u_ref is None):
+        raise ValueError("Supply both physical uncertainty-center arrays, or neither")
+    plant_chi_ref = np.asarray(chi_ref if plant_chi_ref is None else plant_chi_ref)
+    plant_u_ref = np.asarray(u_ref if plant_u_ref is None else plant_u_ref)
+    if plant_chi_ref.shape != (T + 1, N_CHI) or plant_u_ref.shape != (T, M_IO):
+        raise ValueError("The physical uncertainty center must match the simulation horizon")
     rng = np.random.default_rng(seed)
     delta_chi = rng.uniform(-1, 1, (nruns, M_IO, N_CHI)) * E_chi[None] * scale_uncertainty
     delta_u = rng.uniform(-1, 1, (nruns, M_IO, M_IO)) * E_u[None] * scale_uncertainty
@@ -794,6 +848,8 @@ def closed_loop_narx(controller: str, model, aux, y_ref, chi_ref, u_ref, F, E_ch
         t0 = time.perf_counter()
         if controller == "implicit inverse":
             uc, inf = model.inverse(qt, vt, tol=2e-7, warm=warm, return_info=True)
+            if not torch.all(inf["converged"]):
+                raise RuntimeError("Closed-loop inverse residual budget was not met")
             warm = inf["h"]
             uk = uc.numpy()
             iter_hist.append(inf["iterations"].numpy())
@@ -815,8 +871,8 @@ def closed_loop_narx(controller: str, model, aux, y_ref, chi_ref, u_ref, F, E_ch
         t_ctrl += time.perf_counter() - t0
         uk = np.clip(uk, -2.2, 2.2)
         y_nom = true_narx(torch.tensor(q_true, dtype=DTYPE), torch.tensor(uk, dtype=DTYPE)).numpy()
-        q_dev = q - chi_ref[k]
-        u_dev = uk - u_ref[k]
+        q_dev = q - plant_chi_ref[k]
+        u_dev = uk - plant_u_ref[k]
         y_next = (
             y_nom
             + np.einsum("nij,nj->ni", delta_chi, q_dev)
@@ -850,6 +906,7 @@ def closed_loop_narx(controller: str, model, aux, y_ref, chi_ref, u_ref, F, E_ch
     }
     if iter_hist:
         all_it = np.concatenate(iter_hist)
+        metrics["solver_residual_max"] = fp_max if controller == "implicit inverse" else None
         metrics["closed_loop_iterations_mean"] = float(np.mean(all_it))
         metrics["closed_loop_iterations_p95"] = float(np.quantile(all_it, 0.95))
         metrics["closed_loop_iterations_max"] = float(np.max(all_it))
@@ -962,6 +1019,10 @@ def run_narx() -> dict:
     w_bound = np.array([PROC_NOISE_BOUND, PROC_NOISE_BOUND])
     J, G_y, G_u, P_y = narx_shift_matrices()
 
+    # Freeze one physical uncertainty center for all models and controllers.
+    references = {name: build_reference(mdl, T) for name, mdl in models.items()}
+    y_ref, chi_ref, u_ref, z_ref = references["main"]
+
     # ---- open-loop tests, per variant ----------------------------------------
     with torch.no_grad():
         y_clean = true_narx(chi[te], u[te])
@@ -981,7 +1042,10 @@ def run_narx() -> dict:
         sens = mdl.sensitivity_matrices()
         r_fp_bar = 2e-7 * np.ones(mdl.hdim)
         box = conformal_box(mdl, chi_c, u_c, y_c, n_cal_traj, T, training_scale(mdl))
-        d_bar = np.asarray(box["d_bar"]) + bias_bound
+        _, cr_model, ur_model, _ = references[name]
+        center_allowance = uncertainty_center_allowance(
+            cr_model, ur_model, chi_ref, u_ref, E_chi, E_u)
+        d_bar = np.asarray(box["d_bar"]) + bias_bound + center_allowance
         cert = certificate(sens, F, E_chi, E_u, d_bar, w_bound, r_fp_bar)
         variant_results[name] = {
             "forward_rmse": rms((pred - y_clean).numpy()),
@@ -996,6 +1060,7 @@ def run_narx() -> dict:
             "rho_H": cert["rho_H"],
             "rho_nominal_memory": cert["rho_nominal_memory"],
             "conformal_box": box["d_bar"],
+            "uncertainty_center_allowance": center_allowance.tolist(),
             "y_tube": cert.get("y_tube", np.full(M_IO, np.nan)).tolist(),
             "u_tube": cert.get("u_tube", np.full(M_IO, np.nan)).tolist(),
         }
@@ -1013,7 +1078,6 @@ def run_narx() -> dict:
     rho_signed_linear = pf_radius(J - G_u @ K_lin)
     rho_majorant_linear = pf_radius(J + G_u @ np.abs(K_lin))
 
-    y_ref, chi_ref, u_ref, z_ref = build_reference(model, T)
     final_calibration = calibrate_closed_loop(
         model, aux, y_ref, chi_ref, u_ref, F, E_chi, E_u, bias_bound, w_bound,
         box['sigma'], box['d_bar'])
@@ -1059,12 +1123,14 @@ def run_narx() -> dict:
     # ablation models in closed loop (their own inverse)
     for name in [n for n in variants if n != "main"]:
         print(f"    closed loop: {name}", flush=True)
-        yr, cr, ur, _ = build_reference(models[name], T)
-        m_, _ = closed_loop_narx("implicit inverse", models[name], aux, yr, cr, ur, F, E_chi, E_u, bias_bound, w_bound)
+        yr, cr, ur, _ = references[name]
+        m_, _ = closed_loop_narx("implicit inverse", models[name], aux, yr, cr, ur, F, E_chi, E_u, bias_bound, w_bound,
+                                 plant_chi_ref=chi_ref, plant_u_ref=u_ref)
         variant_results[name]["closed_loop"] = {k: v for k, v in m_.items() if k not in ("rmse_samples", "max_error_samples")}
         variant_results[name]["closed_loop_rmse_samples"] = m_["rmse_samples"]
         if name == "implicit forward (A!=0)":
-            mn_, _ = closed_loop_narx("online Newton", models[name], aux, yr, cr, ur, F, E_chi, E_u, bias_bound, w_bound)
+            mn_, _ = closed_loop_narx("online Newton", models[name], aux, yr, cr, ur, F, E_chi, E_u, bias_bound, w_bound,
+                                       plant_chi_ref=chi_ref, plant_u_ref=u_ref)
             variant_results[name]["closed_loop_newton"] = {k: v for k, v in mn_.items() if k not in ("rmse_samples", "max_error_samples")}
     variant_results["main"]["closed_loop"] = {k: v for k, v in metrics["implicit inverse"].items() if k not in ("rmse_samples", "max_error_samples")}
     # plants violating the envelope
@@ -1081,6 +1147,8 @@ def run_narx() -> dict:
     paired["implicit minus control-affine"] = paired_bootstrap_ci(metrics["implicit inverse"]["rmse_samples"], variant_results["control-affine (B_u=0)"]["closed_loop_rmse_samples"])
 
     out = {
+        "uncertainty_center": "main-model reference, fixed across all controllers and variants",
+        "inverse_stopping_rule": "per-query first residual crossing; completed queries frozen",
         "input_dimension": M_IO,
         "output_dimension": M_IO,
         "regressor_dimension": N_CHI,
@@ -1325,6 +1393,8 @@ def run_servo() -> dict:
             target = torch.tensor(velocity_target[:, None], dtype=DTYPE)
             if method == "implicit inverse":
                 ut, inf = model.inverse(q, target, tol=2e-7, warm=warm, return_info=True)
+                if not torch.all(inf["converged"]):
+                    raise RuntimeError("Servo inverse residual budget was not met")
                 warm = inf["h"]
                 uk = ut.numpy()[:, 0]
             elif method == "control-affine inverse":
@@ -1368,6 +1438,8 @@ def run_servo() -> dict:
         "inverse_voltage_rmse_direct": rms((ud - u[te]).numpy()),
         "inverse_contraction_inf": info["kappa_inf"],
         "mean_iterations": float(info["iterations"].float().mean().item()),
+        "solver_residual_max": float(info["residual"].max()),
+        "solver_converged_fraction": float(info["converged"].float().mean()),
         "physics_skip_D_u": float(D_u[0, 0]),
         "state_measurement_noise_std": 0.004,
         "paired_rmse_differences": paired,
@@ -1411,23 +1483,26 @@ def run_servo() -> dict:
 
 
 def write_summary(results: dict) -> None:
-    rows = ["experiment,metric,value"]
+    """Quoted scalar CSV, retaining commas in model names as field content."""
+    import csv
+    rows = [["experiment", "metric", "value"]]
     for exp, vals in results.items():
         for key, value in vals.items():
             if isinstance(value, (int, float)):
-                rows.append(f"{exp},{key},{value}")
+                rows.append([exp, key, value])
         for method, metrics in vals.get("monte_carlo", {}).items():
             for key, value in metrics.items():
                 if isinstance(value, (int, float)):
-                    rows.append(f"{exp},{method}:{key},{value}")
+                    rows.append([exp, f"{method}:{key}", value])
         for name, vr in vals.get("variants", {}).items():
             for key, value in vr.items():
                 if isinstance(value, (int, float)):
-                    rows.append(f"{exp},variant[{name}]:{key},{value}")
+                    rows.append([exp, f"variant[{name}]:{key}", value])
             for key, value in vr.get("closed_loop", {}).items():
                 if isinstance(value, (int, float)):
-                    rows.append(f"{exp},variant[{name}]:closed_loop:{key},{value}")
-    (RES / "summary.csv").write_text("\n".join(rows) + "\n")
+                    rows.append([exp, f"variant[{name}]:closed_loop:{key}", value])
+    with (RES / "summary.csv").open("w", newline="", encoding="utf-8") as stream:
+        csv.writer(stream, lineterminator="\n").writerows(rows)
 
 
 def main(which: str) -> None:

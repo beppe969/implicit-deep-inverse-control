@@ -1,7 +1,7 @@
 {
-  "static_inverse_rmse": 0.02310915827702672,
+  "static_inverse_rmse": 0.023109159044718438,
   "NARX_rho_H": 0.6706798304285071,
-  "NARX_rmse": 0.005764506431937189,
+  "NARX_rmse": 0.005764506410143383,
   "equation_tests": {
     "implementation": "independent NumPy equations; float64",
     "seed": 2091306,

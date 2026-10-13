@@ -1,29 +1,18 @@
-# Source provenance
+# Release provenance
 
-The authoritative scientific baseline is the supplied `revision_v3.zip`,
-including `paper_rev.tex`. The public repository was assembled from
-`revision_v3_light_review.zip`, which is the light revision derived solely from
-that archive. No older project source was used.
+This release is derived from the user-supplied `paper_package_submission.zip`.
+Its embedded `implicit_deep_inverse_control_github.zip` supplies the repository
+layout. The outer archive supplies the submitted manuscript and author images.
+The scientific Python files in the outer and embedded archives had identical
+SHA-256 hashes before editing.
 
-`REFERENCE_MANIFEST.json` records SHA-256 hashes of both input archives and each
-of the 21 frozen scientific files. These are the four Python scripts, five saved
-result/checkpoint files, and twelve original experimental graphic files.
+The three tensor checkpoint files remain byte-identical to the supplied files.
+Scientific evaluations, numerical tables, and experimental figures are regenerated
+with the repaired code. The new reference is `results/all_results.json`; the
+supplied numerical baseline is retained as `validation/baseline_results.json`.
+The focused comparison is recorded in `validation/before_after.json`.
 
-The three original experiment/review scripts and every original result or graphic
-were also compared directly with the corresponding member of `revision_v3.zip`.
-Their bytes agree. The fourth script, `audit_light_revision.py`, is the separate
-numerical audit added during the current light revision.
-
-Public packaging adds a safe runner and a table exporter. It adds unit tests and
-GitHub workflow definitions. The supplementary numerical documentation has been
-updated to point to the safe commands. The existing architecture drawing was
-extracted into a standalone TikZ source without changing the drawing itself.
-
-Internal scientific assessments and editorial records are excluded. The full
-manuscript sources and manuscript PDFs are also excluded; the public deposit
-contains the reproducibility materials and citation metadata.
-
-The supplied reference JSON and summary CSV are retained unchanged, including
-their historical formatting. Additional portable exports normalize unavailable
-values and correctly quote CSV fields. New runs always write to distinct
-workspaces. Root-level scientific inputs remain the manuscript reference.
+`REFERENCE_MANIFEST.json` binds the current scientific files to their hashes and
+records the source archive hash. It certifies release-file integrity, rather than
+mathematical correctness. The validation report states which calculations were
+actually rerun. No remote repository or published release was modified.

@@ -1,6 +1,6 @@
 """Worker for isolated experiment runs. Invoke through reproduce.py.
 
-The original numerical functions are imported unchanged. In checkpoint mode,
+The released numerical functions are imported directly. In checkpoint mode,
 only the optimizer calls are replaced: saved weights are restored and the
 same minibatch RNG draws are consumed. Data generation and evaluation run in
 full, including the diagnostic cyclic-forward Newton comparison.
@@ -107,6 +107,7 @@ def main() -> None:
             result[name] = getattr(ex, f'run_{name}')()
         timings[name] = time.perf_counter() - t0
         write_json(ex.RES / 'all_results.json', result)
+        ex.write_summary(result)
         export_metrics(result, ex.RES / 'metrics.csv')
         print(f'[{name}] completed in {timings[name]:.2f} s', flush=True)
     write_json(ROOT / 'environment.json', {

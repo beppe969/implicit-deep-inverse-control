@@ -16,6 +16,13 @@ F = 0.1*np.eye(2)
 E_chi = np.array([[0.0040,0.0020,0.0020,0.0010,0.0010,0.0010,0.0010,0.0005,0.0005,0.0005],[0.0020,0.0040,0.0010,0.0020,0.0010,0.0010,0.0005,0.0010,0.0005,0.0005]])
 E_u = np.array([[0.0040,0.0015],[0.0010,0.0040]]); bias=np.array([0.004,0.004]); wb=np.array([0.003,0.003])
 y_clean = E.true_narx(chi[te], u[te])
+# Keep the published main-model center fixed throughout this selection sweep.
+from pathlib import Path
+ck = torch.load(Path(__file__).resolve().parents[1] / 'results/narx_models.pt',
+                weights_only=True, map_location='cpu')['variant:main']
+center_model = E.AlgebraicImplicitMap(10,2,48,ck['D_u'],ck['D_chi'],kappa_i=.68)
+center_model.load_state_dict(ck); center_model.eval()
+_, plant_cr, plant_ur, _ = E.build_reference(center_model,T)
 for w in [float(a) for a in sys.argv[1:]]:
     m = E.train_narx_model(chi,u,y,tr,D_u_hat,D_chi_hat,c_hat,seed=E.SEED+2,sens_w=abs(w),input_features=(w>=0))
     with torch.no_grad():
@@ -24,8 +31,10 @@ for w in [float(a) for a in sys.argv[1:]]:
         residual = (y[tr] - m(chi[tr], u[tr])).numpy().reshape(len(tr_ids), horizon, E.M_IO)
     sigma = np.median(np.max(np.abs(residual), axis=1), axis=0)
     sens = m.sensitivity_matrices(); box = E.conformal_box(m,chi_c,u_c,y_c,n_cal,T,sigma)
-    cert = E.certificate(sens,F,E_chi,E_u,np.asarray(box['d_bar'])+bias,wb,2e-7*np.ones(m.hdim))
     yr,cr,ur,_ = E.build_reference(m,T)
-    mc,tj = E.closed_loop_narx("implicit inverse", m, aux, yr,cr,ur,F,E_chi,E_u,bias,wb)
+    offset=E.uncertainty_center_allowance(cr,ur,plant_cr,plant_ur,E_chi,E_u)
+    cert = E.certificate(sens,F,E_chi,E_u,np.asarray(box['d_bar'])+bias+offset,wb,2e-7*np.ones(m.hdim))
+    mc,tj = E.closed_loop_narx("implicit inverse", m, aux, yr,cr,ur,F,E_chi,E_u,bias,wb,
+                                plant_chi_ref=plant_cr,plant_u_ref=plant_ur)
     tc = E.tube_check(tj, cert['y_tube'], cert['u_tube']) if 'y_tube' in cert else {}
     print(f"w={w:g} fwd={E.rms((pred-y_clean).numpy()):.5f} inv={E.rms((ua-u[te]).numpy()):.5f} kappa={info['kappa_inf']:.3f} rhoH={cert['rho_H']:.4f} ytube={np.round(cert.get('y_tube',[np.nan]),4)} utube={np.round(cert.get('u_tube',[np.nan]),3)} CLrmse={mc['rmse_mean']:.6f} p95={mc['rmse_p95']:.6f} maxerr={mc['max_error_mean']:.5f} yratio={tc.get('output_tube_max_ratio_after_burn',np.nan):.3f}", flush=True)
